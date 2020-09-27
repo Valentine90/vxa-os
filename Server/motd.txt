@@ -1,0 +1,1 @@
+Bem-vindo ao VXA-OS! Para saber quem está on-line, digite /who

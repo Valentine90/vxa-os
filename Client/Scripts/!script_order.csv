@@ -1,0 +1,160 @@
+[VS] Configs
+[VS] Quests
+[VS] Vocab
+
+▼ RMVXA~blank
+[RM] Vocab
+[RM] Sound
+[RM] Cache
+[RM] DataManager °
+[RM] SceneManager °
+[RM] Game_Temp
+[RM] Game_System
+[RM] Game_Timer
+[RM] Game_Message
+[RM] Game_Switches
+[RM] Game_Variables
+[RM] Game_SelfSwitches
+[RM] Game_Screen
+[RM] Game_Picture
+[RM] Game_Pictures
+[RM] Game_BaseItem
+[RM] Game_Action
+[RM] Game_ActionResult
+[RM] Game_BattlerBase
+[RM] Game_Battler °
+[RM] Game_Actor °
+[RM] Game_Enemy
+[RM] Game_Actors
+[RM] Game_Unit
+[RM] Game_Party
+[RM] Game_Map °
+[RM] Game_CharacterBase °
+[RM] Game_Character
+[RM] Game_Player °
+[RM] Game_Vehicle
+[RM] Game_Event °
+[RM] Game_Interpreter °
+[RM] Sprite_Base
+[RM] Sprite_Character °
+[RM] Sprite_Picture
+[RM] Sprite_Timer
+[RM] Spriteset_Weather
+[RM] Spriteset_Map °
+[RM] Window_Base °
+[RM] Window_Selectable
+[RM] Window_Command °
+[RM] Window_Gold
+[RM] Window_ItemList
+[RM] Window_ChoiceList
+[RM] Window_NumberInput
+[RM] Window_KeyItem
+[RM] Window_Message °
+[RM] Window_ScrollText
+[RM] Scene_Base °
+[RM] Scene_Map °
+
+▼ Kernel~blank
+[VS] Kernel
+[VS] Enums
+[VS] Structs
+[VS] DataManager
+[VS] VXAOS_Base
+[VS] VXAOS
+[VS] Audio
+[VS] Input
+[VS] Mouse
+
+▼ Network~blank
+[VS] Socket
+[VS] Buffer
+[VS] Send_Data
+[VS] Handle_Data
+[VS] Network
+
+▼ Game Classes~blank
+[VS] Game_Map
+[VS] Game_Character
+[VS] Game_Player
+[VS] Game_Event
+[VS] Game_ActionResult
+[VS] Game_Actor
+[VS] Game_Party
+[VS] Game_NetPlayer
+[VS] Game_Drop
+[VS] Game_Trade
+[VS] Game_Bank
+[VS] Game_Quest
+[VS] Game_Projectile
+
+▼ Sprites~blank
+[VS] Sprite2
+[VS] Sprite_Character
+[VS] Sprite_HUD
+[VS] Sprite_TargetHUD
+[VS] Sprite_States
+[VS] Sprite_Party
+[VS] Sprite_Hotbar
+[VS] Sprite_Desc
+[VS] Sprite_Minimap
+[VS] Sprite_Cursor
+[VS] Sprite_Drop
+[VS] Sprite_Popup
+[VS] Sprite_Projectile
+[VS] Spriteset_Map
+
+▼ Menu Windows~blank
+[VS] Window_Base
+[VS] Window_Selectable
+[VS] Window_Login
+[VS] Window_CreateAcc
+[VS] Window_UseChar
+[VS] Window_CreateChar
+[VS] Window_VIPTime
+[VS] Window_Alert
+
+▼ Game Windows~blank
+[VS] Window_Message
+[VS] Window_Choice
+[VS] Window_Chat
+[VS] Window_Equip
+[VS] Window_Item
+[VS] Window_Skill
+[VS] Window_Status
+[VS] Window_Menu
+[VS] Window_Config
+[VS] Window_Icon
+[VS] Window_Shop
+[VS] Window_Amount
+[VS] Window_Trade
+[VS] Window_Quest
+[VS] Window_Friend
+[VS] Window_Bank
+[VS] Window_Teleport
+[VS] Window_CreateGuild
+[VS] Window_Guild
+[VS] Window_Panel
+
+▼ Controls~blank
+[VS] Control
+[VS] Button
+[VS] Icon
+[VS] Text_Box
+[VS] Check_Box
+[VS] Progress_Bar
+[VS] Combo_Box
+[VS] Image_Button
+[VS] Radio_Button
+[VS] Tab_Control
+[VS] Scroll_Bar
+[VS] Input_Slider
+
+▼ Scenes~blank
+[VS] Scene_Base
+[VS] Scene_Login
+[VS] Scene_Character
+[VS] Scene_Map
+
+▼ Main~blank
+no_script_name
+[RM] Main

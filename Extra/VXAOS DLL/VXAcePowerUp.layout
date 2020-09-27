@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="910" topLine="12" />
+	</File>
+	<File name="main.h" open="1" top="0" tabpos="2">
+		<Cursor position="790" topLine="11" />
+	</File>
+	<File name="md5.c" open="1" top="0" tabpos="7">
+		<Cursor position="11772" topLine="336" />
+	</File>
+	<File name="md5.h" open="1" top="0" tabpos="8">
+		<Cursor position="2878" topLine="62" />
+	</File>
+	<File name="vxace_input.c" open="0" top="0" tabpos="3">
+		<Cursor position="3637" topLine="125" />
+	</File>
+	<File name="vxace_input.h" open="0" top="0" tabpos="4">
+		<Cursor position="1999" topLine="28" />
+	</File>
+	<File name="vxace_mouse.c" open="1" top="0" tabpos="5">
+		<Cursor position="585" topLine="2" />
+	</File>
+	<File name="vxace_mouse.h" open="1" top="0" tabpos="6">
+		<Cursor position="676" topLine="9" />
+	</File>
+	<File name="vxace_sdk.h" open="0" top="0" tabpos="7">
+		<Cursor position="3282" topLine="0" />
+	</File>
+	<File name="vxace_socket.c" open="1" top="0" tabpos="3">
+		<Cursor position="3836" topLine="146" />
+	</File>
+	<File name="vxace_socket.h" open="1" top="0" tabpos="4">
+		<Cursor position="205" topLine="5" />
+	</File>
+</CodeBlocks_layout_file>

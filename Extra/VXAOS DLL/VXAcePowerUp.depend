@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1330702146 source:f:\vxace_powerup\source\vxacepowerup\md5.c
+	"md5.h"
+
+1330702353 f:\vxace_powerup\source\vxacepowerup\md5.h
+	<sys/types.h>
+	"main.h"
+
+1332693931 f:\vxace_powerup\source\vxacepowerup\main.h
+	<windows.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"vxace_sdk.h"
+
+1331941480 f:\vxace_powerup\source\vxacepowerup\vxace_sdk.h
+	<windows.h>
+
+1332126703 source:f:\vxace_powerup\source\vxacepowerup\vxace_mouse.c
+	"main.h"
+	"vxace_mouse.h"
+
+1330795746 f:\vxace_powerup\source\vxacepowerup\vxace_mouse.h
+	"main.h"
+	"vxace_sdk.h"
+	<windows.h>
+
+1331941481 source:f:\vxace_powerup\source\vxacepowerup\vxace_sdk.c
+	"main.h"
+	"vxace_sdk.h"
+
+1332124526 source:f:\vxace_powerup\source\vxacepowerup\vxace_socket.c
+	"vxace_socket.h"
+	<winsock2.h>
+	<ws2tcpip.h>
+	<stdio.h>
+	<io.h>
+
+1332124531 f:\vxace_powerup\source\vxacepowerup\vxace_socket.h
+	"main.h"
+	<winsock2.h>
+	<ws2tcpip.h>
+	<stdio.h>
+
+1331232343 source:f:\vxace_powerup\source\vxacepowerup\main.cpp
+	<windows.h>
+	"main.h"
+	"vxace_sdk.h"
+
+1330786391 source:f:\vxace_powerup\source\vxacepowerup\vxace_input.c
+	"vxace_input.h"
+	<winuser.h>
+
+1330825950 f:\vxace_powerup\source\vxacepowerup\vxace_input.h
+	"main.h"
+	"vxace_sdk.h"
+
+1305733051 source:f:\vxace_powerup\source\vxacepowerup\iconv\win_iconv.c
+	<windows.h>
+	<errno.h>
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<fcntl.h>
+	<io.h>
+
