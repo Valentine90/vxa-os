@@ -6,9 +6,9 @@
 ![Rpg Maker VX ACE](https://img.shields.io/badge/RPG%20MAKER-VX%20ACE-red?style=for-the-badge&logo=appveyo)
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
 
-<p>VXA-OS é a ferramenta gratuita mais completa e segura de criação de jogos on-line 2D do RPG Maker. Está em desenvolvimento ativo desde outubro de 2017 e já foi utilizada em vários MMORPGs.</p>
+<p>VXA-OS é a ferramenta gratuita mais completa e segura de criação de jogos on-line 2D do RPG Maker. Está em desenvolvimento ativo desde outubro de 2017.</p>
 
-## Funções Disponíveis 
+## Funções disponíveis 
   - [x] 5 tipos de bate-papo
   - [x] 9 tipos de equipamento
   - [x] 13 comandos de administrador
@@ -31,20 +31,20 @@
   - [x] PvP
   - [x] Banco
 
-## Funções Futuras
+## Funções futuras
   - [ ] Comando de evento Mover Evento
   - [ ] Movimento customizado dos eventos
   
 
 
-## Screenshot
+## Screenshots
 <br>
 
-Para verificar as screenshot do projeto [clique aqui]().
+Para verificar as screenshots do projeto, [clique aqui]().
 
 <br>
 
-## Projetos MMORPG que utilizam o sistema VXA-OS
+## MMORPGs que utilizam o VXA-OS
 
 - [Urkon Online](https://www.aldeiarpg.com/t14262-urkon-online)
 - [Lotus Online](https://www.aldeiarpg.com/t14134-lotus-online)
@@ -53,10 +53,10 @@ Para verificar as screenshot do projeto [clique aqui]().
 
 <br>
 
-## Links Uteis
+## Links úteis
 
-- [Forum Oficial](https://www.aldeiarpg.com/t13748-vxa-os-crie-seu-mmo-com-rpg-maker)
-- [Scripts Adicionais](https://www.aldeiarpg.com/f64-scripts)
+- [Forum oficial](https://www.aldeiarpg.com/t13748-vxa-os-crie-seu-mmo-com-rpg-maker)
+- [Scripts adicionais](https://www.aldeiarpg.com/f64-scripts)
 
 
 
