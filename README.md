@@ -5,6 +5,7 @@
 ![Version](https://img.shields.io/badge/Version-%202.1.1-red?style=for-the-badge&logo=appveyo)
 ![Rpg Maker VX ACE](https://img.shields.io/badge/RPG%20MAKER-VX%20ACE-red?style=for-the-badge&logo=appveyo)
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
+![Discord Shield](https://discordapp.com/api/guilds/[429043233587462144]/widget.png?style=shield)
 
 <p>VXA-OS é a ferramenta gratuita mais completa e segura de criação de jogos on-line 2D do RPG Maker. Está em desenvolvimento ativo desde outubro de 2017.</p>
 
