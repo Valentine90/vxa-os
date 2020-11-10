@@ -13,7 +13,6 @@
   - [x] 9 types of equipment
   - [x] 13 administrator commands
   - [x] Global real-time battle system on the server
-  - [x] Passwords protected with the MD5 cryptographic function
   - [x] 99% of event commands on the server
   - [x] Common server events
   - [x] Configurable resolution
