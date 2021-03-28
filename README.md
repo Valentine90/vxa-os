@@ -2,7 +2,7 @@
 
 ## About
 
-![Version](https://img.shields.io/badge/Version-%202.1.1-red?style=for-the-badge&logo=appveyo)
+![Version](https://img.shields.io/badge/Version-%202.1.4-red?style=for-the-badge&logo=appveyo)
 ![Rpg Maker VX ACE](https://img.shields.io/badge/RPG%20MAKER-VX%20ACE-red?style=for-the-badge&logo=appveyo)
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
 
@@ -17,7 +17,7 @@
   - [x] Common server events
   - [x] Configurable resolution
   - [x] Global switches
-  - [x] SQL and MySQL databases;
+  - [x] SQL and MySQL databases
   - [x] EventMachine network library
   - [x] Friend
   - [x] Quest
