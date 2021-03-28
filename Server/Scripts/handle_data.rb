@@ -35,6 +35,8 @@ module Handle_Data
 		when Enums::Packet::USE_ACTOR
 			handle_use_actor(client, buffer)
 		end
+		# Chama a variável inactivity_time em vez do método comm_inactivity_timeout do EventMachine
+		#para que o jogador inativo saiba o motivo pelo qual ele foi expulso do jogo
 		client.inactivity_time = Time.now + INACTIVITY_TIME
 	end
 
@@ -80,6 +82,8 @@ module Handle_Data
 			handle_guild_notice(client, buffer)
 		when Enums::Packet::REMOVE_GUILD_MEMBER
 			handle_remove_guild_member(client, buffer)
+		when Enums::Packet::GUILD_REQUEST
+			handle_guild_request(client, buffer)
 		when Enums::Packet::LEAVE_GUILD
 			handle_leave_guild(client)
 		when Enums::Packet::LEAVE_PARTY
@@ -141,25 +145,27 @@ module Handle_Data
 			add_attempt(client)
 			client.close_connection_after_writing
 			return
-		elsif banned?(user)
-			send_failed_login(client, Enums::Login::ACC_BANNED)
-			client.close_connection_after_writing
-			return
 		elsif multi_accounts?(user, client.ip)
 			send_failed_login(client, Enums::Login::MULTI_ACCOUNT)
 			client.close_connection_after_writing
 			return
 		end
 		account = Database.load_account(user)
-		unless pass == account.pass
+		if pass != account.pass
 			send_failed_login(client, Enums::Login::INVALID_PASS)
 			add_attempt(client)
 			client.close_connection_after_writing
 			return
+		elsif banned?(account.id_db)
+			send_failed_login(client, Enums::Login::ACC_BANNED)
+			client.close_connection_after_writing
+			return
 		end
 		client.user = user
+		client.account_id_db = account.id_db
+		# Salva a senha, já que, ao excluir personagem, é necessário verificar
+		#se a senha que o usuário digitou está correta
 		client.pass = account.pass
-		client.email = account.email
 		client.group = account.group
 		client.vip_time = account.vip_time
 		client.actors = account.actors
@@ -206,7 +212,7 @@ module Handle_Data
 	
 	def handle_create_actor(client, buffer)
 		actor_id = buffer.read_byte
-		name = adjust_name(buffer.read_string.strip)
+		name = titleize(buffer.read_string.strip)
 		character_index = buffer.read_byte
 		class_id = buffer.read_short
 		sex = buffer.read_byte
@@ -231,7 +237,6 @@ module Handle_Data
 		end
 		client.antispam_time = Time.now + 0.5
 		Database.create_player(client, actor_id, name, character_index, class_id, sex, params, points)
-		Database.save_account(client)
 		send_create_actor(client, actor_id, client.actors[actor_id])
 	end
 	
@@ -244,10 +249,9 @@ module Handle_Data
 			add_attempt(client)
 			return
 		end
-		Database.remove_player(client.actors[actor_id].name)
-		client.remove_actor_guild(client.actors[actor_id].guild, client.actors[actor_id].name)
+		Database.remove_player(client.actors[actor_id].id_db)
+		client.remove_actor_guild(client.actors[actor_id].guild_name, client.actors[actor_id].name)
 		client.actors.delete(actor_id)
-		Database.save_account(client)
 		send_remove_actor(client, actor_id)
 	end
 
@@ -260,6 +264,7 @@ module Handle_Data
 		#jogador que ainda não está conectado
 		send_player_data(client, client.map_id)
 		@maps[client.map_id].total_players += 1
+		Database.change_whos_online(client.id_db, :insert)
 		# Conecta ao jogo
 		client.join_game(actor_id)
 		send_use_actor(client)
@@ -449,13 +454,15 @@ module Handle_Data
 
 	def handle_create_guild(client, buffer)
 		flag = []
-		name = adjust_name(buffer.read_string.strip)
+		name = titleize(buffer.read_string.strip)
 		64.times { flag << buffer.read_byte }
 		return unless client.creating_guild?
 		return if client.in_guild?
 		return if client.spawning?
 		return if name.size < Configs::MIN_CHARACTERS || name.size > Configs::MAX_CHARACTERS
 		return if invalid_name?(name)
+		# Se o brasão tiver menos de 64 índices de cor
+		return if flag.include?(nil)
 		client.antispam_time = Time.now + 0.5
 		create_guild(client, name, flag)
 	end
@@ -485,12 +492,29 @@ module Handle_Data
 	def handle_remove_guild_member(client, buffer)
 		name = buffer.read_string
 		return unless client.in_guild? && client.guild_leader?
-		member = find_guild_member(@guilds[client.guild], name)
-		if member && @guilds[client.guild].leader != member
+		member = find_guild_member(@guilds[client.guild_name], name)
+		if member && @guilds[client.guild_name].leader != member
 			remove_guild_member(client, member)
 		else
 			alert_message(client, Enums::Alert::INVALID_NAME)
 		end
+	end
+
+	def handle_guild_request(client, buffer)
+		player = find_player(buffer.read_string)
+		return unless client.in_guild? && client.guild_leader?
+		return if client.spawning?
+		client.antispam_time = Time.now + 0.5
+		if !player || player.in_guild?
+			alert_message(client, Enums::Alert::INVALID_NAME)
+			return
+		elsif @guilds[client.guild_name].members.size >= Configs::MAX_GUILD_MEMBERS
+			alert_message(client, Enums::Alert::FULL_GUILD)
+			return
+		end
+		player.request.id = client.id
+		player.request.type = Enums::Request::GUILD
+		send_request(player, Enums::Request::GUILD, client)
 	end
 	
 	def handle_leave_guild(client)
@@ -498,7 +522,7 @@ module Handle_Data
 		if client.guild_leader?
 			# Possibilita que a guilda seja deletada e que o texto da variável guild dos membros que
 			#logaram posteriormente ao líder seja apagado, mesmo após a string guild do líder ficar vazia
-			remove_guild(client.guild.clone)
+			remove_guild(client.guild_name.clone)
 		else
 			client.leave_guild
 		end
@@ -635,7 +659,7 @@ module Handle_Data
 			if !client.guild_leader?
 				alert_message(client, Enums::Alert::NOT_GUILD_LEADER)
 				return
-			elsif @guilds[client.guild].members.size >= Configs::MAX_GUILD_MEMBERS
+			elsif @guilds[client.guild_name].members.size >= Configs::MAX_GUILD_MEMBERS
 				alert_message(client, Enums::Alert::FULL_GUILD)
 				return
 			end
@@ -702,6 +726,7 @@ module Handle_Data
 	def handle_logout(client)
 		client.load_original_graphic
 		send_logout(client)
+		client.update_current_actor
 		client.leave_game
 		client.inactivity_time = Time.now + INACTIVITY_TIME
 	end
@@ -709,14 +734,14 @@ module Handle_Data
 	def handle_admin_command(client, buffer)
 		command = buffer.read_byte
 		# Altera a codificação padrão da mensagem recebida pela Socket do Ruby (ASCII-8BIT) para UTF-8
-		str1 = buffer.read_string.force_encoding('UTF-8')
-		str2 = buffer.read_int
-		str3 = buffer.read_int
-		str4 = buffer.read_short
+		str = buffer.read_string.force_encoding('UTF-8')
+		int1 = buffer.read_int
+		int2 = buffer.read_int
+		int3 = buffer.read_short
 		if client.admin?
-			admin_commands(client, command, str1, str2, str3, str4)
+			admin_commands(client, command, str, int1, int2, int3)
 		elsif client.monitor?
-			monitor_commands(client, command, str1, str2, str3, str4)
+			monitor_commands(client, command, str)
 		end
 	end
 

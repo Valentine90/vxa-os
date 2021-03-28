@@ -109,7 +109,7 @@ class Game_Interpreter
   def finalize
     @fiber = nil
     # Se o ID do evento é maior que 0 e não é o processo paralelo dos eventos que está sendo finalizado
-    $server.maps[@map_id].events[@event_id].unlock(@client.id) if @event_id > 0 && @client
+    $network.maps[@map_id].events[@event_id].unlock(@client.id) if @event_id > 0 && @client
   end
 
   def execute_command
@@ -131,7 +131,7 @@ class Game_Interpreter
   end
 
   def get_character(param)
-    param < 0 ? @client : $server.maps[@map_id].events[param > 0 ? param : @event_id]
+    param < 0 ? @client : $network.maps[@map_id].events[param > 0 ? param : @event_id]
   end
 
   def operate_value(operation, operand_type, operand)
@@ -139,12 +139,12 @@ class Game_Interpreter
     operation == 0 ? value : -value
   end
 
-  def default_event_command
+  def default_event_command(initial_index = @index, final_index = @index + 1)
     if @client
-      $server.send_event_command(@client, @event_id, @index, @index + 1)
+      $network.send_event_command(@client, @event_id, initial_index, final_index)
     # Se é um evento do mapa com condição de início processo paralelo
     else
-      $server.send_parallel_process_command(@object, @index, @index + 1)
+      $network.send_parallel_process_command(@object, initial_index, final_index)
     end
   end
   
@@ -155,20 +155,20 @@ class Game_Interpreter
     case next_event_code
     when 102
       @index += 1
-      $server.send_event_command(@client, @event_id, initial_index, @index)
+      $network.send_event_command(@client, @event_id, initial_index, @index)
       # Passa os parâmetros da lista para o setup_choices antes que @params seja resetado quando
       #o @fiber.resume for executado, após o Fiber.yield, nas mensagens de evento sem face
       setup_choices(@list[@index].parameters)
     when 103
       @index += 1
-      $server.send_event_command(@client, @event_id, initial_index, @index)
+      $network.send_event_command(@client, @event_id, initial_index, @index)
       setup_num_input(@list[@index].parameters)
     when 104
       @index += 1
-      $server.send_event_command(@client, @event_id, initial_index, @index)
+      $network.send_event_command(@client, @event_id, initial_index, @index)
       setup_item_choice(@list[@index].parameters)
     else
-      $server.send_event_command(@client, @event_id, initial_index, @index)
+      $network.send_event_command(@client, @event_id, initial_index, @index)
       Fiber.yield
     end
   end
@@ -193,7 +193,7 @@ class Game_Interpreter
 
   def setup_num_input(params)
     Fiber.yield
-    @client.change_variable(params[0], [@client.choice, 99_999_999].min)
+    @client.variables[params[0]] = [@client.choice, 99_999_999].min
     @client.close_event_message
   end
 
@@ -205,14 +205,14 @@ class Game_Interpreter
 
   def setup_item_choice(params)
     Fiber.yield
-    @client.change_variable(params[0], [@client.choice, $data_items.size].min)
+    @client.variables[params[0]] = [@client.choice, $data_items.size].min
     @client.close_event_message
   end
 
   def show_scrolling_text
     initial_index = @index
     @index += 1 while next_event_code == 405
-    $server.send_event_command(@client, @event_id, initial_index, @index)
+    $network.send_event_command(@client, @event_id, initial_index, @index)
   end
 
   def choice
@@ -227,8 +227,8 @@ class Game_Interpreter
     result = false
     case @params[0]
     when 0
-      result = (@client.switches[@params[1]] == (@params[2] == 0)) if @params[1] < Configs::MAX_PLAYER_SWITCHES
-      result = ($server.switches[@params[1] - Configs::MAX_PLAYER_SWITCHES] == (@params[2] == 0)) if @params[1] >= Configs::MAX_PLAYER_SWITCHES
+      result = (@client.switches[@params[1]] == (@params[2] == 0)) if @params[1] <= Configs::MAX_PLAYER_SWITCHES
+      result = ($network.switches[@params[1]] == (@params[2] == 0)) if @params[1] > Configs::MAX_PLAYER_SWITCHES
     when 1
       value1 = @client.variables[@params[1]]
       value2 = @params[2] == 0 ? @params[3] : @client.variables[@params[3]]
@@ -249,7 +249,7 @@ class Game_Interpreter
     when 2
       if @event_id > 0
         key = [@map_id, @event_id, @params[1]]
-        result = (@client.self_switches.has_key?(key) == (@params[2] == 0))
+        result = (@client.self_switches[key] == (@params[2] == 0))
       end
     when 4
       case @params[2]
@@ -263,6 +263,8 @@ class Game_Interpreter
         result = (@client.weapon_id == @params[3])
       when 5
         result = (@client.equips[1, Configs::MAX_EQUIPS - 1].include?(@params[3]))
+      when 6
+        result = (@client.state?(@params[3]))
       end
     when 6
       character = get_character(@params[1])
@@ -316,6 +318,7 @@ class Game_Interpreter
     if common_event
       child = Game_Interpreter.new
       child.setup(@client, common_event.list, @event_id)
+      child.run
     end
   end
 
@@ -332,11 +335,8 @@ class Game_Interpreter
   def change_switch
     value = (@params[2] == 0)
     (@params[0]..@params[1]).each do |switch_id|
-      if switch_id < Configs::MAX_PLAYER_SWITCHES
-        @client.change_switch(switch_id, value)
-      else
-        $server.change_global_switch(switch_id, value)
-      end
+      object = switch_id <= Configs::MAX_PLAYER_SWITCHES ? @client : $network
+      object.switches[switch_id] = value
     end
   end
 
@@ -354,9 +354,9 @@ class Game_Interpreter
     when 4
       value = eval(@params[4])
     end
-    (@params[0]..@params[1]).each do |i|
-      operate_variable(i, @params[2], value)
-    end
+    # Muda individualmente a variável, já que a alteração
+    #múltipla (desde x até y) não funciona
+    operate_variable(@params[0], @params[2], value)
   end
 
   def game_data_operand(type, param1, param2)
@@ -407,27 +407,27 @@ class Game_Interpreter
     begin
       case operation_type
       when 0
-        @client.change_variable(variable_id, value)
+        @client.variables[variable_id] = value
       when 1
-        @client.change_variable(variable_id, @client.variables[variable_id] + value)
+        @client.variables[variable_id] += value
       when 2
-        @client.change_variable(variable_id, @client.variables[variable_id] - value)
+        @client.variables[variable_id] -= value
       when 3
-        @client.change_variable(variable_id, @client.variables[variable_id] * value)
+        @client.variables[variable_id] *= value
       when 4
-        @client.change_variable(variable_id, @client.variables[variable_id] / value)
+        @client.variables[variable_id] /= value
       when 5
-        @client.change_variable(variable_id, @client.variables[variable_id] % value)
+        @client.variables[variable_id] %= value
       end
     rescue
-      @client.change_variable(variable_id, 0)
+      @client.variables[variable_id] = 0
     end
   end
 
   def change_self_switches
     return if @event_id == 0
     key = [@map_id, @event_id, @params[0]]
-    @client.change_self_switches(key, @params[1] == 0)
+    @client.self_switches[key] = (@params[1] == 0)
   end
 
   def change_gold
@@ -438,7 +438,7 @@ class Game_Interpreter
   def change_item
     value = operate_value(@params[1], @params[2], @params[3])
     if @client.full_inventory?($data_items[@params[0]]) && value > 0
-      $server.maps[@client.map_id].add_drop(@params[0], 1, value, @client.x, @client.y, @client.name)
+      $network.maps[@client.map_id].add_drop(@params[0], 1, value, @client.x, @client.y, @client.name)
       return
     end
     @client.gain_item($data_items[@params[0]], value, false, value > 0)
@@ -449,7 +449,7 @@ class Game_Interpreter
   def change_weapon
     value = operate_value(@params[1], @params[2], @params[3])
     if @client.full_inventory?($data_weapons[@params[0]]) && value > 0
-      $server.maps[@client.map_id].add_drop(@params[0], 2, value, @client.x, @client.y, @client.name)
+      $network.maps[@client.map_id].add_drop(@params[0], 2, value, @client.x, @client.y, @client.name)
       return
     end
     @client.gain_item($data_weapons[@params[0]], value, false, value > 0)
@@ -459,7 +459,7 @@ class Game_Interpreter
   def change_armor
     value = operate_value(@params[1], @params[2], @params[3])
     if @client.full_inventory?($data_armors[@params[0]]) && value > 0
-      $server.maps[@client.map_id].add_drop(@params[0], 3, value, @client.x, @client.y, @client.name)
+      $network.maps[@client.map_id].add_drop(@params[0], 3, value, @client.x, @client.y, @client.name)
       return
     end
     @client.gain_item($data_armors[@params[0]], value, false, value > 0)
@@ -498,14 +498,14 @@ class Game_Interpreter
   def show_animation
     character = get_character(@params[0])
     type = @params[0] >= 0 ? Enums::Target::ENEMY : Enums::Target::PLAYER
-    $server.send_animation(character, @params[1], character.id, type - 1, 8, type) if character
+    $network.send_animation(character, @params[1], character.id, type - 1, 8, type) if character
     wait($data_animations[@params[1]].frame_max * 4 + 1) if @params[2]
   end
 
   def show_balloon
     character = get_character(@params[0])
     type = character.is_a?(Game_Client) ? Enums::Target::PLAYER : Enums::Target::ENEMY
-    $server.send_balloon(character, type, @params[1]) if character
+    $network.send_balloon(character, type, @params[1]) if character
     wait(76) if @params[2]
   end
 
@@ -521,7 +521,7 @@ class Game_Interpreter
 
   def tremor_effect
     default_event_command
-    wait(@params[1]) if @params[2]
+    wait(@params[2]) if @params[3]
   end
   
   def wait(duration = @params[0])
@@ -564,13 +564,13 @@ class Game_Interpreter
     end
     case @params[1]
     when 0
-      value = $server.maps[@map_id].terrain_tag(x, y)
+      value = $network.maps[@map_id].terrain_tag(x, y)
     when 1
-      value = $server.maps[@map_id].event_id_xy(x, y)
+      value = $network.maps[@map_id].event_id_xy(x, y)
     when 2..4
-      value = $server.maps[@map_id].tile_id(x, y, @params[1] - 2)
+      value = $network.maps[@map_id].tile_id(x, y, @params[1] - 2)
     else
-      value = $server.maps[@map_id].region_id(x, y)
+      value = $network.maps[@map_id].region_id(x, y)
     end
     @client.variables[@params[0]] = value
   end
@@ -650,16 +650,21 @@ class Game_Interpreter
   end
 
   def call_script
+    initial_index = @index
     script = "#{@list[@index].parameters[0]}\n"
     while next_event_code == 655
       @index += 1
       script << "#{@list[@index].parameters[0]}\n"
     end
-    eval(script)
+    if script.start_with?('[NG]')
+      default_event_command(initial_index, @index)
+    else
+      eval(script)
+    end
   end
 
   def chat_add(message, color_id)
-    $server.player_message(@client, message, color_id)
+    $network.player_message(@client, message, color_id)
   end
 
   def check_point(map_id, x, y)
@@ -682,6 +687,9 @@ class Game_Interpreter
   end
 
   def open_bank
+    # Carrega os itens comprados na loja toda vez que abre o banco,
+    #pois o jogador pode ter comprado o item durante o jogo
+    Database.load_distributor(@client)
     @client.open_bank
     Fiber.yield
   end

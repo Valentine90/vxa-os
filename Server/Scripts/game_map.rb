@@ -10,18 +10,18 @@ class Game_Map
 
 	attr_reader   :events
 	attr_reader   :drops
+	attr_reader   :pvp
 	attr_reader   :revive_regions
 	attr_accessor :total_players
-	attr_accessor :pvp
 
-	def initialize(id, data, width, height, tileset_id)
+	def initialize(id, map)
 		@id = id
-		@data = data
-		@width = width
-		@height = height
-		@tileset_id = tileset_id
+		@data = map.data
+		@width = map.width
+		@height = map.height
+		@tileset_id = map.tileset_id
+		@pvp = Note.read_boolean('PvP', map.note)
 		@total_players = 0
-		@pvp = false
 		@events = {}
 		@drops = []
 		enemies_revive_regions
@@ -103,7 +103,7 @@ class Game_Map
 	end
 
 	def all_tiles(x, y)
-		tile_events_xy(x, y).collect { |ev| ev.tile_id } + layered_tiles(x, y)
+		tile_events_xy(x, y).collect(&:tile_id) + layered_tiles(x, y)
 	end
 
 	def passable?(x, y, d)
@@ -112,6 +112,10 @@ class Game_Map
 
 	def layered_tiles_flag?(x, y, bit)
 		layered_tiles(x, y).any? { |tile_id| $data_tilesets[@tileset_id].flags[tile_id] & bit != 0 }
+	end
+
+	def ladder?(x, y)
+		valid?(x, y) && layered_tiles_flag?(x, y, 0x20)
 	end
 
 	def counter?(x, y)
@@ -137,12 +141,12 @@ class Game_Map
 
 	def add_drop(item_id, kind, amount, x, y, name = '', party_id = -1)
 		@drops << Drop.new(item_id, kind, amount, name, party_id, x, y, Time.now + DROP_DESPAWN_TIME, Time.now + DROP_PICK_UP_TIME)
-		$server.send_add_drop(@id, item_id, kind, amount, x, y)
+		$network.send_add_drop(@id, item_id, kind, amount, x, y)
 	end
 
 	def remove_drop(drop_id)
 		@drops.delete_at(drop_id)
-		$server.send_remove_drop(@id, drop_id)
+		$network.send_remove_drop(@id, drop_id)
 	end
 	
 	def update
@@ -155,12 +159,8 @@ class Game_Map
 	end
 
 	def update_drops
-		@drops.each_index do |drop_id|
-			# Se o drop anterior foi deletado e o próximo item da lista original, que tem mais itens
-			#que a atual, está sendo executado embora não exista mais
-			next unless @drops[drop_id] && Time.now > @drops[drop_id].despawn_time
-			remove_drop(drop_id)
-		end
+		# downto evita erros ao remover elementos enquanto a matriz está sendo iterada
+		(@drops.size - 1).downto(0) { |drop_id| remove_drop(drop_id) if Time.now > @drops[drop_id].despawn_time  }
 	end
 
 end

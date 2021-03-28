@@ -26,7 +26,7 @@ module Game_Data
 		load_banlist
 		load_global_switches
 		load_guilds
-		puts(Time.now.strftime("Servidor iniciado às %kh%Mmin."))
+		puts(Time.now.strftime("Servidor iniciado às %-kh%Mmin."))
   end
   
 	def load_enemies
@@ -74,6 +74,8 @@ module Game_Data
 		animations = load_data('Animations.rvdata2')
 		(1...animations.size).each do |animation_id|
 			$data_animations[animation_id] = RPG::Animation.new
+			# Carrega a quantidade máxima de frames da animação para possibilitar a execução
+			#da opção Esperar até o fim do comando de evento Mostrar Animação
 			$data_animations[animation_id].frame_max = animations[animation_id].frame_max
 		end
 	end
@@ -203,13 +205,10 @@ module Game_Data
 		mapinfos = load_data('MapInfos.rvdata2')
 		mapinfos.each_key do |map_id|
 			map = load_data(sprintf('Map%03d.rvdata2', map_id))
-			@maps[map_id] = Game_Map.new(map_id, map.data, map.width, map.height, map.tileset_id)
-			@maps[map_id].pvp = Note.read_boolean('PvP', map.note)
+			@maps[map_id] = Game_Map.new(map_id, map)
 			map.events.each do |event_id, event|
-				@maps[map_id].events[event_id] = Game_Event.new(event_id, event.pages)
-				@maps[map_id].events[event_id].map_id = map_id
-				@maps[map_id].events[event_id].x = event.x
-				@maps[map_id].events[event_id].y = event.y
+				next if event.name == 'notupdate' || event.name == 'notglobal'
+				@maps[map_id].events[event_id] = Game_Event.new(event_id, event, map_id)
 			end
 			@maps[map_id].refresh_tile_events
 		end
@@ -243,11 +242,13 @@ module Game_Data
 	end
 
 	def load_banlist
-		return unless File.exist?('Data/banlist.dat')
-		puts('Carregando lista de contas banidas...')
-		file = File.open('Data/banlist.dat', 'rb')
-		@ban_list = Marshal.load(file)
-		file.close
+		puts('Carregando lista de banidos...')
+		begin
+			Database.load_banlist
+		rescue
+			puts('O banco de dados SQL está off-line!'.colorize(:red))
+			puts('A lista de banidos não foi carregada!'.colorize(:red))
+		end
 	end
 
 	def load_global_switches
@@ -260,26 +261,19 @@ module Game_Data
 
 	def load_guilds
 		puts('Carregando guildas...')
-		Dir["Data/Guilds/*.bin"].each do |file|
-			name = File.basename(file, '.bin')
-			reader = Binary_Reader.new(File.read(file, mode: 'rb'))
-			@guilds[name] = Guild.new
-			@guilds[name].leader = reader.read_string
-			@guilds[name].notice = reader.read_string
-			@guilds[name].flag = []
-			64.times { @guilds[name].flag << reader.read_byte }
-			@guilds[name].members = []
-			size = reader.read_byte
-			size.times { @guilds[name].members << reader.read_string }
+		begin
+			Database.load_guilds
+		rescue
+			puts('As guildas não foram carregadas!'.colorize(:red))
 		end
 	end
   
 	def save_game_data
-		puts(Time.now.strftime("Salvando todos os dados às %kh%Mmin...").colorize(:green))
+		puts(Time.now.strftime("Salvando todos os dados às %-kh%Mmin...").colorize(:green))
 		save_motd
-		save_banlist
 		save_global_switches
 		save_all_players_online
+		Database.save_banlist
 		@log.save_all
 	end
 
@@ -289,32 +283,14 @@ module Game_Data
 		file.close
 	end
 
-	def save_banlist
-		file = File.open('Data/banlist.dat', 'wb')
-		file.write(Marshal.dump(@ban_list))
-		file.close
-	end
-
 	def save_global_switches
 		file = File.open('Data/switches.dat', 'wb')
 		file.write(Marshal.dump(@switches))
 		file.close
 	end
-
-	def save_guild(name)
-		writer = Binary_Writer.new
-		writer.write_string(@guilds[name].leader)
-		writer.write_string(@guilds[name].notice)
-		@guilds[name].flag.each { |color_id| writer.write_byte(color_id) }
-		writer.write_byte(@guilds[name].members.size)
-		@guilds[name].members.each { |name| writer.write_string(name) }
-		file = File.open("Data/Guilds/#{name}.bin", mode: 'wb')
-		file.write(writer.to_s)
-		file.close
-	end
 	
 	def save_all_players_online
-		@clients.each { |client| client.save_data if client&.in_game? }
+		@clients.each { |client| Database.save_player(client) if client&.in_game? }
 	end
 
 end

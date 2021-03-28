@@ -11,7 +11,7 @@ module Game_Party
 	attr_accessor :party_id
 	
 	def party_members_in_map
-		$server.parties[@party_id].select { |member| member.map_id == @map_id }
+		$network.parties[@party_id].select { |member| member.map_id == @map_id }
 	end
 
 	def party_share(exp, gold, enemy_id)
@@ -57,41 +57,41 @@ module Game_Party
   
 	def accept_party
 		return if in_party?
-		if $server.clients[@request.id].in_party?
-			return if $server.parties[$server.clients[@request.id].party_id].size >= Configs::MAX_PARTY_MEMBERS
-    	@party_id = $server.clients[@request.id].party_id
+		if $network.clients[@request.id].in_party?
+			return if $network.parties[$network.clients[@request.id].party_id].size >= Configs::MAX_PARTY_MEMBERS
+    	@party_id = $network.clients[@request.id].party_id
   	else
 			create_party
 		end
-		$server.parties[@party_id].each do |member|
-			$server.send_join_party(member, self)
-			$server.send_join_party(self, member)
+		$network.parties[@party_id].each do |member|
+			$network.send_join_party(member, self)
+			$network.send_join_party(self, member)
 		end
-		$server.parties[@party_id] << self
+		$network.parties[@party_id] << self
 	end
 	
 	def create_party
-		@party_id = $server.find_empty_party_id
-		$server.clients[@request.id].party_id = @party_id
-		$server.parties[@party_id] = [$server.clients[@request.id]]
+		@party_id = $network.find_empty_party_id
+		$network.clients[@request.id].party_id = @party_id
+		$network.parties[@party_id] = [$network.clients[@request.id]]
 	end
 
 	def leave_party
 		return unless in_party?
-		$server.send_dissolve_party(self)
-		$server.parties[@party_id].delete(self)
-		if $server.parties[@party_id].size == 1
-			dissolve_party($server.parties[@party_id].first)
+		$network.send_dissolve_party(self)
+		$network.parties[@party_id].delete(self)
+		if $network.parties[@party_id].size == 1
+			dissolve_party($network.parties[@party_id].first)
 		else
-			$server.send_leave_party(self)
+			$network.send_leave_party(self)
 		end
 		@party_id = -1
 	end
 
 	def dissolve_party(party_member)
-		$server.parties[@party_id] = nil
-		$server.party_ids_available << @party_id
-		$server.send_dissolve_party(party_member)
+		$network.parties[@party_id] = nil
+		$network.party_ids_available << @party_id
+		$network.send_dissolve_party(party_member)
 		party_member.party_id = -1
 	end
 

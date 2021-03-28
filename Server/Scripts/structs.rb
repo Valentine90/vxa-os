@@ -54,6 +54,7 @@ Interpreter = Struct.new(
 )
 
 Guild = Struct.new(
+	:id_db,
 	:leader,
 	:flag,
 	:members,
@@ -61,8 +62,8 @@ Guild = Struct.new(
 )
 
 Account = Struct.new(
+	:id_db,
 	:pass,
-	:email,
 	:group,
 	:vip_time,
 	:actors,
@@ -70,7 +71,7 @@ Account = Struct.new(
 )
 
 Actor = Struct.new(
-	:user,
+	:id_db,
 	:name,
 	:character_name,
 	:character_index,
@@ -85,7 +86,7 @@ Actor = Struct.new(
 	:param_base,
 	:equips,
 	:points,
-	:guild,
+	:guild_name,
 	:revive_map_id,
 	:revive_x,
 	:revive_y,

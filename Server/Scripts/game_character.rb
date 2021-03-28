@@ -334,18 +334,18 @@ module Game_Character
 	end
 
 	def passable?(x, y, d)
-		x2 = $server.maps[@map_id].round_x_with_direction(x, d)
-		y2 = $server.maps[@map_id].round_y_with_direction(y, d)
-		return false unless $server.maps[@map_id].valid?(x2, y2)
+		x2 = $network.maps[@map_id].round_x_with_direction(x, d)
+		y2 = $network.maps[@map_id].round_y_with_direction(y, d)
+		return false unless $network.maps[@map_id].valid?(x2, y2)
 		return true if @through
-		return false unless $server.maps[@map_id].passable?(x2, y2, reverse_dir(d))
+		return false unless $network.maps[@map_id].passable?(x2, y2, reverse_dir(d))
 		return false if collide_with_characters?(x2, y2)
 		return true
 	end
 
   def diagonal_passable?(x, y, horz, vert)
-    x2 = $server.maps[@map_id].round_x_with_direction(x, horz)
-    y2 = $server.maps[@map_id].round_y_with_direction(y, vert)
+    x2 = $network.maps[@map_id].round_x_with_direction(x, horz)
+    y2 = $network.maps[@map_id].round_y_with_direction(y, vert)
     (passable?(x, y, vert) && passable?(x, y2, horz)) ||
     (passable?(x, y, horz) && passable?(x2, y, vert))
   end
@@ -355,11 +355,11 @@ module Game_Character
 	end
 
 	def collide_with_events?(x, y)
-		$server.maps[@map_id].events_xy_nt(x, y).any? { |event| event.normal_priority? && !event.erased? }
+		$network.maps[@map_id].events_xy_nt(x, y).any? { |event| event.normal_priority? && !event.erased? }
 	end
 
 	def collide_with_players?(x, y)
-		$server.clients.any? { |client| client&.in_game? && client.map_id == @map_id && client.pos_nt?(x, y) }
+		$network.clients.any? { |client| client&.in_game? && client.map_id == @map_id && client.pos_nt?(x, y) }
 	end
 
 	def moveto(x, y)
@@ -373,8 +373,8 @@ module Game_Character
 	end
 
 	def check_event_trigger_touch_front
-		x2 = $server.maps[@map_id].round_x_with_direction(@x, @direction)
-		y2 = $server.maps[@map_id].round_y_with_direction(@y, @direction)
+		x2 = $network.maps[@map_id].round_x_with_direction(@x, @direction)
+		y2 = $network.maps[@map_id].round_y_with_direction(@y, @direction)
 		check_event_trigger_touch(x2, y2)
 	end
 
@@ -382,8 +382,11 @@ module Game_Character
 		@move_succeed = passable?(@x, @y, d)
 		if @move_succeed
 			@direction = d
-			@x = $server.maps[@map_id].round_x_with_direction(@x, d)
-			@y = $server.maps[@map_id].round_y_with_direction(@y, d)
+			@x = $network.maps[@map_id].round_x_with_direction(@x, d)
+			@y = $network.maps[@map_id].round_y_with_direction(@y, d)
+			# Muda a direção para 8, se o jogador, após a mudança acima de suas
+			#coordendas @x e @y, estiver em uma escada
+			@direction = 8 if $network.maps[@map_id].ladder?(@x, @y)
 			send_movement
 		elsif turn_ok
 			@direction = d
@@ -402,8 +405,9 @@ module Game_Character
     end
     @move_succeed = diagonal_passable?(x, y, horz, vert)
     if @move_succeed
-      @x = $server.maps[@map_id].round_x_with_direction(@x, horz)
-      @y = $server.maps[@map_id].round_y_with_direction(@y, vert)
+      @x = $network.maps[@map_id].round_x_with_direction(@x, horz)
+			@y = $network.maps[@map_id].round_y_with_direction(@y, vert)
+			@direction = 8 if $network.maps[@map_id].ladder?(@x, @y)
     end
     @direction = horz if @direction == reverse_dir(horz)
 		@direction = vert if @direction == reverse_dir(vert)
@@ -411,7 +415,7 @@ module Game_Character
   end
 	
 	def restriction
-		states.collect { |state| state.restriction }.push(0).max
+		states.collect(&:restriction).push(0).max
 	end
 
 	def skill_learn?(skill_id)

@@ -23,21 +23,21 @@ module Game_Trade
   end
 
   def open_trade
-    return unless $server.clients[@request.id]&.in_game?
-    return unless @map_id == $server.clients[@request.id].map_id
-    return if $server.clients[@request.id].in_trade? || $server.clients[@request.id].in_shop? || $server.clients[@request.id].in_bank?
+    return unless $network.clients[@request.id]&.in_game?
+    return unless @map_id == $network.clients[@request.id].map_id
+    return if $network.clients[@request.id].in_trade? || $network.clients[@request.id].in_shop? || $network.clients[@request.id].in_bank?
     return if in_trade? || in_shop? || in_bank?
     @trade_player_id = @request.id
-    $server.clients[@trade_player_id].trade_player_id = @id
-    $server.send_accept_request(self, @request.type)
-    $server.send_accept_request($server.clients[@trade_player_id], @request.type)
+    $network.clients[@trade_player_id].trade_player_id = @id
+    $network.send_accept_request(self, @request.type)
+    $network.send_accept_request($network.clients[@trade_player_id], @request.type)
   end
 
   def close_trade
     return unless in_trade?
-    $server.send_close_window(self)
-    $server.send_close_window($server.clients[@trade_player_id])
-    $server.clients[@trade_player_id].clear_trade_items
+    $network.send_close_window(self)
+    $network.send_close_window($network.clients[@trade_player_id])
+    $network.clients[@trade_player_id].clear_trade_items
     clear_trade_items
   end
 
@@ -81,8 +81,8 @@ module Game_Trade
     new_number = last_number + amount
     container[item_id] = [[new_number, 0].max, Configs::MAX_ITEMS].min
     container.delete(item_id) if container[item_id] == 0
-    $server.send_trade_item(self, @id, item_id, kind, amount)
-    $server.send_trade_item($server.clients[@trade_player_id], @id, item_id, kind, amount)
+    $network.send_trade_item(self, @id, item_id, kind, amount)
+    $network.send_trade_item($network.clients[@trade_player_id], @id, item_id, kind, amount)
   end
 
   def lose_trade_item(item, amount)
@@ -91,8 +91,8 @@ module Game_Trade
 
   def gain_trade_gold(amount)
     @trade_gold = [[@trade_gold + amount, 0].max, Configs::MAX_GOLD].min
-    $server.send_trade_gold(self, @id, amount)
-    $server.send_trade_gold($server.clients[@trade_player_id], @id, amount)
+    $network.send_trade_gold(self, @id, amount)
+    $network.send_trade_gold($network.clients[@trade_player_id], @id, amount)
   end
 
   def finish_trade
@@ -100,56 +100,56 @@ module Game_Trade
     return unless in_trade?
     @trade_items.each do |item_id, amount|
       item = $data_items[item_id]
-      unless $server.clients[@trade_player_id].full_inventory?(item)
-        amount = [amount, Configs::MAX_ITEMS - $server.clients[@trade_player_id].item_number(item)].min
+      unless $network.clients[@trade_player_id].full_inventory?(item)
+        amount = [amount, Configs::MAX_ITEMS - $network.clients[@trade_player_id].item_number(item)].min
         lose_item(item, amount)
-        $server.clients[@trade_player_id].gain_item(item, amount)
+        $network.clients[@trade_player_id].gain_item(item, amount)
       end
     end
     @trade_weapons.each do |weapon_id, amount|
       weapon = $data_weapons[weapon_id]
-      unless $server.clients[@trade_player_id].full_inventory?(weapon)
-        amount = [amount, Configs::MAX_ITEMS - $server.clients[@trade_player_id].item_number(weapon)].min
+      unless $network.clients[@trade_player_id].full_inventory?(weapon)
+        amount = [amount, Configs::MAX_ITEMS - $network.clients[@trade_player_id].item_number(weapon)].min
         lose_item(weapon, amount)
-        $server.clients[@trade_player_id].gain_item(weapon, amount)
+        $network.clients[@trade_player_id].gain_item(weapon, amount)
       end
     end
     @trade_armors.each do |armor_id, amount|
       armor = $data_armors[armor_id]
-      unless $server.clients[@trade_player_id].full_inventory?(armor)
-        amount = [amount, Configs::MAX_ITEMS - $server.clients[@trade_player_id].item_number(armor)].min
+      unless $network.clients[@trade_player_id].full_inventory?(armor)
+        amount = [amount, Configs::MAX_ITEMS - $network.clients[@trade_player_id].item_number(armor)].min
         lose_item(armor, amount)
-        $server.clients[@trade_player_id].gain_item(armor, amount)
+        $network.clients[@trade_player_id].gain_item(armor, amount)
       end
     end
-    $server.clients[@trade_player_id].trade_items.each do |item_id, amount|
+    $network.clients[@trade_player_id].trade_items.each do |item_id, amount|
       item = $data_items[item_id]
       unless full_inventory?(item)
         amount = [amount, Configs::MAX_ITEMS - item_number(item)].min
         gain_item(item, amount)
-        $server.clients[@trade_player_id].lose_item(item, amount)
+        $network.clients[@trade_player_id].lose_item(item, amount)
       end
     end
-    $server.clients[@trade_player_id].trade_weapons.each do |weapon_id, amount|
+    $network.clients[@trade_player_id].trade_weapons.each do |weapon_id, amount|
       weapon = $data_weapons[weapon_id]
       unless full_inventory?(weapon)
         amount = [amount, Configs::MAX_ITEMS - item_number(weapon)].min
         gain_item(weapon, amount)
-        $server.clients[@trade_player_id].lose_item(weapon, amount)
+        $network.clients[@trade_player_id].lose_item(weapon, amount)
       end
     end
-    $server.clients[@trade_player_id].trade_armors.each do |armor_id, amount|
+    $network.clients[@trade_player_id].trade_armors.each do |armor_id, amount|
       armor = $data_armors[armor_id]
       unless full_inventory?(armor)
         amount = [amount, Configs::MAX_ITEMS - item_number(armor)].min
         gain_item(armor, amount)
-        $server.clients[@trade_player_id].lose_item(armor, amount)
+        $network.clients[@trade_player_id].lose_item(armor, amount)
       end
     end
-    gain_gold($server.clients[@trade_player_id].trade_gold - @trade_gold)
-    $server.clients[@trade_player_id].gain_gold(@trade_gold - $server.clients[@trade_player_id].trade_gold)
-    $server.alert_message(self, Enums::Alert::TRADE_FINISHED)
-    $server.alert_message($server.clients[@trade_player_id], Enums::Alert::TRADE_FINISHED)
+    gain_gold($network.clients[@trade_player_id].trade_gold - @trade_gold)
+    $network.clients[@trade_player_id].gain_gold(@trade_gold - $network.clients[@trade_player_id].trade_gold)
+    $network.alert_message(self, Enums::Alert::TRADE_FINISHED)
+    $network.alert_message($network.clients[@trade_player_id], Enums::Alert::TRADE_FINISHED)
     close_trade
   end
   

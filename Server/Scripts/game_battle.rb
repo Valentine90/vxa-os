@@ -22,8 +22,8 @@ module Game_Battler
   }
 
   def in_front?(target)
-    x = $server.maps[@map_id].round_x_with_direction(@x, @direction)
-    y = $server.maps[@map_id].round_y_with_direction(@y, @direction)
+    x = $network.maps[@map_id].round_x_with_direction(@x, @direction)
+    y = $network.maps[@map_id].round_y_with_direction(@y, @direction)
     target.pos?(x, y)
   end
 
@@ -39,7 +39,7 @@ module Game_Battler
   def get_target
     # Verifica se o ID do alvo é maior ou igual a 0 para impedir que
     #retorne o último elemento da matriz
-    @target.type == Enums::Target::ENEMY ? $server.maps[@map_id].events[@target.id] : @target.id >= 0 ? $server.clients[@target.id] : nil
+    @target.type == Enums::Target::ENEMY ? $network.maps[@map_id].events[@target.id] : @target.id >= 0 ? $network.clients[@target.id] : nil
   end
 
   def valid_target?(target)
@@ -136,9 +136,11 @@ module Game_Battler
       elsif item.animation_id > 0
         attacker_type = user.is_a?(Game_Client) ? 0 : 1
         character_type = self.is_a?(Game_Client) ? Enums::Target::PLAYER : Enums::Target::ENEMY
-        $server.send_animation(self, item.animation_id, user.id, attacker_type, ani_index, character_type)
+        $network.send_animation(self, item.animation_id, user.id, attacker_type, ani_index, character_type)
       end
-      item.effects.each { |effect| item_effect_apply(user, item, effect) }
+      # Se o dano do item/habilidade causou a morte do usuário, o efeito,
+      #que é executado após o dano, não será aplicado nele
+      item.effects.each { |effect| item_effect_apply(user, item, effect) } unless dead?
     end
   end
 
@@ -148,16 +150,12 @@ module Game_Battler
   end
 
   def item_effect_recover_hp(user, item, effect)
-    # Se o item/habilidade causou um dano que levou à morte do
-    #usuário e logo depos vai recuperar o HP dele
-    return if dead?
     value = (mhp * effect.value1 + effect.value2) * rec
     value *= user.pha if item.is_a?(RPG::Item)
     execute_hp_damage(value.to_i, false, user, item.animation_id, item.ani_index, true)
   end
 
   def item_effect_recover_mp(user, item, effect)
-    return if dead?
     value = (mmp * effect.value1 + effect.value2) * rec
     value *= user.pha if item.is_a?(RPG::Item)
     execute_mp_damage(value.to_i, false, user, item.animation_id, item.ani_index, true)
@@ -271,14 +269,16 @@ module Game_Battler
   end
 
   def map_passable?(x, y, d)
-    $server.maps[@map_id].valid?(x, y) && $server.maps[@map_id].passable?(x, y, d)
+    $network.maps[@map_id].valid?(x, y) && $network.maps[@map_id].passable?(x, y, d)
   end
 
   def clear_target_players(type, map_id = @map_id)
-    return if $server.maps[map_id].zero_players?
-    $server.clients.each do |client|
+    return if $network.maps[map_id].zero_players?
+    $network.clients.each do |client|
       next unless client&.in_game? && client.map_id == map_id
       next unless client.target.id == @id && client.target.type == type
+      # O change_target, em vez do clear_target, é utilizado, pois aquele
+      #chama o $network.send_target; enquanto o clear_target, não
       client.change_target(-1, Enums::Target::NONE)
     end
   end
@@ -295,16 +295,16 @@ class Game_Client < EventMachine::Connection
   def attack_normal
     return if restriction == 4
     @weapon_attack_time = Time.now + Configs::ATTACK_TIME
-    ani_index = $data_weapons[weapon_id].ani_index ? $data_weapons[weapon_id].ani_index : @character_index
-    $server.maps[@map_id].events.each_value do |event|
+    ani_index = $data_weapons[weapon_id].ani_index || @character_index
+    $network.maps[@map_id].events.each_value do |event|
       # Se é um evento, inimigo morto, ou inimigo vivo fora do alcance
       next if event.dead? || !in_front?(event)
       hit_enemy(event, $data_weapons[weapon_id].animation_id, ani_index, $data_skills[attack_skill_id])
       return
     end
-    return unless $server.maps[@map_id].pvp
-    return unless $server.maps[@map_id].total_players > 1
-    $server.clients.each do |client|
+    return unless $network.maps[@map_id].pvp
+    return unless $network.maps[@map_id].total_players > 1
+    $network.clients.each do |client|
       next if !client&.in_game? || client.map_id != @map_id || !in_front?(client) || client.admin? || protection_level?(client)
       hit_player(client, $data_weapons[weapon_id].animation_id, ani_index, $data_skills[attack_skill_id])
       break
@@ -321,10 +321,10 @@ class Game_Client < EventMachine::Connection
     lose_item($data_items[Configs::RANGE_WEAPONS[weapon_id][:item_id]], 1) if Configs::RANGE_WEAPONS[weapon_id][:item_id] > 0
     self.mp -= Configs::RANGE_WEAPONS[weapon_id][:mp_cost] if Configs::RANGE_WEAPONS[weapon_id][:mp_cost]
     x, y = max_passage(target)
-    $server.send_add_projectile(self, x, y, target, Enums::Projectile::WEAPON, weapon_id)
+    $network.send_add_projectile(self, x, y, target, Enums::Projectile::WEAPON, weapon_id)
     return if blocked_passage?(target, x, y)
-    ani_index = $data_weapons[weapon_id].ani_index ? $data_weapons[weapon_id].ani_index : @character_index
-    if @target.type == Enums::Target::PLAYER && valid_target?(target) && $server.maps[@map_id].pvp && !target.admin? && !protection_level?(target)
+    ani_index = $data_weapons[weapon_id].ani_index || @character_index
+    if @target.type == Enums::Target::PLAYER && valid_target?(target) && $network.maps[@map_id].pvp && !target.admin? && !protection_level?(target)
       hit_player(target, $data_weapons[weapon_id].animation_id, ani_index, $data_skills[attack_skill_id])
     elsif @target.type == Enums::Target::ENEMY && !target.dead?
       hit_enemy(target, $data_weapons[weapon_id].animation_id, ani_index, $data_skills[attack_skill_id])
@@ -377,27 +377,27 @@ class Game_Client < EventMachine::Connection
       return
     end
     x, y = max_passage(target)
-    $server.send_add_projectile(self, x, y, target, Enums::Projectile::SKILL, item.id) if item.is_a?(RPG::Skill) && Configs::RANGE_SKILLS.has_key?(item.id)
+    $network.send_add_projectile(self, x, y, target, Enums::Projectile::SKILL, item.id) if item.is_a?(RPG::Skill) && Configs::RANGE_SKILLS.has_key?(item.id)
     return if blocked_passage?(target, x, y)
     if @target.type == Enums::Target::PLAYER && valid_target?(target)
-      hit_player(target, item.animation_id, item.ani_index, item) if item.for_friend? || $server.maps[@map_id].pvp && !target.admin? && !protection_level?(target)
+      hit_player(target, item.animation_id, item.ani_index, item) if item.for_friend? || $network.maps[@map_id].pvp && !target.admin? && !protection_level?(target)
     elsif @target.type == Enums::Target::ENEMY
       hit_enemy(target, item.animation_id, item.ani_index, item)
     end
   end
 
   def item_attack_area(item)
-    $server.maps[@map_id].events.each_value do |event|
+    $network.maps[@map_id].events.each_value do |event|
       next if event.dead? || !in_range?(event, item.aoe)
       hit_enemy(event, 0, 8, item)
     end
-    if $server.maps[@map_id].pvp && $server.maps[@map_id].total_players > 1
-      $server.clients.each do |client|
+    if $network.maps[@map_id].pvp && $network.maps[@map_id].total_players > 1
+      $network.clients.each do |client|
         next if !client&.in_game? || client.map_id != @map_id || !in_range?(client, item.aoe) || client.admin? || protection_level?(client) || client == self
         hit_player(client, 0, 8, item)
       end
     end
-    $server.send_animation(self, item.animation_id, @id, 0, item.ani_index, Enums::Target::PLAYER)
+    $network.send_animation(self, item.animation_id, @id, 0, item.ani_index, Enums::Target::PLAYER)
   end
 
   def item_recover(item)
@@ -420,7 +420,7 @@ class Game_Client < EventMachine::Connection
   end
 
   def send_attack(hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, animation_id, not_show_missed)
-    $server.send_attack_player(@map_id, hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, @id, animation_id, not_show_missed)
+    $network.send_attack_player(@map_id, hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, @id, animation_id, not_show_missed)
   end
   
   def die
@@ -447,7 +447,7 @@ module Game_Enemy
     2 => :conditions_met_hp?,
     3 => :conditions_met_mp?,
     4 => :conditions_met_state?,
-    5 => :conditions_met_party_level?,
+    5 => :conditions_met_level?,
     6 => :conditions_met_switch?,
   }
 
@@ -462,7 +462,7 @@ module Game_Enemy
   def revive
     @hp = mhp
     @mp = mmp
-    $server.send_enemy_revive(self)
+    $network.send_enemy_revive(self)
     change_position unless @move_type == Enums::Move::FIXED
   end
 
@@ -478,44 +478,44 @@ module Game_Enemy
   end
 
   def treasure
-    if $server.clients[@target.id].in_party?
+    if $network.clients[@target.id].in_party?
       # Não converte em inteiro aqui, pois o resultado provisório ainda será multiplicado pelo bônus VIP
-      $server.clients[@target.id].party_share($data_enemies[@enemy_id].exp * EXP_BONUS, rand($data_enemies[@enemy_id].gold).to_i * GOLD_BONUS, @enemy_id)
+      $network.clients[@target.id].party_share($data_enemies[@enemy_id].exp * EXP_BONUS, rand($data_enemies[@enemy_id].gold).to_i * GOLD_BONUS, @enemy_id)
     else
       # Converte eventual resultado decimal do bônus de experiência em inteiro
-      $server.clients[@target.id].gain_exp(($data_enemies[@enemy_id].exp * EXP_BONUS * $server.clients[@target.id].vip_exp_bonus).to_i)
+      $network.clients[@target.id].gain_exp(($data_enemies[@enemy_id].exp * EXP_BONUS * $network.clients[@target.id].vip_exp_bonus).to_i)
       # Amount será um número inteiro, ainda que o ouro seja 0 e em razão
       #disso o rand retorne um valor decimal
-      $server.clients[@target.id].gain_gold((rand($data_enemies[@enemy_id].gold).to_i * GOLD_BONUS * $server.clients[@target.id].gold_rate * $server.clients[@target.id].vip_gold_bonus).to_i, false, true)
-      $server.clients[@target.id].add_kills_count(@enemy_id)
+      $network.clients[@target.id].gain_gold((rand($data_enemies[@enemy_id].gold).to_i * GOLD_BONUS * $network.clients[@target.id].gold_rate * $network.clients[@target.id].vip_gold_bonus).to_i, false, true)
+      $network.clients[@target.id].add_kills_count(@enemy_id)
     end
     drop_items
   end
 
   def drop_items
     $data_enemies[@enemy_id].drop_items.each do |drop|
-      next if drop.kind == 0 || rand * drop.denominator > (DROP_BONUS + $server.clients[@target.id].drop_item_rate + $server.clients[@target.id].vip_drop_bonus - 2)
-      break if $server.maps[@map_id].full_drops?
-      $server.maps[@map_id].add_drop(drop.data_id, drop.kind, 1, @x, @y, $server.clients[@target.id].name, $server.clients[@target.id].party_id)
+      next if drop.kind == 0 || rand * drop.denominator > (DROP_BONUS + $network.clients[@target.id].drop_item_rate + $network.clients[@target.id].vip_drop_bonus - 2)
+      break if $network.maps[@map_id].full_drops?
+      $network.maps[@map_id].add_drop(drop.data_id, drop.kind, 1, @x, @y, $network.clients[@target.id].name, $network.clients[@target.id].party_id)
     end 
   end
 
   def disable
-    $server.clients[@target.id].change_variable($data_enemies[@enemy_id].disable_variable_id, $server.clients[@target.id].variables[$data_enemies[@enemy_id].disable_variable_id] + 1) if $data_enemies[@enemy_id].disable_variable_id > 0
-    if $data_enemies[@enemy_id].disable_switch_id >= Configs::MAX_PLAYER_SWITCHES
-      $server.change_global_switch($data_enemies[@enemy_id].disable_switch_id, !$server.switches[$data_enemies[@enemy_id].disable_switch_id - Configs::MAX_PLAYER_SWITCHES])
+    $network.clients[@target.id].variables[$data_enemies[@enemy_id].disable_variable_id] += 1 if $data_enemies[@enemy_id].disable_variable_id > 0
+    if $data_enemies[@enemy_id].disable_switch_id > Configs::MAX_PLAYER_SWITCHES
+      $network.switches[$data_enemies[@enemy_id].disable_switch_id] = !$network.switches[$data_enemies[@enemy_id].disable_switch_id]
       # Possibilita que o inimigo reapareça ao ser ativado novamente
-      $server.send_enemy_revive(self)
+      $network.send_enemy_revive(self)
     elsif $data_enemies[@enemy_id].disable_switch_id > 0
-      $server.clients[@target.id].change_switch($data_enemies[@enemy_id].disable_switch_id, !$server.clients[@target.id].switches[$data_enemies[@enemy_id].disable_switch_id])
+      $network.clients[@target.id].switches[$data_enemies[@enemy_id].disable_switch_id] = !$network.clients[@target.id].switches[$data_enemies[@enemy_id].disable_switch_id]
     end
   end
 
   def change_position
-    $server.maps[@map_id].revive_regions[@region_id - 1].size.times do
-      region_id = rand($server.maps[@map_id].revive_regions[@region_id - 1].size)
-      x = $server.maps[@map_id].revive_regions[@region_id - 1][region_id].x
-      y = $server.maps[@map_id].revive_regions[@region_id - 1][region_id].y
+    $network.maps[@map_id].revive_regions[@region_id - 1].size.times do
+      region_id = rand($network.maps[@map_id].revive_regions[@region_id - 1].size)
+      x = $network.maps[@map_id].revive_regions[@region_id - 1][region_id].x
+      y = $network.maps[@map_id].revive_regions[@region_id - 1][region_id].y
       if passable?(x, y, 0)
         moveto(x, y)
         break
@@ -559,17 +559,17 @@ module Game_Enemy
   end
 
   def conditions_met_level?(param1, param2)
-    $server.clients[@target.id].level >= param1
+    $network.clients[@target.id] && valid_target?($network.clients[@target.id]) && $network.clients[@target.id].level >= param1
   end
 
   def conditions_met_switch?(param1, param2)
-    $server.clients[@target.id].switches[param1]
+    $network.clients[@target.id] && valid_target?($network.clients[@target.id]) && $network.clients[@target.id].switches[param1]
   end
 
   def attack_normal
-    $server.clients.each do |client|
+    $network.clients.each do |client|
       next if !client&.in_game? || client.map_id != @map_id || !in_front?(client)
-      ani_index = $data_enemies[@enemy_id].ani_index ? $data_enemies[@enemy_id].ani_index : @character_index
+      ani_index = $data_enemies[@enemy_id].ani_index || @character_index
       client.item_apply(self, $data_skills[attack_skill_id], $data_skills[attack_skill_id].animation_id, ani_index)
       break
     end
@@ -595,7 +595,7 @@ module Game_Enemy
     return if !target || !valid_target?(target) || !in_range?(target, item.range)
     x, y = max_passage(target)
     unless blocked_passage?(target, x, y)
-      $server.send_add_projectile(self, x, y, target, Enums::Projectile::SKILL, item.id) if Configs::RANGE_SKILLS.has_key?(item.id)
+      $network.send_add_projectile(self, x, y, target, Enums::Projectile::SKILL, item.id) if Configs::RANGE_SKILLS.has_key?(item.id)
       target.item_apply(self, item, item.animation_id, item.ani_index)
       self.mp -= item.mp_cost
     end
@@ -603,7 +603,7 @@ module Game_Enemy
 
   def item_attack_area(item)
     used = false
-    $server.clients.each do |client|
+    $network.clients.each do |client|
       if client&.in_game? && client.map_id == @map_id && in_range?(client, item.aoe)
         client.item_apply(self, item, 0, 8)
         used = true
@@ -611,7 +611,7 @@ module Game_Enemy
     end
     if used
       self.mp -= item.mp_cost
-      $server.send_animation(self, item.animation_id, @id, 1, item.ani_index, Enums::Target::ENEMY)
+      $network.send_animation(self, item.animation_id, @id, 1, item.ani_index, Enums::Target::ENEMY)
     end
   end
 
@@ -621,7 +621,7 @@ module Game_Enemy
   end
 
   def send_attack(hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, animation_id, not_show_missed)
-    $server.send_attack_enemy(@map_id, hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, @id, animation_id)
+    $network.send_attack_enemy(@map_id, hp_damage, mp_damage, critical, attacker_id, attacker_type, ani_index, @id, animation_id)
   end
 
 end

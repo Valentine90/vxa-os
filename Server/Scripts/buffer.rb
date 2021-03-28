@@ -7,7 +7,7 @@
 #  Autor: Valentine
 #==============================================================================
 
-class Binary_Writer
+class Buffer_Writer
 
   def initialize
     @buffer = []
@@ -49,7 +49,7 @@ class Binary_Writer
   end
 
   def to_s
-    @buffer.pack(@pack)
+    ([@size] + @buffer).pack("s#{@pack}")
   end
 
   private
@@ -63,9 +63,9 @@ class Binary_Writer
 end
 
 #==============================================================================
-# ** Binary_Reader
+# ** Buffer_Reader
 #==============================================================================
-class Binary_Reader
+class Buffer_Reader
 
   def initialize(str)
     @bytes = str.bytes
@@ -108,17 +108,6 @@ class Binary_Reader
 
   def read(n, format)
     @bytes.shift(n).pack('C*').unpack(format)[0]
-  end
-
-end
-
-#==============================================================================
-# ** Buffer_Writer
-#==============================================================================
-class Buffer_Writer < Binary_Writer
-
-  def to_s
-    ([@size] + @buffer).pack("s#{@pack}")
   end
 
 end

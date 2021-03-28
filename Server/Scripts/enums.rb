@@ -34,12 +34,12 @@ module Enums
 	)
 
 	# Escopos dos itens
-	module Item
-		SCOPE_ENEMY              = 1
-		SCOPE_ALL_ALLIES         = 8
-		SCOPE_ALLIES_KNOCKED_OUT = 10
-		SCOPE_USER               = 11
-	end
+	Item = enum %w(
+		SCOPE_ENEMY               1
+		SCOPE_ALL_ALLIES          8
+		SCOPE_ALLIES_KNOCKED_OUT  10
+		SCOPE_USER                11
+	)
 
 	# Movimentos dos eventos
 	Move = enum %w(

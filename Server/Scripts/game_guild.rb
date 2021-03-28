@@ -9,9 +9,9 @@
 module Game_Guild
 	
   def open_guild(client)
-		online_members = @guilds[client.guild].members.select { |name| find_player(name) }
-		offline_members = @guilds[client.guild].members - online_members
-		@guilds[client.guild].members = online_members + offline_members
+		online_members = @guilds[client.guild_name].members.select { |name| find_player(name) }
+		offline_members = @guilds[client.guild_name].members - online_members
+		@guilds[client.guild_name].members = online_members + offline_members
 		send_open_guild(client, online_members.size)
   end
 
@@ -23,7 +23,7 @@ module Game_Guild
 		end
 		# Impede que o nome da guilda seja alterado se, posteriormente,
 		#o líder passar o cargo para outro membro e sair dela
-		client.guild = name.clone
+		client.guild_name = name.clone
 		@guilds[name] = Guild.new
 		# Impede que o nome do líder seja alterado
 		#quando @name dele ficar vazia no leave_game
@@ -31,7 +31,7 @@ module Game_Guild
 		@guilds[name].flag = flag
 		@guilds[name].members = [@guilds[name].leader]
 		@guilds[name].notice = ''
-		save_guild(name)
+		Database.create_guild(name)
 		send_guild_name(client)
 		player_message(client, sprintf(NewGuild, name), Configs::SUCCESS_COLOR)
 		client.creating_guild = false
@@ -39,21 +39,21 @@ module Game_Guild
   end
 
   def change_guild_leader(client, name)
-		member = find_guild_member(@guilds[client.guild], name)
-		if member && @guilds[client.guild].leader != member
-			@guilds[client.guild].leader = member
-			guild_message(client, "#{member} #{ChangeLeader}", Configs::GUILD_COLOR)
-			save_guild(client.guild)
-			send_guild_leader(client)
-		else
-			$server.alert_message(client, Enums::Alert::INVALID_NAME)
+		member = find_guild_member(@guilds[client.guild_name], name)
+		if !member || @guilds[client.guild_name].leader == member
+			$network.alert_message(client, Enums::Alert::INVALID_NAME)
+			return
 		end
+		@guilds[client.guild_name].leader = member
+		guild_message(client, "#{member} #{ChangeLeader}", Configs::GUILD_COLOR)
+		Database.save_guild(@guilds[client.guild_name])
+		send_guild_leader(client)
 	end
 	
 	def change_guild_notice(client, notice)
-		@guilds[client.guild].notice = notice
+		@guilds[client.guild_name].notice = notice
 		guild_message(client, "#{ChangeNotice} #{notice}", Configs::GUILD_COLOR)
-		save_guild(client.guild)
+		Database.save_guild(@guilds[client.guild_name])
 		send_guild_notice(client)
 	end
 
@@ -62,8 +62,8 @@ module Game_Guild
     if player
 			player.leave_guild
     else
-      @guilds[client.guild].members.delete(member_name)
-      save_guild(client.guild)
+			@guilds[client.guild_name].members.delete(member_name)
+			Database.remove_guild_member(member_name)
     end
     send_remove_guild_member(client, member_name)
   end
@@ -71,14 +71,13 @@ module Game_Guild
   def remove_guild(guild_name)
 		message = sprintf(RemoveGuild, guild_name)
 		@clients.each do |player|
-			if player&.in_game? && player.guild == guild_name
-				player.guild.clear
-				send_guild_name(player)
-				player_message(player, message, Configs::ERROR_COLOR)
-			end
+			next unless player&.in_game? && player.guild_name == guild_name
+			player.guild_name.clear
+			send_guild_name(player)
+			player_message(player, message, Configs::ERROR_COLOR)
 		end
+		Database.remove_guild(@guilds[guild_name])
 		@guilds.delete(guild_name)
-    File.delete("Data/Guilds/#{guild_name}.bin")
   end
 
 end

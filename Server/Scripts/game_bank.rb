@@ -8,7 +8,7 @@
 
 module Game_Bank
 
-  attr_accessor :bank_items, :bank_weapons, :bank_armors, :bank_gold
+  attr_accessor :bank_items, :bank_weapons, :bank_armors, :bank_gold, :bank_id_db
 
   def init_bank
     @bank_items = {}
@@ -19,13 +19,13 @@ module Game_Bank
 
   def open_bank
     return if in_trade? || in_shop? || in_bank?
-    $server.send_open_bank(self)
+    $network.send_open_bank(self)
     @in_bank = true
   end
 
   def close_bank
     return unless in_bank?
-    $server.send_close_window(self)
+    $network.send_close_window(self)
     @in_bank = false
     @event_interpreter.fiber.resume
   end
@@ -56,12 +56,12 @@ module Game_Bank
     new_number = last_number + amount
     container[item_id] = [[new_number, 0].max, Configs::MAX_ITEMS].min
     container.delete(item_id) if container[item_id] == 0
-    $server.send_bank_item(self, item_id, kind, amount)
+    $network.send_bank_item(self, item_id, kind, amount)
   end
 
   def gain_bank_gold(amount)
     @bank_gold = [[@bank_gold + amount, 0].max, Configs::MAX_GOLD].min
-    $server.send_bank_gold(self, amount)
+    $network.send_bank_gold(self, amount)
   end
 
 end

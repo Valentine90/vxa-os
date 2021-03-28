@@ -1,16 +1,16 @@
 #==============================================================================
-# ** Server
+# ** Network
 #------------------------------------------------------------------------------
 #  Esta classe lida com a rede.
 #------------------------------------------------------------------------------
 #  Autor: Valentine
 #==============================================================================
 
-class Server
+class Network
 	
 	include Handle_Data, Send_Data, Game_General, Game_Data, Game_Guild
 	
-	attr_reader   :clients, :parties, :party_ids_available, :maps, :switches, :guilds
+	attr_reader   :clients, :parties, :party_ids_available, :maps, :switches, :guilds, :log, :ban_list
 
 	def initialize
 		puts('Iniciando servidor...')
@@ -31,7 +31,7 @@ class Server
 		$data_armors = []
 		$data_tilesets = []
 		$data_common_events = []
-		@switches = Array.new(100, false)
+		@switches = Game_GlobalSwitches.new
 		@log = Logger.new
 		@maps = {}
 		@blocked_ips = {}

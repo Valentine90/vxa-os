@@ -20,8 +20,8 @@ module Send_Data
 		@parties[party_id].each { |member| member.send_data(data) }
 	end
 
-	def send_data_to_guild(guild, data)
-		@clients.each { |client| client.send_data(data) if client&.in_game? && client.guild == guild }
+	def send_data_to_guild(guild_name, data)
+		@clients.each { |client| client.send_data(data) if client&.in_game? && client.guild_name == guild_name }
 	end
 
 	def send_login(client)
@@ -103,7 +103,7 @@ module Send_Data
 		buffer.write_int(client.mp)
 		buffer.write_int(client.exp)
 		buffer.write_short(client.points)
-		buffer.write_string(client.guild)
+		buffer.write_string(client.guild_name)
 		buffer.write_int(client.gold)
 		buffer.write_byte(client.actor.items.size)
 		client.actor.items.each do |item_id, amount|
@@ -133,10 +133,10 @@ module Send_Data
 			buffer.write_byte(hotbar.type)
 			buffer.write_short(hotbar.item_id)
 		end
-		client.switches.each { |switch| buffer.write_boolean(switch) }
-		client.variables.each { |variable| buffer.write_short(variable) }
-		buffer.write_short(client.self_switches.size)
-		client.self_switches.each do |key, value|
+		client.switches.data.each { |switch| buffer.write_boolean(switch) }
+		client.variables.data.each { |variable| buffer.write_short(variable) }
+		buffer.write_short(client.self_switches.data.size)
+		client.self_switches.data.each do |key, value|
 			buffer.write_short(key[0])
 			buffer.write_short(key[1])
 			buffer.write_string(key[2])
@@ -171,7 +171,7 @@ module Send_Data
 		buffer.write_int(client.hp)
 		# Envia o nível do jogador que será calculado a partir da experiência
 		buffer.write_int(client.exp)
-		buffer.write_string(client.guild)
+		buffer.write_string(client.guild_name)
 		buffer.write_short(client.x)
 		buffer.write_short(client.y)
 		buffer.write_byte(client.direction)
@@ -194,7 +194,7 @@ module Send_Data
 			buffer.write_int(client.param_base[Enums::Param::MAXHP])
 			buffer.write_int(client.hp)
 			buffer.write_int(client.exp)
-			buffer.write_string(client.guild)
+			buffer.write_string(client.guild_name)
 			buffer.write_short(client.x)
 			buffer.write_short(client.y)
 			buffer.write_byte(client.direction)
@@ -260,7 +260,7 @@ module Send_Data
 		buffer.write_byte(Enums::Packet::CHAT_MSG)
 		buffer.write_byte(color_id)
 		buffer.write_string(message)
-		send_data_to_guild(client.guild, buffer.to_s)
+		send_data_to_guild(client.guild_name, buffer.to_s)
 	end
 
 	def private_message(client, message, name)
@@ -627,33 +627,33 @@ module Send_Data
 	def send_open_guild(client, online_members_size)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::OPEN_GUILD)
-		buffer.write_string(@guilds[client.guild].leader)
-		buffer.write_string(@guilds[client.guild].notice)
-		@guilds[client.guild].flag.each { |color_id| buffer.write_byte(color_id) }
-		buffer.write_byte(@guilds[client.guild].members.size)
+		buffer.write_string(@guilds[client.guild_name].leader)
+		buffer.write_string(@guilds[client.guild_name].notice)
+		@guilds[client.guild_name].flag.each { |color_id| buffer.write_byte(color_id) }
+		buffer.write_byte(@guilds[client.guild_name].members.size)
 		buffer.write_byte(online_members_size)
-		@guilds[client.guild].members.each { |name| buffer.write_string(name) }
+		@guilds[client.guild_name].members.each { |name| buffer.write_string(name) }
 		client.send_data(buffer.to_s)
 	end
 
 	def send_guild_leader(client)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::GUILD_LEADER)
-		buffer.write_string(@guilds[client.guild].leader)
+		buffer.write_string(@guilds[client.guild_name].leader)
 		client.send_data(buffer.to_s)
 	end
 
 	def send_guild_notice(client)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::GUILD_NOTICE)
-		buffer.write_string(@guilds[client.guild].notice)
+		buffer.write_string(@guilds[client.guild_name].notice)
 		client.send_data(buffer.to_s)
 	end
 
 	def send_guild_name(client)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::GUILD_NAME)
-		buffer.write_string(client.guild)
+		buffer.write_string(client.guild_name)
 		buffer.write_short(client.id)
 		send_data_to_map(client.map_id, buffer.to_s)
 	end
@@ -776,7 +776,7 @@ module Send_Data
 		buffer.write_byte(Enums::Packet::REQUEST)
 		buffer.write_byte(type)
 		buffer.write_string(player.name)
-		buffer.write_string(player.guild)
+		buffer.write_string(player.guild_name)
 		client.send_data(buffer.to_s)
 	end
 
@@ -822,7 +822,7 @@ module Send_Data
 	def send_vip_days(client)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::VIP_DAYS)
-		buffer.write_time(client.vip_time)
+		buffer.write_time(client.vip_time + client.added_vip_time)
 		client.send_data(buffer.to_s)
 	end
 
@@ -859,7 +859,7 @@ module Send_Data
 	def send_global_switches(client)
 		buffer = Buffer_Writer.new
 		buffer.write_byte(Enums::Packet::NET_SWITCHES)
-		@switches.each { |switch| buffer.write_boolean(switch) }
+		100.times { |switch_id| buffer.write_boolean(@switches[switch_id + Configs::MAX_PLAYER_SWITCHES + 1]) }
 		client.send_data(buffer.to_s)
 	end
 	

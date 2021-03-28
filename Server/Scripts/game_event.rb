@@ -17,15 +17,18 @@ class Game_Event
 	attr_reader   :mp
 	attr_reader   :target
 	attr_reader   :tile_id
+	attr_reader   :map_id
+	attr_reader   :x
+	attr_reader   :y
 	attr_reader   :direction
 	attr_writer   :parallel_process_waiting
-	attr_accessor :x
-	attr_accessor :y
-	attr_accessor :map_id
 	
-	def initialize(id, pages)
+	def initialize(id, event, map_id)
 		@id = id
-		@pages = pages
+		@map_id = map_id
+		@x = event.x
+		@y = event.y
+		@pages = event.pages
 		@target = Target.new
 		@move_succeed = true
 		@move_route_forcing = false
@@ -174,10 +177,10 @@ class Game_Event
 	def conditions_met?(client, page)
 		c = page.condition
 		if c.switch1_valid
-			return false unless client.switches[c.switch1_id] || $server.switches[c.switch1_id - Configs::MAX_PLAYER_SWITCHES] && c.switch1_id >= Configs::MAX_PLAYER_SWITCHES
+			return false unless client.switches[c.switch1_id] || $network.switches[c.switch1_id] && c.switch1_id > Configs::MAX_PLAYER_SWITCHES
 		end
 		if c.switch2_valid
-			return false unless client.switches[c.switch2_id] || $server.switches[c.switch2_id - Configs::MAX_PLAYER_SWITCHES] && c.switch2_id >= Configs::MAX_PLAYER_SWITCHES
+			return false unless client.switches[c.switch2_id] || $network.switches[c.switch2_id] && c.switch2_id > Configs::MAX_PLAYER_SWITCHES
 		end
 		if c.variable_valid
 			return false if client.variables[c.variable_id] < c.variable_value
@@ -199,17 +202,17 @@ class Game_Event
 	def global_conditions_met?(page)
 		c = page.condition
 		if c.switch1_valid
-			return false unless $server.switches[c.switch1_id - Configs::MAX_PLAYER_SWITCHES] && c.switch1_id >= Configs::MAX_PLAYER_SWITCHES
+			return false unless $network.switches[c.switch1_id] && c.switch1_id > Configs::MAX_PLAYER_SWITCHES
 		end
 		if c.switch2_valid
-			return false unless $server.switches[c.switch2_id - Configs::MAX_PLAYER_SWITCHES] && c.switch2_id >= Configs::MAX_PLAYER_SWITCHES
+			return false unless $network.switches[c.switch2_id] && c.switch2_id > Configs::MAX_PLAYER_SWITCHES
 		end
 		return true
 	end
 
 	def check_event_trigger_touch(x, y)
 		return unless @trigger == 2
-		$server.clients.each do |client|
+		$network.clients.each do |client|
 			next unless client&.in_game? || client.map_id == @map_id || client.pos?(x, y) || normal_priority? || !client.event_interpreter.running?
 			start(client)
 			break
@@ -235,7 +238,7 @@ class Game_Event
 	end
 	
 	def select_target
-		return if $server.maps[@map_id].zero_players?
+		return if $network.maps[@map_id].zero_players?
 		target = get_target
 		target = find_target unless near_the_player?(target)
 		if target
@@ -246,7 +249,7 @@ class Game_Event
 	end
 
 	def move_type_toward_player
-		if $server.maps[@map_id].zero_players?
+		if $network.maps[@map_id].zero_players?
 			# Se o alvo, único jogador do mapa, saiu do jogo ou do mapa
 			clear_target
 			move_random
@@ -273,12 +276,12 @@ class Game_Event
 	end
 
 	def send_movement
-		$server.send_event_movement(self)
+		$network.send_event_movement(self)
 	end
 
 	def find_target
-		target = $server.clients.find { |client| client&.in_game? && client.map_id == @map_id && in_range?(client, @sight) }
-		$server.send_enemy_balloon(target, @id, ENEMY_ATTACK_BALLOON_ID) if target && ENEMY_ATTACK_BALLOON_ID > 0
+		target = $network.clients.find { |client| client&.in_game? && client.map_id == @map_id && in_range?(client, @sight) }
+		$network.send_enemy_balloon(target, @id, ENEMY_ATTACK_BALLOON_ID) if target && ENEMY_ATTACK_BALLOON_ID > 0
 		target
 	end
 
