@@ -17,6 +17,7 @@
   - [x] Common server events
   - [x] Configurable resolution
   - [x] Global switches
+  - [x] SQL and MySQL databases;
   - [x] EventMachine network library
   - [x] Friend
   - [x] Quest
@@ -33,6 +34,15 @@
 ## Future functions
   - [ ] Move Event event command
   - [ ] Customized movement of events
+  - [ ] 8 directions
+  - [ ] Finalize states, buffs and debuffs with timer
+  - [ ] Site
+  - [ ] New account editor
+  - [ ] Day and night
+  - [ ] Climate
+  - [ ] Windows by image
+  - [ ] Multiple languages
+  - [ ] Cooldown specific to each skill and item
   
 
 
@@ -49,6 +59,7 @@ To check the project screenshots, [click here]().
 - [Lotus Online](https://www.aldeiarpg.com/t14134-lotus-online)
 - [Darknessfall](https://www.aldeiarpg.com/t14505-darknessfall-online)
 - [Mystical Hunter](https://www.aldeiarpg.com/t14610-mystical-hunter-online)
+- [Hogwarts 2D](https://mmodev.zone/threads/hogwarts-online-2d.173/)
 
 <br>
 
