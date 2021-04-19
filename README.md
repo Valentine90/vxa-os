@@ -47,11 +47,8 @@
 
 
 ## Screenshots
-<br>
-
-To check the project screenshots, [click here]().
-
-<br>
+![alt text](https://i.imgur.com/ayYA007.jpg)
+![alt text](https://i.imgur.com/uwnCkxX.png)
 
 ## MMORPGs using VXA-OS
 
