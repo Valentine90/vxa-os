@@ -4,7 +4,6 @@
 
 ![Version](https://img.shields.io/badge/Version-%202.1.4-red?style=for-the-badge&logo=appveyo)
 ![Rpg Maker VX ACE](https://img.shields.io/badge/RPG%20MAKER-VX%20ACE-red?style=for-the-badge&logo=appveyo)
-![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
 [![Discord Chat](https://img.shields.io/discord/429043233587462144?style=for-the-badge&logo=appveyo)](https://discord.gg/)
 [![PayPal](https://img.shields.io/badge/paypal-donate-yellow?style=for-the-badge&logo=appveyo)](https://www.paypal.com/donate/?hosted_button_id=GWF4ERBTWALKA)  
 
