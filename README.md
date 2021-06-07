@@ -47,8 +47,8 @@
 
 ## Useful links
 
-- [Official forum](https://www.aldeiarpg.com/t13748-vxa-os-crie-seu-mmo-com-rpg-maker)
-- [Additional scripts](https://www.aldeiarpg.com/f64-scripts)
+- [Official forum](https://mmodev.zone/threads/vxa-os-crie-seu-mmo-com-rpg-maker.27/)
+- [Tutorials](https://mmodev.zone/forums/tutoriais.68/)
 
 
 
