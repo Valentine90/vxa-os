@@ -45,8 +45,6 @@
 - [Mystical Hunter](https://www.aldeiarpg.com/t14610-mystical-hunter-online)
 - [Hogwarts 2D](https://mmodev.zone/threads/hogwarts-online-2d.173/)
 
-<br>
-
 ## Useful links
 
 - [Official forum](https://www.aldeiarpg.com/t13748-vxa-os-crie-seu-mmo-com-rpg-maker)
