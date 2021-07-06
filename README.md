@@ -10,27 +10,27 @@
 <p>VXA-OS is the most complete and secure free tool for creating 2D online games from RPG Maker. It has been in active development since October 2017.</p>
 
 ## Features
-  - [x] 5 types of chat
-  - [x] 9 types of equipment
-  - [x] 13 administrator commands
-  - [x] Global real-time battle system on the server
-  - [x] 99% of event commands on the server
-  - [x] Common server events
-  - [x] Configurable resolution
-  - [x] Global switches
-  - [x] SQL and MySQL databases
-  - [x] EventMachine network library
-  - [x] Friend
-  - [x] Quest
-  - [x] VIP system
-  - [x] Account Editor
-  - [x] Teleport
-  - [x] Paperdolls
-  - [x] Guild
-  - [x] Party
-  - [x] Minimap
-  - [x] PvP
-  - [x] Bank
+  - 5 types of chat
+  - 9 types of equipment
+  - 13 administrator commands
+  - Global real-time battle system on the server
+  - 99% of event commands on the server
+  - Common server events
+  - Configurable resolution
+  - Global switches
+  - SQL and MySQL databases
+  - EventMachine network library
+  - Friend
+  - Quest
+  - VIP system
+  - Account Editor
+  - Teleport
+  - Paperdolls
+  - Guild
+  - Party
+  - Minimap
+  - PvP
+  - Bank
 
   
 ## Screenshots
