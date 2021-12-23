@@ -17,6 +17,7 @@
   - Global switches
   - SQL and MySQL databases
   - EventMachine network library
+  - Website
   - Friend
   - Quest
   - VIP system
