@@ -367,8 +367,11 @@ class Game_Interpreter
       @comments.push(@list[@index].parameters[0])
     end
   end
+=end
   #--------------------------------------------------------------------------
   # * Condições
+  #  As condições e exceções deste script podem ser
+  # executadas nos eventos não globais
   #--------------------------------------------------------------------------
   def command_111
     result = false
@@ -471,11 +474,12 @@ class Game_Interpreter
     command_skip if !@branch[@indent]
   end
   #--------------------------------------------------------------------------
-  # * Excessão
+  # * Exceção
   #--------------------------------------------------------------------------
   def command_411
     command_skip if @branch[@indent]
   end
+=begin
   #--------------------------------------------------------------------------
   # * Iniciar ciclo
   #--------------------------------------------------------------------------
@@ -943,7 +947,8 @@ class Game_Interpreter
   #--------------------------------------------------------------------------
   def command_225
     screen.start_shake(@params[0], @params[1], @params[2])
-    wait(@params[1]) if @params[2]
+    # VXA-OS
+    wait(@params[2]) if @params[3]
   end
 =begin
   #--------------------------------------------------------------------------
@@ -1220,6 +1225,7 @@ class Game_Interpreter
       end
       actor.perform_collapse_effect if actor.dead? && !already_dead
     end
+    $game_party.clear_results
   end
   #--------------------------------------------------------------------------
   # * Curar tudo
@@ -1430,6 +1436,7 @@ class Game_Interpreter
     SceneManager.goto(Scene_Title)
     Fiber.yield
   end
+=end
   #--------------------------------------------------------------------------
   # * Chamar script
   #--------------------------------------------------------------------------
@@ -1439,7 +1446,8 @@ class Game_Interpreter
       @index += 1
       script += @list[@index].parameters[0] + "\n"
     end
-    eval(script)
+    # O sub, em vez de delete, evita que os caracteres
+    #[, N, G e ] sejam removidos do restante do texto
+    eval(script.sub('[NG]', ''))
   end
-=end
 end

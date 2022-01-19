@@ -8,6 +8,8 @@
 
 class Window_Shop < Window_ItemSelectable
   
+  attr_reader   :price
+  
   def initialize
     super(280, 165, 212, 212)
     self.visible = false
@@ -22,6 +24,9 @@ class Window_Shop < Window_ItemSelectable
   end
   
   def hide_window
+    # Não envia o send_close_window se pressionar Esc
+    #quando a loja não estiver aberta
+    return unless visible
     $network.send_close_window
   end
   

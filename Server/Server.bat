@@ -1,5 +1,5 @@
 @echo off
 Title Server
-ruby main.rb
+ruby Scripts/main.rb
 pause
 @echo on

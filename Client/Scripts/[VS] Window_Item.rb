@@ -6,12 +6,12 @@
 #  Autor: Valentine
 #==============================================================================
 
-class Window_Item < Window_ItemSelectable
+class Window_Item < Window_ItemSelectable#2
   
   def initialize
     # Quando a resolução é alterada, a coordenada x é
     #reajustada no adjust_windows_position da Scene_Map
-    super(adjust_x, adjust_y, 212, 212)
+    super(adjust_x, adjust_y, 212, 212)#'ItemWindow')
     self.visible = false
     self.windowskin = Cache.system('Window3')
     @dragable = false
@@ -58,7 +58,7 @@ class Window_Item < Window_ItemSelectable
     return unless index >= 0
     if $windows[:shop].visible
       $windows[:shop].sell_item
-    elsif $windows[:trade].visible
+    elsif $windows[:my_trade].visible
       $windows[:amount].show(Enums::Amount::ADD_TRADE_ITEM, item)
     elsif $windows[:bank].visible
       $windows[:amount].show(Enums::Amount::DEPOSIT_ITEM, item)
@@ -78,7 +78,7 @@ class Window_Item < Window_ItemSelectable
   def drop_item
     return unless Mouse.click?(:R)
     return unless index >= 0
-    return if $windows[:trade].visible
+    return if $windows[:my_trade].visible
     $windows[:amount].show(Enums::Amount::DROP_ITEM, item)
   end
   

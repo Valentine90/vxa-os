@@ -73,18 +73,18 @@ class Sprite2 < Sprite
     wth
   end
   
-  def convert_gold(value)
+  def format_number(value)
     value.to_s.reverse.scan(/...|..|./).join('.').reverse
   end
   
   def update
     super
+    return unless @dragable
     update_dragging
     $dragging_window = Mouse.press?(:L) ? in_area? && !$dragging_window ? self : $dragging_window : nil
   end
   
   def update_dragging
-    return unless @dragable
     return if $cursor.object
     if $dragging_window == self
       self.x = Mouse.x - @dif_x

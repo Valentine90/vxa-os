@@ -15,10 +15,12 @@ class Sprite_Character < Sprite_Base
     @message_duration = 0
     @damage_sprites = []
     @paperdoll_sprites = []
+    @paperdoll_oy = []
     @last_equips = []
     @name_sprite = nil
     @guild_sprite = nil
     @quest_sprite = nil
+    @tip_sprite = nil
     @hp_sprite = nil
     @message_sprite = nil
     @last_guild = nil
@@ -32,6 +34,7 @@ class Sprite_Character < Sprite_Base
     dispose_name
     dispose_guild_name
     dispose_quest_icon
+    dispose_tip
     dispose_hp_bar
     dispose_damage
     dispose_message
@@ -68,6 +71,13 @@ class Sprite_Character < Sprite_Base
     @quest_sprite.bitmap.dispose
     @quest_sprite.dispose
     @quest_sprite = nil
+  end
+  
+  def dispose_tip
+    return unless @tip_sprite
+    @tip_sprite.bitmap.dispose
+    @tip_sprite.dispose
+    @tip_sprite = nil
   end
   
   def dispose_hp_bar
@@ -107,6 +117,7 @@ class Sprite_Character < Sprite_Base
   def end_sprites
     end_animation
     end_balloon
+    dispose_tip
     dispose_damage
     dispose_message
     @balloon_duration = 0
@@ -148,7 +159,7 @@ class Sprite_Character < Sprite_Base
     else
       dispose_name
     end
-    if !@character.is_a?(Game_Event) && !@character.actor.guild.empty?
+    if !@character.is_a?(Game_Event) && !@character.actor.guild_name.empty?
       refresh_guild_name if guild_changed?
       @guild_sprite.x = x
       @guild_sprite.y = y - height
@@ -161,6 +172,14 @@ class Sprite_Character < Sprite_Base
       @quest_sprite.y = y - height
     else
       dispose_quest_icon
+    end
+    # Se a lista de comandos do evento não está vazia (empty)
+    if @character.is_a?(Game_Event) && @character.event.name.start_with?('$') && !@character.character_name.empty? && $game_player.in_front?(@character) && !@character.empty?
+      create_tip unless @tip_sprite
+      @tip_sprite.x = x
+      @tip_sprite.y = y - height
+    else
+      dispose_tip
     end
     if @character.boss?
       refresh_boss_hp_bar if hp_changed?
@@ -197,7 +216,7 @@ class Sprite_Character < Sprite_Base
   
   def guild_changed?
     return true unless @guild_sprite
-    return true unless @last_guild == @character.actor.guild
+    return true unless @last_guild == @character.actor.guild_name
     return false
   end
   
@@ -209,22 +228,24 @@ class Sprite_Character < Sprite_Base
   end
   
   def update_damage
-    @damage_sprites.each_with_index do |damage, i|
-      damage.duration -= 1
-      if damage.dir == Enums::Dir::UP
-        damage.sprite.x = x
-        damage.sprite.y = y - (height - damage.duration)
+    # downto evita erros ao remover elementos enquanto a
+    #matriz está sendo iterada
+    (@damage_sprites.size - 1).downto(0) do |i|
+      @damage_sprites[i].duration -= 1
+      if @damage_sprites[i].dir == Enums::Dir::UP
+        @damage_sprites[i].sprite.x = x
+        @damage_sprites[i].sprite.y = y - (height - @damage_sprites[i].duration)
       else
-        damage.sprite.x = damage.dir == Enums::Dir::RIGHT ? x + (20 - damage.duration) : x - (20 - damage.duration)
-        if damage.duration > 10
-          damage.sprite.y = y - (height - damage.duration * 2)
-        elsif damage.duration <= 10 && damage.duration > 0
-          damage.sprite.y = y + (height - damage.duration * 4)
+        @damage_sprites[i].sprite.x = @damage_sprites[i].dir == Enums::Dir::RIGHT ? x + (20 - @damage_sprites[i].duration) : x - (20 - @damage_sprites[i].duration)
+        if @damage_sprites[i].duration > 10
+          @damage_sprites[i].sprite.y = y - (height - @damage_sprites[i].duration * 2)
+        elsif @damage_sprites[i].duration <= 10 && @damage_sprites[i].duration > 0
+          @damage_sprites[i].sprite.y = y + (height - @damage_sprites[i].duration * 4)
         end
       end
-      if damage.duration == 0
-        damage.sprite.bitmap.dispose
-        damage.sprite.dispose
+      if @damage_sprites[i].duration == 0
+        @damage_sprites[i].sprite.bitmap.dispose
+        @damage_sprites[i].sprite.dispose
         @damage_sprites.delete_at(i)
       end
     end
@@ -305,24 +326,15 @@ class Sprite_Character < Sprite_Base
   end
   
   def order_equips
-    # 0 = Arma
-    # 1 = Escudo
-    # 2 = Capacete
-    # 3 = Armadura
-    # 4 = Acessório
-    # 5 = Amuleto
-    # 6 = Capa
-    # 7 = Luva
-    # 8 = Bota
     case @character.direction
-    when 2 # Frente
-      return [3, 5, 2, 7, 6, 8, 1, 0, 4]
-    when 4 # Esquerda
-      return [7, 0, 3, 5, 2, 6, 8, 1, 4]
-    when 6 # Direita
-      return [1, 3, 5, 2, 7, 6, 8, 0, 4]
-    when 8 # Costas
-      return [7, 1, 0, 3, 5, 2, 8, 6, 4]
+    when 2
+      return Configs::PAPERDOLL_DOWN_DIR
+    when 4
+      return Configs::PAPERDOLL_LEFT_DIR
+    when 6
+      return Configs::PAPERDOLL_RIGHT_DIR
+    when 8
+      return Configs::PAPERDOLL_UP_DIR
     end
   end
   
@@ -336,8 +348,15 @@ class Sprite_Character < Sprite_Base
         sy = (paperdoll_index / 4 * 4 + (@character.direction - 2) / 2) * @ch
         @paperdoll_sprites[slot_id].src_rect.set(sx, sy, @cw, @ch)
         @paperdoll_sprites[slot_id].x = x
-        @paperdoll_sprites[slot_id].y = y
-        @paperdoll_sprites[slot_id].z = z + index
+        # Como a ordem z (z-order) de todos os paperdolls
+        #é a mesma, a prioridade deles é definida pelo
+        #paperdoll que está mais abaixo em razão da soma:
+        #base y (y + altura) + índice da ordem do paperdoll.
+        #Já o oy original somado pelo índice coloca o
+        #paperdoll na posição que ele deveria ter ficado
+        #na tela se não fosse a alteração da coordenada y
+        @paperdoll_sprites[slot_id].y = y + index
+        @paperdoll_sprites[slot_id].oy = @paperdoll_oy[slot_id] + index
       else
         dispose_paperdoll(slot_id)
       end
@@ -360,11 +379,17 @@ class Sprite_Character < Sprite_Base
     end
     @paperdoll_sprites[slot_id].ox = cw / 2
     @paperdoll_sprites[slot_id].oy = ch
+    @paperdoll_oy[slot_id] = ch
   end
   
   def create_paperdoll(slot_id, bitmap)
     @paperdoll_sprites[slot_id] = Sprite.new(viewport)
     @paperdoll_sprites[slot_id].bitmap = Bitmap.new(bitmap.width, bitmap.height)
+    # A ordem z de todos os paperdolls é a mesma, e
+    #não z + index ou z + (0.1 * index), pra evitar que
+    #os paperdolls fiquem por cima dos jogadores e eventos,
+    #quando estes estiverem na frente do @character
+    @paperdoll_sprites[slot_id].z = z
   end
   
   def refresh_name
@@ -376,7 +401,8 @@ class Sprite_Character < Sprite_Base
   
   def create_name
     @name_sprite = Sprite2.new(viewport)
-    @name_sprite.bitmap = Bitmap.new(@name_sprite.text_width(@last_name.delete('$')) + 10, 18)
+    # Largura necessária para nomes grandes
+    @name_sprite.bitmap = Bitmap.new(@name_sprite.text_width(@last_name.delete('$')) + 18, 18)
     @name_sprite.ox = @name_sprite.bitmap.width / 2
     @name_sprite.oy = 19
     @name_sprite.z = z + 100
@@ -391,7 +417,7 @@ class Sprite_Character < Sprite_Base
   end
   
   def refresh_guild_name
-    @last_guild = @character.actor.guild
+    @last_guild = @character.actor.guild_name
     @guild_sprite ? @guild_sprite.bitmap.clear : create_guild_name
     @guild_sprite.bitmap.draw_text(@guild_sprite.bitmap.rect, "<#{@last_guild}>", 1)
   end
@@ -414,6 +440,19 @@ class Sprite_Character < Sprite_Base
     @quest_sprite.ox = 12
     @quest_sprite.oy = 40
     @quest_sprite.z = z + 100
+  end
+  
+  def create_tip
+    @tip_sprite = Sprite2.new(viewport)
+    # O sub, em vez de delete, evita que as consoantes
+    #trl da palavra Ctrl sejam removidas
+    tip = "#{Vocab::Press} #{Configs::ATTACK_KEY.to_s.sub('LETTER_', '').capitalize}"
+    @tip_sprite.bitmap = Bitmap.new(@tip_sprite.text_width(tip) + 18, Font.default_size + 2)
+    @tip_sprite.bitmap.fill_rect(@tip_sprite.bitmap.rect, Color.new(0, 0, 0, 100))
+    @tip_sprite.bitmap.draw_text(@tip_sprite.bitmap.rect, tip, 1)
+    @tip_sprite.ox = @tip_sprite.bitmap.width / 2
+    @tip_sprite.oy = 38
+    @tip_sprite.z = z + 100
   end
   
   def refresh_hp_bar
@@ -466,14 +505,16 @@ class Sprite_Character < Sprite_Base
     dispose_message
     b = Bitmap.new(1, 1)
     # Define a largura a partir da matriz com maior texto
-    width = message.collect { |s| b.text_size(s).width }.max
+    message_width = message.collect { |s| b.text_size(s).width }.max
     b.dispose
     @message_sprite = Sprite.new(viewport)
-    @message_sprite.bitmap = Bitmap.new(width + 18, message.size * 18)
+    @message_sprite.bitmap = Bitmap.new(message_width + 18, message.size * 18)
     @message_sprite.bitmap.fill_rect(@message_sprite.bitmap.rect, Color.new(0, 0, 0, 160))
     @message_sprite.bitmap.font.bold = true
     message.each_with_index do |text, i|
       @message_sprite.bitmap.draw_text(0, 18 * i, @message_sprite.bitmap.width, 18, text, 1)
+      #x = (@message_sprite.bitmap.width - @message_sprite.bitmap.text_size(text).width) / 2
+      #$windows[:chat].draw_emojis(@message_sprite.bitmap, x, i, text)
     end
     @message_sprite.ox = @message_sprite.width / 2
     @message_sprite.oy = message.size * 18 + height + 10

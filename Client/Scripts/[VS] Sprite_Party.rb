@@ -14,9 +14,9 @@ class Sprite_Party < Sprite2
     self.y = 121
     self.z = 50
     self.visible = false
-    @exit_icon = Icon.new(nil, 9, 0, Configs::LEAVE_PARTY_ICON) { $windows[:choice].show(Vocab::Ask, Enums::Choice::LEAVE_PARTY) }
+    @exit_icon = Icon.new(nil, 9, 0, Configs::LEAVE_PARTY_ICON, Vocab::game_end) { $windows[:choice].show(Vocab::Ask, Enums::Choice::LEAVE_PARTY) }
     @exit_icon.visible = false
-    @bitmap = Cache.system('Party')
+    @bitmap = Cache.system('PartyBase')
   end
   
   def refresh_icon_y

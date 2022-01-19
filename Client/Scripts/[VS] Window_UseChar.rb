@@ -8,6 +8,9 @@
 
 class Window_UseChar < Window_Base
   
+  CURSOR_WIDTH  = 98
+  CURSOR_HEIGHT = 98
+  
   def initialize
     # Quando a resolução é alterada, as coordenadas x e y
     #são reajustadas no adjust_windows_position da Scene_Map
@@ -45,7 +48,7 @@ class Window_UseChar < Window_Base
         draw_text(110 * actor_id + 8, 6, 98, line_height, Vocab::Empty, 1)
       end
     end
-    contents.blt(110 * $actor_id + 7, 26, bitmap, Rect.new(318, 0, 98, 98))
+    contents.blt(110 * $actor_id + 7, 26, bitmap, Rect.new(318, 0, CURSOR_WIDTH, CURSOR_HEIGHT))
     refresh_buttons
   end
   
@@ -66,6 +69,7 @@ class Window_UseChar < Window_Base
   end
   
   def create_actor
+    SceneManager.scene.change_background('Title3')
     $windows[:create_char].show($actor_id)
     $windows[:password].hide
     hide
@@ -133,7 +137,7 @@ class Window_UseChar < Window_Base
   def update_cursor
     return unless Mouse.click?(:L)
     Configs::MAX_ACTORS.times do |actor_id|
-      if in_area?(110 * actor_id + 20, 39, 98, 98)
+      if in_area?(110 * actor_id + 20, 39, CURSOR_WIDTH, CURSOR_HEIGHT)
         $actor_id = actor_id
         refresh
         break

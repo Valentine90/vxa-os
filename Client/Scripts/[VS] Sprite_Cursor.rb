@@ -6,16 +6,16 @@
 #  Autor: Valentine
 #==============================================================================
 
-class Sprite_Cursor
+class Sprite_Cursor < Sprite
   
   attr_reader   :object
   attr_reader   :type
   attr_accessor :sprite_index
   
   def initialize
-    @cursor_sprite = Sprite.new
-    @cursor_sprite.bitmap = Cache.system('Cursor')
-    @cursor_sprite.z = 999
+    super
+    self.bitmap = Cache.system('Cursor')
+    self.z = 999
     @type = Enums::Mouse::NONE
     @sprite_index = Enums::Cursor::NONE
     @item_sprite = nil
@@ -30,9 +30,9 @@ class Sprite_Cursor
     rect = Rect.new(@object.icon_index % 16 * 24, @object.icon_index / 16 * 24, 24, 24)
     @item_sprite.bitmap.blt(0, 0, bitmap, rect)
     # Define imediatamente as coordenadas x e y
-    @item_sprite.x = @cursor_sprite.x - 13
-    @item_sprite.y = @cursor_sprite.y - 13
-    @item_sprite.z = @cursor_sprite.z - 1
+    @item_sprite.x = self.x - 13
+    @item_sprite.y = self.y - 13
+    @item_sprite.z = self.z - 1
   end
   
   def dispose_item
@@ -52,12 +52,13 @@ class Sprite_Cursor
   end
   
   def update
-    @cursor_sprite.src_rect.set(@cursor_sprite.bitmap.width / 5 * @sprite_index, 0, @cursor_sprite.bitmap.width / 5, @cursor_sprite.bitmap.height)
-    @cursor_sprite.x = Mouse.x
-    @cursor_sprite.y = Mouse.y
+    super
+    self.src_rect.set(self.bitmap.width / 5 * @sprite_index, 0, self.bitmap.width / 5, self.bitmap.height)
+    self.x = Mouse.x
+    self.y = Mouse.y
     if @item_sprite
-      @item_sprite.x = @cursor_sprite.x - 13
-      @item_sprite.y = @cursor_sprite.y - 13
+      @item_sprite.x = self.x - 13
+      @item_sprite.y = self.y - 13
     end
     update_drag
   end

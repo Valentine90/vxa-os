@@ -1,0 +1,144 @@
+Downloads:
+BitVise 
+https://dl.bitvise.com/BvSshClient-Inst.exe
+
+PuttyGen 64 bits
+https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe
+
+PuttyGen 32 bits
+https://the.earth.li/~sgtatham/putty/latest/w32/pageant.exe
+
+============================================================
+**** Alterar usuário para root no console.
+
+sudo -i 
+============================================================
+**** Instalação Apache
+
+sudo apt update
+sudo apt install apache2
+ 
+sudo ufw app list
+ 
+sudo ufw allow in "Apache Full"
+
+VERIFICAR SE OCORREU TUDO CERTO: http://ip_do_seu_servidor
+============================================================
+ **** Instalação do PHP
+
+sudo apt install php libapache2-mod-php php-mysql
+
+ 
+sudo nano /etc/apache2/mods-enabled/dir.conf
+ 
+	DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+
+**** Para salvar a alteração:
+Ctrl + X 
+Y
+Enter
+ 
+sudo systemctl restart apache2
+ 
+sudo systemctl status apache2
+============================================================
+**** Instalação phpmyadmin
+
+sudo apt-get update
+sudo apt-get install mysql-server
+
+sudo apt install phpmyadmin php-mbstring php-gettext
+ 
+sudo phpenmod mbstring
+ 
+sudo systemctl restart apache2
+ 
+nano /etc/apache2/apache2.conf
+ 
+	Include /etc/phpmyadmin/apache.conf
+ 
+sudo service apache2 restart
+ 
+http://SEU_iP/phpmyadmin
+
+============================================================
+**** Correção da senha do phpmyadmin
+
+sudo service mysql stop
+ 
+sudo mkdir -p /var/run/mysqld
+ 
+sudo chown mysql:mysql /var/run/mysqld
+ 
+sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &
+ 
+mysql
+ 
+FLUSH PRIVILEGES;
+ 
+USE mysql;
+ 
+UPDATE user SET authentication_string=PASSWORD("SUA SENHA AQUI") WHERE User='root';
+ 
+UPDATE user SET plugin="mysql_native_password" WHERE User='root';
+ 
+quit
+ 
+sudo pkill mysqld
+ 
+sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking  &
+
+sudo service mysql start
+
+sudo chgrp -R www-data /var/www/html
+sudo gpasswd -a ubuntu www-data
+sudo chmod -R 777 /var/www/html
+
+sudo a2enmod rewrite
+
+sudo systemctl restart apache2
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+    <Directory /var/www/html>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+============================================================
+**** Instalação de dependencias do servidor VXAOS
+
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+
+sudo apt-get install ruby2.4 ruby2.4-dev
+
+ruby2.4 -v
+
+cd $HOME
+sudo apt-get update
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
+sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+
+sudo apt-get install libmariadb-dev
+
+sudo gem install bundler
+rbenv rehash
+
+sudo gem install --platform ruby eventmachine
+sudo gem install --platform ruby mysql2
+sudo gem install zlib
+sudo gem install sequel
+sudo gem install colorize
+
+
+
+**** OPCIONAL: Conversor de arquivos .rvdata2 to JSON ****
+sudo gem install jsonable
+
+

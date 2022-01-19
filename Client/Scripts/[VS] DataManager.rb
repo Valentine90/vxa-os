@@ -12,6 +12,12 @@ module DataManager
   
   def self.init_basic
     $cursor = Sprite_Cursor.new
+    $settings_file = Settings_File.new('System/Settings.ini')
+    Graphics.resize_screen(Configs::RESOLUTIONS[$settings_file.resolution_id][:width], Configs::RESOLUTIONS[$settings_file.resolution_id][:height])
+    # Se a tela cheia está ativada e o executável utiliza DirectX 9
+    Graphics.toggle_fullscreen if $settings_file.fullscreen == 0 && Graphics.respond_to?(:toggle_fullscreen)
+    Graphics.vsync = ($settings_file.vsync == 0) if Graphics.respond_to?(:vsync)
+    Graphics.background_exec = true if Graphics.respond_to?(:background_exec)
     $dragging_window = nil
     $typing = nil
     $alert_msg = nil
@@ -58,6 +64,7 @@ module DataManager
     (1...$data_skills.size).each do |skill_id|
       $data_skills[skill_id].range = Note.read_number('Range', $data_skills[skill_id].note)
       $data_skills[skill_id].aoe = Note.read_number('AOE', $data_skills[skill_id].note)
+      $data_skills[skill_id].level = Note.read_number('Level', $data_skills[skill_id].note)
     end
   end
   
@@ -84,6 +91,10 @@ module Cache
   
   def self.projectile(filename)
     load_bitmap('Graphics/Projectiles/', filename)
+  end
+  
+  def self.window(filename)
+    load_bitmap('Graphics/Windows/', filename)
   end
   
   def self.button(filename)

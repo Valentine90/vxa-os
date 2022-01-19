@@ -97,7 +97,7 @@ module Sound
     play_system_sound(16)
   end
 
-  # Erro
+  # Errar Ataque
   def self.play_miss
     play_system_sound(17)
   end

@@ -29,7 +29,7 @@ class Game_Map
   end
   
   def refresh
-    @events.each_value { |event| event.refresh }
+    @events.each_value(&:refresh)
     $windows[:minimap].refresh if $windows.has_key?(:minimap)
     refresh_tile_events
     @need_refresh = false

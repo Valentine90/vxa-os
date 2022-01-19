@@ -1,0 +1,305 @@
+<?php
+/* ---------------------------------------------
+
+				PORTUGUÊS BRASIL
+
+	----------------------------------------------*/
+
+$lang['inicio']					= "Início";
+$lang['description']			= "Descrição";
+$lang['bt_validar']				= "Validar";
+$lang['bt_delete']				= "Excluir";
+$lang['bt_edit']				= "Editar";
+$lang['bt_buy']					= "Comprar";
+$lang['bt_toapprove']			= "Aprovar";
+$lang['bt_close']				= "Fechar";
+$lang['bt_alterar']				= "Alterar";
+$lang['bt_renovar']				= "Renovar";
+$lang['bt_vantagens']			= "Vantagens";
+$lang['rank']					= "Ranking";
+$lang['staff']					= "Membro da Staff";
+$lang['ban']					= "Banido até";
+$lang['comment']				= "Comentário";
+$lang['loja']					= "Loja";
+$lang['download']				= "Download";
+$lang['comunidade']				= "Comunidade";
+$lang['char']					= "Personagens";
+$lang['forum']					= "Fórum";
+$lang['guild']					= "Guilda";
+$lang['guilds']					= "Guildas";
+$lang['user']					= "Usuário";
+$lang['login']					= "Login";
+$lang['senha']					= "Senha";
+$lang['email']					= "E-mail";
+$lang['myacc']					= "Minha conta";
+$lang['sair']					= "Sair";
+$lang['pesquisa']				= "Buscar";
+$lang['server']					= "STATUS DO SERVIDOR";
+$lang['icon']         = "Ícone";
+$lang['nome']					= "Nome";
+$lang['level']					= "Nível";
+$lang['HP']				   	= "HP";
+$lang['atk']					= "Atq";
+$lang['def']					= "Def";
+$lang['mat']					= "Mat";
+$lang['mdf']					= "Mdf";
+$lang['agi']					= "Agi";
+$lang['luk']					= "Srt";
+$lang['mpcost']         = "Custo de MP";
+$lang['gold']          = "Ouro";
+$lang['exprank']				= "Exp";
+$lang['playervip']				= "Jogador VIP";
+$lang['infor']					= "Informações";
+$lang['security']				= "Segurança";
+$lang['leader']					= "Líder";
+$lang['image']					= "Imagem";
+$lang['flag']					= "Brasão";
+$lang['admin']					= "Administração";
+$lang['admcash']				= "Gerenciar $cash_name";
+$lang['payvoucher']				= "Comprovantes";
+$lang['payvoucherinfo']			= "Enviar comprovante de pagamento";
+$lang['repeatpass']				= "Repita a senha";
+$lang['amount']					= "Quantidade";
+$lang['amountbuy']				= "Quantidade de $cash_name comprados";
+$lang['date']					= "Data";
+$lang['loginbuy']				= "Usuário que vai receber os $cash_name";
+$lang['itemid']					= "ID do Item no Banco de Dados do jogo. Especifique a categoria escolhida (0 = Se o item for do tipo vip)";
+$lang['managershop']			= "Gerenciar loja";
+$lang['shopadditem']			= "Adicionar itens à loja";
+$lang['shopitemedit']			= "Editar itens da loja";
+$lang['slider']					= "Gerenciar slider";
+$lang['nameitem']				= "Nome do item";
+$lang['descitem']				= "Descrição";
+$lang['priceitem']				= "Preço do item em $cash_name";
+$lang['categoryitem']			= "Categoria do item";
+$lang['imgitem']				= "Imagem do item";
+$lang['amountitem']				= "Quantidade que o jogador irá receber ao comprar, em caso de VIP. A quantidade colocada será em dias";
+$lang['alertitemmsg']			= "ATENÇÃO! São aceitas imagens em .JPG, .JPEG, .GIF e .PNG! No entanto, para manter um padrão, envie no tamanho exato de 200x200 píxeis";
+$lang['categorystore1']			= "VIP";
+$lang['categorystore2']			= "Itens gerais";
+$lang['categorystore3']			= "Armas";
+$lang['categorystore4']			= "Protetores";
+$lang['category1']				= "VIP";
+$lang['category2']				= "Itens gerais (poções, recursos...)";
+$lang['category3']				= "Armas (espadas, arcos, cajados, lanças...)";
+$lang['category4']				= "Protetores (armaduras, luvas, botas, escudos...)";
+$lang['saldo']					= "Seu saldo é de ";
+$lang['type']					= "Tipo";
+$lang['days']					= "Dias";
+$lang['msgsuccessvip']			= "Obrigado pela sua compra! Você terá VIP até ";
+$lang['msgsuccesspush']			= "Obrigado pela sua compra! Você verá o item comprado em seu banco!";
+$lang['purchaseid']				= "ID da compra: ";
+$lang['purchased']				= "Comprou ";
+$lang['msgviewimg']				= "Abrir imagem";
+$lang['msgexpvip']				= "Seu VIP irá acabar em";
+$lang['msgsenhaatual']			= "Senha atual";
+$lang['msgnovasenha1']			= "Nova senha";
+$lang['msgnovasenha2']			= "Repita a nova senha";
+$lang['msgaltsenha']			= "Alterar a senha da conta";
+$lang['msgsemvip']				= "Você não é VIP. Conheça as ";
+$lang['ou']						= "ou";
+$lang['data']					= "%d de %b de %Y as %H:%M hrs";
+$lang['msgerrorlogin']			= "Dados incorretos!";
+$lang['msgsuccesslogin']		= "Redirecionando...";
+$lang['msgamount']				= "Quantia de $cash_name";
+$lang['msgsucessaddcash']		= "$cash_name adicionados com sucesso. O saldo atual é de ";
+$lang['msgsucesstakeoutcash']	= "$cash_name foram retirados com sucesso, saldo atual é de ";
+$lang['msgback']				= "Clique para voltar ao painel!";
+$lang['for']					= "para ";
+$lang['titleaddcash']			= "Adicionar $cash_name";
+$lang['titletakeoutcash']		= "Retirar $cash_name";
+$lang['criterror']				= "Um erro critico ocorreu, entre em contato com um administrador!";
+$lang['errorlogin']				= "O login digitado não existe!";
+$lang['msgvoucherfile']			= "Anexe uma foto do comprovante";
+$lang['msgvouchersuccess']		= "Comprovante enviado, agora é só aguardar a equipe analisar e, assim que tudo for confirmado, você verá o novo saldo em sua conta";
+$lang['msgaddsuccess']			= "Item adicionado a loja com sucesso!";
+$lang['msgeditsuccess']			= "Item alterado com sucesso!";
+$lang['msgdeleteditem']			= "O item foi excluido da loja!";
+$lang['msgerrorfile']			= "Você só poderá enviar arquivos com as extensões ";
+$lang['msgnobalance']			= "Você não possui $cash_name suficientes para este item";
+$lang['createaccount']			= "Cadastro";
+$lang['whosonline']				= "jogadores";
+$lang['msgaccount']				= "É gratuito e todos podem entrar!";
+$lang['msgexistlogin']			= "O login já está sendo utilizado ou contém informações inválidas no formulário!";
+$lang['msgsucesscad']			= "Parabéns, conta criada com sucesso!";
+$lang['welcome']				= "Bem-vindo!";
+$lang['search']					= "Buscar personagem";
+$lang['social']					= "Acompanhe-nos";
+$lang['history']				= "Histórico de compras";
+$lang['donate']					= "Doação";
+$lang['404']					= "Ops! Página não encontrada.";
+$lang['sex']					= "Sexo";
+$lang['male']					= "Masculino";
+$lang['female']					= "Feminino";
+$lang['lastlogin']				= "Ultimo login";
+$lang['creationdata']			= "Criado(a) em";
+$lang['admnews']				= "Gerenciar notícias";
+$lang['admaccounts']			= "Gerenciar contas e personagens";
+$lang['admconfig']				= "Configurações do site";
+$lang['addnewsbutton']			= "Adicionar nova notícia";
+$lang['editnewsbutton']			= "Editar notícia";
+$lang['newstitle']				= "Titulo da notícia";
+$lang['newsadd']				= "Notícia adicionada com sucesso";
+$lang['titlesite']				= ["1" => "Título", "2" 		=> "TÍTULO DO SITE"];
+$lang['cashname']				= ["1" => "Cash", "2" 			=> "NOME DA MOEDA DE CASH"];
+$lang['maxnews']				= ["1" => "Max. notícia", "2" 	=> "MÁXIMO DE NOTÍCIAS MOSTRADAS NO INÍCIO"];
+$lang['maxrank']				= ["1" => "Max. rank", "2" 		=> "MÁXIMO DE JOGADORES MOSTRADOS NO RANK"];
+$lang['maxrankguild']			= ["1" => "Max. guildas", "2" => "MÁXIMO DE GUILDAS MOSTRADAS POR PÁGINA"];
+$lang['maxitemstore']			= ["1" => "Max. loja", "2" 		=> "MÁXIMO DE ITENS MOSTRADOS NA LOJA"];
+$lang['downloadlink']			= ["1" => "Link de download", "2" 	=> "AQUI VOCE COLOCA O LINK PARA DOWNLOAD DO JOGO, EXEMPLO: https://site.com/download.zip"];
+$lang['discount']				= ["1" => "Desconto", "2" 		=> "0 = NÃO APLICA DESCONTO! QUALQUER OUTRO VALOR É CONVERTIDO EM % QUE SERÁ DESCONTADO NO PREÇO TOTAL DE CADA ITEM DA LOJA"];
+$lang['languages']				= ["1" => "Idioma", "2" 		=> "NÃO COLOQUE ESPAÇOS ENTRE AS VIRGULAS! CASO DESEJE ADICIONAR +1 LINGUAGEM, DUPLIQUE 1 ARQUIVO NA PASTA LANG E RENOMEIE PARA A NOVA LINGUAGEM, LOGO APÓS COLOQUE O NOME DA NOVA LINGUAGEM EXATAMENTE COMO ESTÁ NO ARQUIVO CRIADO."];
+$lang['langdefault']			= ["1" => "Idioma padrão", "2" 	=> "DEFINE QUAL A LINGUAGEM PRINCIPAL DO SITE"];
+$lang['ipserver']				= ["1" => "IP do servidor", "2" 	=> "IP DO SERVIDOR"];
+$lang['portserver']				= ["1" => "Porta do servidor", "2" => "PORTA DO SERVIDOR"];
+$lang['configs']				= "Configurações";
+$lang['bau']					= "Baú diário";
+$lang['onon']					= "On-line";
+$lang['onoff']					= "Off-line";
+$lang['accounts']				= "Contas criadas";
+$lang['characters']				= "Personagens criados";
+$lang['wiki']					= "Wikipedia";
+$lang['items']					= "Itens";
+$lang['enemies']					= "Monstros";
+$lang['armors']					= "Armaduras";
+$lang['classes']					= "Classes";
+$lang['home']					= "Início";
+$lang['valor']					= "Preço";
+$lang['params']          = "Atributos";
+$lang['drop']          = "Dropa de";
+$lang['search_char']			= "Buscar por personagem";
+$lang['search_acc']				= "Buscar por conta";
+$lang['infoskill']				= "Habilidades da classe";
+$lang['commentpanel']			= "Comentário do personagem:";
+$lang['downloadpage']			= "Esta é uma página de download";
+$lang['downloadterms']			= "Ao baixar, você automaticamente está concordando com os termos de uso.";
+$lang['directdownload']			= "Download direto";
+
+# DATA TABLES
+/*
+$lang['datatables']				= [
+	"1" => "Nenhum registro encontrado",
+	"2" => "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+	"3" => "Mostrando 0 até 0 de 0 registros",
+	"4" => "(Filtrados de _MAX_ registros)",
+	"5" => ".",
+	"6" => "Carregando...",
+	"7" => "Processando...",
+	"8" => "Nenhum registro encontrado",
+	"9" => "Pesquisar",
+	"10" => "Próximo",
+	"11" => "Anterior",
+	"12" => "Primeiro",
+	"13" => "Último",
+	"14" => ": Ordenar colunas de forma ascendente",
+	"15" => ": Ordenar colunas de forma descendente",
+	"16" => "Selecionado %d linhas",
+	"17" => "Nenhuma linha selecionada",
+	"18" => "Selecionado 1 linha",
+	"19" => "%d linha selecionada",
+	"20" => "%d linhas selecionadas",
+	"21" => "1 célula selecionada",
+	"22" => "%d células selecionadas",
+	"23" => "1 coluna selecionada",
+	"24" => "%d colunas selecionadas",
+	"25" => "Uma linha copiada com sucesso",
+	"26" => "%d linhas copiadas com sucesso",
+	"27" => "Coleção  <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+	"28" => "Visibilidade da Coluna",
+	"29" => "Restaurar Visibilidade",
+	"30" => "Copiar",
+	"31" => "Pressione ctrl ou u2318 + C para copiar os dados da tabela para a área de transferência do sistema. Para cancelar, clique nesta mensagem ou pressione Esc..",
+	"32" => "Copiar para a Área de Transferência",
+	"33" => "CSV",
+	"33" => "Excel",
+	"34" => "Mostrar todos os registros",
+	"35" => "Mostrar 1 registro",
+	"36" => "Mostrar %d registros",
+	"37" => "PDF",
+	"38" => "Imprimir",
+	"39" => "Cancelar",
+	"40" => "Preencher todas as células com",
+	"41" => "Preencher células horizontalmente",
+	"42" => "Preencher células verticalmente",
+	"43" => "Exibir _MENU_ resultados por página",
+	"44" => "Adicionar Condição",
+	"45" => "Construtor de Pesquisa",
+	"46" => "Construtor de Pesquisa (%d)",
+	"47" => "Limpar Tudo",
+	"48" => "Condição",
+	"49" => "Depois",
+	"50" => "Antes",
+	"51" => "Entre",
+	"52" => "Vazio",
+	"53" => "Igual",
+	"54" => "Não",
+	"55" => "Não Entre",
+	"56" => "Não Vazio",
+	"57" => "Entre",
+	"58" => "Vazio",
+	"59" => "Igual",
+	"60" => "Maior Que",
+	"61" => "Maior ou Igual a",
+	"62" => "Menor Que",
+	"63" => "Menor ou Igual a",
+	"64" => "Não",
+	"65" => "Não Entre",
+	"66" => "Não Vazio",
+	"67" => "Contém",
+	"68" => "Vazio",
+	"69" => "Termina Com",
+	"70" => "Igual",
+	"71" => "Não",
+	"72" => "Não Vazio",
+	"73" => "Começa Com",
+	"74" => "Contém",
+	"75" => "Vazio",
+	"76" => "Igual à",
+	"77" => "Não",
+	"78" => "Não vazio",
+	"79" => "Não possui",
+	"80" => "Data",
+	"81" => "Excluir regra de filtragem",
+	"82" => "E",
+	"83" => "Ou",
+	"84" => "Construtor de Pesquisa",
+	"85" => "Construtor de Pesquisa (%d)",
+	"86" => "Valor",
+	"87" => "Limpar Tudo",
+	"88" => "Painéis de Pesquisa",
+	"89" => "Painéis de Pesquisa (%d)",
+	"90" => "{total}",
+	"91" => "{shown} ({total})",
+	"92" => "Nenhum Painel de Pesquisa",
+	"93" => "Carregando Painéis de Pesquisa...",
+	"94" => "Filtros Ativos",
+	"95" => "Digite um termo para pesquisar",
+	"96" => ".",
+	"97" => "Anterior",
+	"98" => "Próximo",
+	"99" => "Hora",
+	"100" => "Minuto",
+	"101" => "Segundo",
+	"102" => "-",
+	"103" => "Fechar",
+	"104" => "Novo",
+	"105" => "Criar",
+	"106" => "Criar novo registro",
+	"107" => "Editar",
+	"108" => "Atualizar",
+	"109" => "Editar registro",
+	"110" => "Ocorreu um erro no sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mais informações<\/a>).",
+	"111" => "Essa entrada pode ser editada individualmente, mas não como parte do grupo",
+	"112" => "Desfazer alterações",
+	"113" => "Multiplos valores",
+	"114" => "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
+	"115" => "Remover",
+	"116" => "Tem certeza que quer deletar %d linhas?",
+	"117" => "Tem certeza que quer deletar 1 linha?",
+	"118" => "Remover",
+	"119" => "Remover registro",
+	"120" => ","
+
+];
+
+*/

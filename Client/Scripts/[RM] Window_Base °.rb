@@ -4,30 +4,14 @@
 #  Esta é a superclasse para todas as janelas no jogo.
 #==============================================================================
 
-class Window_Base < Window
-  #--------------------------------------------------------------------------
-  # * Inicialização do objeto
-  #     x      : coordenada X
-  #     y      : coordenada Y
-  #     width  : largura
-  #     height : altura
-  #--------------------------------------------------------------------------
-  def initialize(x, y, width, height)
-    super
-    self.windowskin = Cache.system("Window")
-    update_padding
-    update_tone
-    create_contents
-    # VXA-OS
-    init_features
-    @opening = @closing = false
-  end
+module W_Base
   #--------------------------------------------------------------------------
   # * Disposição
   #--------------------------------------------------------------------------
   def dispose
     contents.dispose unless disposed?
     # VXA-OS
+    contents2.dispose if @contents2
     dispose_features
     super
   end
@@ -231,8 +215,8 @@ class Window_Base < Window
   def reset_font_settings
     change_color(normal_color)
     contents.font.size = Font.default_size
-    contents.font.bold = false
-    contents.font.italic = false
+    contents.font.bold = Font.default_bold
+    contents.font.italic = Font.default_italic
   end
   #--------------------------------------------------------------------------
   # * Pré-conversão dos caracteres de controle
@@ -669,5 +653,37 @@ class Window_Base < Window
     return power_up_color   if change > 0
     return power_down_color if change < 0
     return normal_color
+  end
+end
+
+#==============================================================================
+# ** Window_Base
+#==============================================================================
+class Window_Base < Window
+  #--------------------------------------------------------------------------
+  include W_Base
+  #--------------------------------------------------------------------------
+  # * Inicialização do objeto
+  #     x      : coordenada X
+  #     y      : coordenada Y
+  #     width  : largura
+  #     height : altura
+  #--------------------------------------------------------------------------
+  def initialize(x, y, width, height)
+    super
+    self.windowskin = Cache.system('Window')
+    update_padding
+    update_tone
+    create_contents
+    # VXA-OS
+    self.back_opacity = 255
+    init_features
+    @opening = @closing = false
+  end
+  #--------------------------------------------------------------------------
+  # * Coordenada x do conteúdo da janela
+  #--------------------------------------------------------------------------
+  def contents_x
+    standard_padding
   end
 end

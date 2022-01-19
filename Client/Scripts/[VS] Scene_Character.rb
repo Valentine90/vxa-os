@@ -103,12 +103,10 @@ class Scene_Character < Scene_Base
     super
     @config_icon.update
     @loading_bar.update
-    update_loading
+    update_loading if @loading_bar.visible && @loading_bar.index < 100
   end
   
   def update_loading
-    return unless @loading_bar.visible
-    return if @loading_bar.index == 100
     @loading_count += 1
     if @loading_count >= Configs::LOADING_TIME / 2.5
       @loading_bar.index += 1

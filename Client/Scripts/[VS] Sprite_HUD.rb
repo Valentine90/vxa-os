@@ -9,7 +9,7 @@
 
 class Sprite_HUD < Sprite2
   
-  attr_reader :exp_sprite
+  attr_reader   :exp_sprite
   
   def initialize
     super
@@ -19,7 +19,7 @@ class Sprite_HUD < Sprite2
     self.z = 50
     self.bitmap.font.size = 18
     self.bitmap.font.bold = true
-    @back = Cache.system('HUD')
+    @back = Cache.system('HUDBase')
     @bars = Cache.system('HUDBars')
     create_exp_bar
     refresh
@@ -92,7 +92,7 @@ class Sprite_HUD < Sprite2
     @exp_sprite.bitmap.clear
     rect1 = Rect.new(0, 98, @exp_sprite.bitmap.width, @exp_sprite.bitmap.height)
     rect2 = Rect.new(0, 52, 308 * $game_actors[1].now_exp / $game_actors[1].next_exp, @exp_sprite.bitmap.height)
-    exp = $game_actors[1].level >= Configs::MAX_LEVEL ? Vocab::MaxLevel : convert_gold($game_actors[1].next_exp - $game_actors[1].now_exp)
+    exp = $game_actors[1].level >= Configs::MAX_LEVEL ? Vocab::MaxLevel : format_number($game_actors[1].next_exp - $game_actors[1].now_exp)
     @exp_sprite.bitmap.blt(0, 0, @back, rect1)
     @exp_sprite.bitmap.blt(0, 0, @bars, rect2)
     @exp_sprite.bitmap.draw_text(4, 2, 25, 18, Vocab::Exp)

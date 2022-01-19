@@ -30,18 +30,21 @@ class Window_VIPTime < Window_Base
     Graphics.height - 32
   end
   
+  def days_between(time_now)
+    (($network.vip_time - time_now) / 86400).to_i
+  end
+  
   def refresh
     if $network.vip?
       time_now = Time.new(Time.now.year, Time.now.month, Time.now.day, 0, 0, 0)
-      vip_days = (($network.vip_time - time_now) / 86400).to_i
-      draw_text(0, 0, contents_width, line_height, sprintf(Vocab::VIP, vip_days), 1)
+      draw_text(0, 0, contents_width, line_height, sprintf(Vocab::VIP, days_between(time_now)), 1)
     else
       draw_text(20, 0, contents_width, line_height, Vocab::NotVIP)
     end
   end
   
   def open_url
-    Win32API.new('Shell32.dll', 'ShellExecute', 'pppppi', 'i').call(nil, 'open', Configs::STORE_WEBSITE, nil, nil, 10)
+    Win32API.new('Shell32.dll', 'ShellExecute', 'pppppi', 'i').call(nil, 'open', Configs::SHOP_WEBSITE, nil, nil, 10)
   end
   
 end

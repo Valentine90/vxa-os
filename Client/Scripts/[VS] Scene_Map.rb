@@ -36,6 +36,7 @@ class Scene_Map < Scene_Base
     $windows[:minimap] = Sprite_Minimap.new
     $windows[:icon] = Window_Icon.new
     $windows[:chat] = Window_Chat.new
+    $windows[:emoji] = Window_Emoji.new
     # A Window_Amount é instanciada logo para que
     #a sua caixa de texto fique ativa ao pressionar o
     #botão do mouse duas vezes sobre o item na janela de
@@ -56,6 +57,7 @@ class Scene_Map < Scene_Base
     $windows[:teleportinfo] = Window_TeleportInfo.new
     $windows[:quest] = Window_Quest.new
     $windows[:quest_info] = Window_QuestInfo.new
+    $windows[:quest_dialogue] = Window_QuestDialogue.new
     $windows[:friend] = Window_Friend.new
     $windows[:create_guild] = Window_CreateGuild.new
     $windows[:guild] = Window_Guild.new
@@ -72,6 +74,8 @@ class Scene_Map < Scene_Base
     $windows[:hotbar].y = $windows[:hotbar].adjust_y
     $windows[:minimap].x = $windows[:minimap].adjust_x
     $windows[:chat].y = $windows[:chat].adjust_y
+    $windows[:emoji].x = $windows[:emoji].adjust_x
+    $windows[:emoji].y = $windows[:emoji].adjust_y
     $windows[:equip].x = $windows[:equip].adjust_x
     $windows[:item].x = $windows[:item].adjust_x
     $windows[:menu].x = $windows[:menu].adjust_x
@@ -131,7 +135,7 @@ class Scene_Map < Scene_Base
   end
   
   def update_trigger
-    close_all_windows
+    close_all_windows if Input.trigger?(:B)
     return if $typing
     if Input.trigger?(Configs::ITEM_KEY)
       $windows[:equip].trigger
@@ -163,7 +167,6 @@ class Scene_Map < Scene_Base
   end
   
   def close_all_windows
-    return unless Input.trigger?(:B)
     $windows[:equip].hide
     $windows[:skill].hide
     $windows[:status].hide
@@ -175,9 +178,11 @@ class Scene_Map < Scene_Base
     $windows[:teleportinfo].hide
     $windows[:quest].hide
     $windows[:quest_info].hide
+    $windows[:quest_dialogue].hide_window
     $windows[:friend].hide
     $windows[:create_guild].hide
     $windows[:guild].hide
+    $windows[:emoji].hide
     $windows[:amount].hide
     $windows[:panel].hide
   end

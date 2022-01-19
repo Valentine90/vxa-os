@@ -30,6 +30,7 @@ class Window_Bank < Window_ItemSelectable
   end
   
   def hide_window
+    return unless visible
     $network.send_close_window
   end
   

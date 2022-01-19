@@ -21,6 +21,7 @@ class Window_CreateAcc < Window_Base
     @newacc_button = Button.new(self, 22, 211, Vocab::Register) { create_account }
     @cancel_button = Button.new(self, 111, 211, Vocab::Cancel, 79) { login }
     @newacc_button.enable = false
+    draw_contents
   end
 
   def adjust_x
@@ -35,10 +36,7 @@ class Window_CreateAcc < Window_Base
     @email_box.text !~ /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   end
   
-  def refresh
-    # Evita que o texto seja redesenhado sobre ele mesmo
-    #toda vez que a janela ficar visível
-    contents.clear
+  def draw_contents
     draw_text(7, 6, 75, line_height, "#{Vocab::Username}:")
     draw_text(7, 52, 75, line_height, "#{Vocab::Password}:")
     draw_text(7, 98, 135, line_height, Vocab::RepeatPass)

@@ -37,12 +37,11 @@ class Window_Panel < Window_Base
       @map_names << map.name
     end
   end
-  
   def load_items
     @items = []
-    @items << $data_items.drop(1).map { |item| item.name }
-    @items << $data_weapons.drop(1).map { |weapon| weapon.name }
-    @items << $data_armors.drop(1).map { |armor| armor.name }
+    @items << $data_items.drop(1).collect(&:name)
+    @items << $data_weapons.drop(1).collect(&:name)
+    @items << $data_armors.drop(1).collect(&:name)
   end
 =end
   def create_buttons

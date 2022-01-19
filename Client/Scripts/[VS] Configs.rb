@@ -16,6 +16,14 @@ module Configs
   Font.default_bold = false
   Font.default_size = 16
   
+  # Nome, esboço, sombra, negrito e tamanho da fonte da
+  #janela do bate-papo
+  CHAT_FONT_NAME = 'VL Gothic'
+  CHAT_FONT_OUTLINE = false
+  CHAT_FONT_SHADOW = true
+  CHAT_FONT_BOLD = true
+  CHAT_FONT_SIZE = 17
+  
   # Endereço da rede
   HOST = '127.0.0.1'
   
@@ -28,7 +36,7 @@ module Configs
   GAME_VERSION = 12983
   
   # Site da loja para comprar VIP
-  STORE_WEBSITE = 'www.aldeiarpg.com'
+  SHOP_WEBSITE = 'www.aldeiarpg.com'
   
   # Resoluções
   # As dimensões máximas da tela no executável
@@ -59,14 +67,6 @@ module Configs
   
   # Quantidade máxima de atalhos
   MAX_HOTBAR = 9
-  
-  # Quantidade máxima de equipamentos
-  # Este valor deve corresponder ao número de elementos da
-  #matriz de def order_equips na [VS] Sprite_Charcter,
-  #def equip_slots na [VS] Window_Equip e def draw_paperdolls
-  #na [VS] Window_Base. Ele deve ser definido antes
-  #do personagem ser criado
-  MAX_EQUIPS = 9
   
   # Quantidade máxima de classes na criação de personagem
   #para jogadores comuns
@@ -108,6 +108,26 @@ module Configs
   # Quantidade máxima de membros do grupo
   MAX_PARTY_MEMBERS = 4
   
+  # Quantidade máxima de equipamentos
+  # Este valor deve corresponder ao número de elementos da
+  #matriz da ordem do gráfico dos equipamentos abaixo,
+  #def equip_slots na [VS] Window_Equip e def draw_paperdolls
+  #na [VS] Window_Base. Ele deve ser definido antes
+  #do personagem ser criado
+  MAX_EQUIPS = 9
+  
+  # Ordem do gráfico dos equipamentos
+  # 0 = Arma, 1 = Escudo, 2 = Capacete, 3 = Armadura
+  #4 = Acessório, 5 = Amuleto, 6 = Capa, 7 = Luva, 8 = Bota
+  # Frente
+  PAPERDOLL_DOWN_DIR = [3, 5, 2, 7, 6, 8, 1, 0, 4]
+  # Esquerda
+  PAPERDOLL_LEFT_DIR = [7, 0, 3, 5, 2, 6, 8, 1, 4]
+  # Direita
+  PAPERDOLL_RIGHT_DIR = [1, 3, 5, 2, 7, 6, 8, 0, 4]
+  # Costas
+  PAPERDOLL_UP_DIR = [7, 1, 0, 3, 5, 2, 8, 6, 4]
+  
   # Índice da cor das mensagens do bate-papo na
   #Window.png da pasta System
   NORMAL_COLOR  = 0
@@ -115,6 +135,7 @@ module Configs
   SUCCESS_COLOR = 5
   ERROR_COLOR   = 10
   ALERT_COLOR   = 8
+  ADM_MSG_COLOR = 17
   
   # Índice da cor do nome dos jogadores, inimigos e guildas
   #na Window.png da pasta System
@@ -144,16 +165,18 @@ module Configs
   # Índice no IconSet dos demais ícones
   CONFIG_ICON            = 532
   GOLD_ICON              = 262
+  EXP_ICON               = 125
   ADD_GOLD_ICON          = 528
   REMOVE_GOLD_ICON       = 529
   MAP_PVP_ICON           = 534
   MAP_NONPVP_ICON        = 533
-  PLAYER_ON_ICON         = 187
-  PLAYER_OFF_ICON        = 189
+  PLAYER_ON_ICON         = 189
+  PLAYER_OFF_ICON        = 187
   QUEST_NOT_STARTED_ICON = 537
   QUEST_FINISHED_ICON    = 190
   QUEST_IN_PROGRESS_ICON = 189
   LEAVE_PARTY_ICON       = 530
+  EMOJI_ICON             = 541
   
   # Índice no IconSet do início dos ícones de fortalecimento/buff
   ICON_BUFF_START = 64
@@ -163,6 +186,9 @@ module Configs
   
   # Quantidade de pontos iniciais na criação de personagem
   START_POINTS = 10
+  
+  # Altura de barra de título da janela
+  TITLE_BAR_HEIGHT = 20
   
   # Teletransportes
   TELEPORTS = []
@@ -210,6 +236,10 @@ module Configs
   
   # Termos proibidos no nome dos jogadores comuns
   FORBIDDEN_NAMES = ['adm ', 'admin ', 'gm ', 'god ', 'mod ']
+  
+  # Emojis do bate-papo
+  # Cada emoji deve ter 2 caracteres
+  #CHAT_EMOJIS = [':P', '8)', ':v', '-)', ':o', ':(', ':@', '-(']
   
   # Tempo (em segundos) para o herói e inimigos atacarem novamente
   #O tempo mínimo para os inimigos é 0.8 (800 milissegundos)

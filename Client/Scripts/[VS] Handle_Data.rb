@@ -48,7 +48,7 @@ module Handle_Data
     when Enums::Packet::PLAYER_MOVE
       handle_player_movement(buffer)
     when Enums::Packet::MAP_MSG
-      handle_map_message(buffer)
+      handle_map_chat_message(buffer)
     when Enums::Packet::CHAT_MSG
       handle_chat_message(buffer)
     when Enums::Packet::ALERT_MSG
@@ -265,7 +265,7 @@ module Handle_Data
     $game_actors[1].mp = buffer.read_int
     $game_actors[1].change_exp(buffer.read_int, false)
     $game_actors[1].points = buffer.read_short
-    $game_actors[1].guild = buffer.read_string
+    $game_actors[1].guild_name = buffer.read_string
     $game_party.gain_gold(buffer.read_int)
     size = buffer.read_byte
     size.times { $game_party.gain_item($data_items[buffer.read_short], buffer.read_short) }
@@ -283,8 +283,17 @@ module Handle_Data
       $game_actors[1].quests[quest_id] = Game_Quest.new(quest_id, buffer.read_byte)
     end
     Configs::MAX_HOTBAR.times { |id| $game_actors[1].change_hotbar(id, buffer.read_byte, buffer.read_short)} 
-    Configs::MAX_PLAYER_SWITCHES.times { |switch_id| $game_switches[switch_id] = buffer.read_boolean}
-    Configs::MAX_PLAYER_VARIABLES.times { |variable_id| $game_variables[variable_id] = buffer.read_short }
+    Configs::MAX_PLAYER_SWITCHES.times { |switch_id| $game_switches[switch_id + 1] = buffer.read_boolean}
+    # O valor máximo das variáveis, em razão do comando de
+    #evento Armazenar Número, que possibilita até 8 dígitos,
+    #é 99.999.999, o que ultrapassa o limite do tipo short,
+    #porém, para evitar desperídico desnecessário de bytes,
+    #com o tamanho do tipo int, e partindo da ideia de que
+    #ninguém vai precisar de um limite tão alto, o short é
+    #utilizado para receber o valor das variáveis, em vez de
+    #int. Na tabela actor_variables do Database.sql, o tipo
+    #smallint é utilizado na coluna value em vez de int
+    Configs::MAX_PLAYER_VARIABLES.times { |variable_id| $game_variables[variable_id + 1] = buffer.read_short }
     size = buffer.read_short
     size.times do
       key = [buffer.read_short, buffer.read_short, buffer.read_string]
@@ -322,7 +331,7 @@ module Handle_Data
     $game_map.players[player_id].actor.add_param(0, buffer.read_int)
     $game_map.players[player_id].actor.hp = buffer.read_int
     $game_map.players[player_id].actor.change_exp(buffer.read_int, false)
-    $game_map.players[player_id].actor.guild = buffer.read_string
+    $game_map.players[player_id].actor.guild_name = buffer.read_string
     $game_map.players[player_id].moveto(buffer.read_short, buffer.read_short)
     $game_map.players[player_id].set_direction(buffer.read_byte)
     $game_map.players[player_id].refresh
@@ -354,7 +363,7 @@ module Handle_Data
     end
   end
   
-  def handle_map_message(buffer)
+  def handle_map_chat_message(buffer)
     player_id = buffer.read_short
     color_id = buffer.read_byte
     message = buffer.read_string
@@ -442,6 +451,7 @@ module Handle_Data
         $game_player.change_damage(hp_damage, mp_damage, critical, animation_id, not_show_missed)
         $game_map.screen.start_shake(4, 4, 20) if critical
       end
+      # Se o jogador for atacado logo após entrar no jogo
       if $windows.has_key?(:hud)
         $windows[:hud].refresh
         $windows[:status].refresh if $windows[:status].visible
@@ -631,8 +641,12 @@ module Handle_Data
     else
       $game_actors[1].remove_state(state_id)
     end
-    $windows[:states].visible = $game_actors[1].result.status_affected?
-    $windows[:states].refresh if $windows[:states].visible
+    # Se um evento comum em processo paralelo mudar o
+    #estado do jogador antes da Scene_Map ser carregada
+    if $windows.has_key?(:states)
+      $windows[:states].visible = $game_actors[1].result.status_affected?
+      $windows[:states].refresh if $windows[:states].visible
+    end
   end
   
   def handle_player_buff(buffer)
@@ -645,11 +659,15 @@ module Handle_Data
     else
       $game_actors[1].remove_buff(param_id)
     end
-    $windows[:states].visible = $game_actors[1].result.status_affected?
-    $windows[:states].refresh if $windows[:states].visible
-    # Se alterou o HP ou o MP máximo
-    $windows[:hud].refresh if param_id < 2
-    $windows[:status].refresh if $windows[:status].visible
+    # Se um evento comum em processo paralelo mudar
+    #buff do jogador antes da Scene_Map ser carregada
+    if $windows.has_key?(:states)
+      $windows[:states].visible = $game_actors[1].result.status_affected?
+      $windows[:states].refresh if $windows[:states].visible
+      # Se alterou o HP ou o MP máximo
+      $windows[:hud].refresh if param_id < 2
+      $windows[:status].refresh if $windows[:status].visible
+    end
   end
   
   def handle_player_item(buffer)
@@ -860,7 +878,7 @@ module Handle_Data
     name = buffer.read_string
     player_id = buffer.read_short
     if @player_id == player_id
-      $game_actors[1].guild = name
+      $game_actors[1].guild_name = name
       # Se o membro foi expulso da guilda ou ela foi
       #deletada e estava com a janela aberta
       if name.empty?
@@ -868,7 +886,7 @@ module Handle_Data
         $windows[:guild].disable_buttons
       end
     else
-      $game_map.players[player_id].actor.guild = name
+      $game_map.players[player_id].actor.guild_name = name
     end
   end
   
@@ -939,7 +957,7 @@ module Handle_Data
       $windows[:shop].hide
       $windows[:equip].hide
       $windows[:amount].hide
-    elsif $windows[:trade].visible
+    elsif $windows[:my_trade].visible
       $game_trade.close
     end
     $windows[:teleport].hide
@@ -1112,7 +1130,7 @@ module Handle_Data
   
   def handle_global_switches(buffer)
     (Configs::MAX_PLAYER_SWITCHES...Configs::MAX_PLAYER_SWITCHES + 100).each do |switch_id|
-      $game_switches[switch_id] = buffer.read_boolean
+      $game_switches[switch_id + 1] = buffer.read_boolean
     end
   end
   

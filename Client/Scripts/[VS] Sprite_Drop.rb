@@ -17,7 +17,6 @@ class Sprite_Drop < Sprite2
     bitmap = Cache.system('Iconset')
     rect = Rect.new(@character.icon_index % 16 * 24, @character.icon_index / 16 * 24, 24, 24)
     self.bitmap.blt(0, 0, bitmap, rect)
-    #@count = 0
     create_name
     update
   end
@@ -48,21 +47,9 @@ class Sprite_Drop < Sprite2
     super
     self.x = (@character.real_x - $game_map.display_x) * 32
     self.y = (@character.real_y - $game_map.display_y) * 32
-    #move_y
     @name_sprite.x = self.x + 12 - (@name_sprite.bitmap.width / 2)
     @name_sprite.y = self.y - 18
     @name_sprite.visible = in_area? && !$dragging_window && !$cursor.object
   end
-=begin
-  def move_y
-    @count += 1
-    if @count < 50
-      self.y -= @count / 10
-    elsif @count >= 50 && @count <= 100
-      self.y = self.y - 5 + (@count - 50) / 10
-    else
-      @count = 0
-    end
-  end
-=end
+  
 end

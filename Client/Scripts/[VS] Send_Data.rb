@@ -228,6 +228,14 @@ module Send_Data
     @socket.send(buffer.to_s)
   end
   
+  def send_guild_request(name)
+    return unless @socket
+    buffer = Buffer_Writer.new
+    buffer.write_byte(Enums::Packet::GUILD_REQUEST)
+    buffer.write_string(name)
+    @socket.send(buffer.to_s)
+  end
+  
   def send_leave_guild
     return unless @socket
     buffer = Buffer_Writer.new
@@ -359,15 +367,15 @@ module Send_Data
     @socket.send(buffer.to_s)
   end
   
-  def send_admin_command(command, str1, str2 = 0, str3 = 0, str4 = 0)
+  def send_admin_command(command, str, int1 = 0, int2 = 0, int3 = 0)
     return unless @socket
     buffer = Buffer_Writer.new
     buffer.write_byte(Enums::Packet::ADMIN_COMMAND)
     buffer.write_byte(command)
-    buffer.write_string(str1)
-    buffer.write_int(str2)
-    buffer.write_int(str3)
-    buffer.write_short(str4)
+    buffer.write_string(str)
+    buffer.write_int(int1)
+    buffer.write_int(int2)
+    buffer.write_short(int3)
     @socket.send(buffer.to_s)
   end
   

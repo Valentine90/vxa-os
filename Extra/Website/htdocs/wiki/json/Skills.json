@@ -1,0 +1,5039 @@
+[
+  null,
+  {
+    "@message2": "",
+    "@description": "Causa dano ao inimigo",
+    "@name": "Atacar",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " atacou!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Habilidade Nº 1 [Atacar] será usado quando você selecionar o comando Atacar.",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 1,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": true
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 5
+  },
+  {
+    "@message2": "",
+    "@description": "Assume posição defensiva, reduzindo dano recebido",
+    "@name": "Defender",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " protegeu-se.",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "Habilidade Nº 1 [Defender] será usada quando você selecionar o comando Defender",
+    "@mp_cost": 0,
+    "@speed": 2000,
+    "@id": 2,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 9,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 4
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca o alvo duas vezes",
+    "@name": "Ataque Contínuo",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " atacou!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 3,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": true
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 2,
+    "@tp_gain": 3
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca dois inimigos aleatórios",
+    "@name": "Ataque Duplo",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " atacou!",
+    "@scope": 4,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 4,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": true
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 3
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca três inimigos aleatórios",
+    "@name": "Ataque Triplo",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " atacou!",
+    "@scope": 5,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 5,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": true
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 2
+  },
+  {
+    "@message2": "",
+    "@description": "Foge do combate",
+    "@name": "Escapar",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " tentou escapar.",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 6,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 41,
+        "@data_id": 0,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Esperar um turno",
+    "@name": "Esperar",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " analisa a situação.",
+    "@scope": 0,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 7,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 0,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 4
+  },
+  {
+    "@message2": "",
+    "@description": "Causa dano do elemento fogo a todos os inimigos",
+    "@name": "Sopro de Fogo",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " usou Sopro de Fogo!",
+    "@scope": 2,
+    "@animation_id": 25,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 8,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 3,
+      "@formula": "a.atk",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Casa dano do elemento gelo a todos os inimigos",
+    "@name": "Sopro de Gelo",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " usou Sopro de Gelo!",
+    "@scope": 2,
+    "@animation_id": 26,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 9,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 4,
+      "@formula": "a.atk",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Causa dano do elemento trovão a todos os inimigos",
+    "@name": "Choque",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " usou Choque!",
+    "@scope": 2,
+    "@animation_id": 27,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 10,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 5,
+      "@formula": "a.atk",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Envenena todos os inimigos",
+    "@name": "Névoa Venenosa",
+    "@occasion": 1,
+    "@icon_index": 2,
+    "@message1": " usou Névoa Venenosa!",
+    "@scope": 2,
+    "@animation_id": 31,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 11,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 2,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Cega todos os inimigos",
+    "@name": "Cegueira",
+    "@occasion": 1,
+    "@icon_index": 3,
+    "@message1": " usou Cegueira!",
+    "@scope": 2,
+    "@animation_id": 51,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 12,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 3,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Silencia todos os inimigos",
+    "@name": "Névoa Duvidosa",
+    "@occasion": 1,
+    "@icon_index": 4,
+    "@message1": " usou Névoa Duvidosa!",
+    "@scope": 2,
+    "@animation_id": 31,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 13,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 4,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Confunde todos os inimigos",
+    "@name": "Confusão",
+    "@occasion": 1,
+    "@icon_index": 5,
+    "@message1": " usou Confusão!",
+    "@scope": 2,
+    "@animation_id": 30,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 14,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 5,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Confunde todos os inimigos",
+    "@name": "Canção da Tentação",
+    "@occasion": 1,
+    "@icon_index": 5,
+    "@message1": " conjurou Canção da Tentação!",
+    "@scope": 2,
+    "@animation_id": 32,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 15,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 5,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Faz todos os inimigos dormirem",
+    "@name": "Canção Doce",
+    "@occasion": 1,
+    "@icon_index": 6,
+    "@message1": " conjurou Canção Doce!",
+    "@scope": 2,
+    "@animation_id": 54,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 16,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 6,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Faz com que todos os inimigos durmam",
+    "@name": "Pólen de Sono",
+    "@occasion": 1,
+    "@icon_index": 6,
+    "@message1": " liberou Pólen de Sono!",
+    "@scope": 2,
+    "@animation_id": 29,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 17,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 6,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Paralisa todos os inimigos",
+    "@name": "Hálito Entorpecente",
+    "@occasion": 1,
+    "@icon_index": 7,
+    "@message1": " liberou Hálito Entorpecente!",
+    "@scope": 2,
+    "@animation_id": 28,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 18,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 7,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Paralisa um alvo",
+    "@name": "Olhar Paralisante",
+    "@occasion": 1,
+    "@icon_index": 7,
+    "@message1": " usou Olhar Paralisante!",
+    "@scope": 1,
+    "@animation_id": 55,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 19,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 7,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Atordoa um alvo",
+    "@name": "Atordoamento",
+    "@occasion": 1,
+    "@icon_index": 8,
+    "@message1": " usou Aturdimento!",
+    "@scope": 1,
+    "@animation_id": 35,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 20,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 8,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Causa dano e pode atordoar",
+    "@name": "Ataque Preciso",
+    "@occasion": 1,
+    "@icon_index": 8,
+    "@message1": " usou Ataque Preciso!",
+    "@scope": 1,
+    "@animation_id": 36,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 21,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 8,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 80,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Grita com um alvo, podendo atordoá-lo",
+    "@name": "Rugido",
+    "@occasion": 1,
+    "@icon_index": 8,
+    "@message1": " liberou Rugido!",
+    "@scope": 2,
+    "@animation_id": 34,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 22,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 8,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Suga o sangue de um alvo, recuperando um\r\npouco de HP",
+    "@name": "Sugar Sangue",
+    "@occasion": 1,
+    "@icon_index": 120,
+    "@message1": " sugou sangue!",
+    "@scope": 1,
+    "@animation_id": 49,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 23,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 5,
+      "@element_id": 2,
+      "@formula": "a.atk * 2 - b.def",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera HP",
+    "@name": "Meditação",
+    "@occasion": 1,
+    "@icon_index": 112,
+    "@message1": " conjurou Meditação!",
+    "@scope": 11,
+    "@animation_id": 39,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 24,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "b.mhp / 4",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "",
+    "@name": "--------------------",
+    "@occasion": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@scope": 1,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 25,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera HP de um aliado",
+    "@name": "Cura",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " conjurou Cura!",
+    "@scope": 7,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@mp_cost": 4,
+    "@speed": 0,
+    "@id": 26,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 44,
+        "@data_id": 7,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "250 + a.mat",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera HP de um aliado",
+    "@name": "Cura II",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " conjurou Cura II!",
+    "@scope": 11,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@mp_cost": 8,
+    "@speed": 0,
+    "@id": 27,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "1000 + a.mat * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera HP de um aliado",
+    "@name": "Cura III",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " conjurou Cura III!",
+    "@scope": 7,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@mp_cost": 16,
+    "@speed": 0,
+    "@id": 28,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "4000 + a.mat * 4",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera o HP de todos os aliados",
+    "@name": "Recuperação",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " conjurou Recuperação!",
+    "@scope": 8,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@mp_cost": 12,
+    "@speed": 0,
+    "@id": 29,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "250 + a.mat",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera o HP de todos os aliados",
+    "@name": "Recuperação II",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " conjurou Recuperação II!",
+    "@scope": 8,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@mp_cost": 24,
+    "@speed": 0,
+    "@id": 30,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "1000 + a.mat * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Remove Paralisia e Veneno de um aliado",
+    "@name": "Tratamento",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " usou Tratamento!",
+    "@scope": 7,
+    "@animation_id": 40,
+    "@note": "Range=10",
+    "@mp_cost": 3,
+    "@speed": 0,
+    "@id": 31,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Remove todos os status negativos de um aliado",
+    "@name": "Tratamento II",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " usou Tratamento II!",
+    "@scope": 7,
+    "@animation_id": 41,
+    "@note": "Range=10",
+    "@mp_cost": 8,
+    "@speed": 0,
+    "@id": 32,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 3,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 4,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 5,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 6,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera um aliado nocauteado",
+    "@name": "Estimular",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " usou Estimular!",
+    "@scope": 9,
+    "@animation_id": 42,
+    "@note": "Range=10",
+    "@mp_cost": 15,
+    "@speed": 0,
+    "@id": 33,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "b.mhp / 10",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera completamente um aliado nocauteado",
+    "@name": "Estimular II",
+    "@occasion": 0,
+    "@icon_index": 112,
+    "@message1": " usou Estimular II!",
+    "@scope": 9,
+    "@animation_id": 42,
+    "@note": "Range=10",
+    "@mp_cost": 35,
+    "@speed": 0,
+    "@id": 34,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 3,
+      "@element_id": 0,
+      "@formula": "b.mhp / 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Envenena todos os inimigos",
+    "@name": "Envenenar",
+    "@occasion": 1,
+    "@icon_index": 2,
+    "@message1": " conjurou Envenenar!",
+    "@scope": 2,
+    "@animation_id": 50,
+    "@note": "Range=10",
+    "@mp_cost": 2,
+    "@speed": 0,
+    "@id": 35,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 2,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Cega todos os inimigos",
+    "@name": "Cegar",
+    "@occasion": 1,
+    "@icon_index": 3,
+    "@message1": " conjurou Cegar!",
+    "@scope": 2,
+    "@animation_id": 51,
+    "@note": "Range=10",
+    "@mp_cost": 3,
+    "@speed": 0,
+    "@id": 36,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 3,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Silencia todos os inimigos",
+    "@name": "Silenciar",
+    "@occasion": 1,
+    "@icon_index": 4,
+    "@message1": " liberou Silenciar!",
+    "@scope": 2,
+    "@animation_id": 52,
+    "@note": "Range=10",
+    "@mp_cost": 4,
+    "@speed": 0,
+    "@id": 37,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 4,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Confunde todos os inimigos",
+    "@name": "Confundir",
+    "@occasion": 1,
+    "@icon_index": 5,
+    "@message1": " conjurou Confundir!",
+    "@scope": 2,
+    "@animation_id": 53,
+    "@note": "Range=10",
+    "@mp_cost": 5,
+    "@speed": 0,
+    "@id": 38,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 5,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Faz com que todos os inimigos durmam",
+    "@name": "Adormecer",
+    "@occasion": 1,
+    "@icon_index": 6,
+    "@message1": " conjurou Adormecer!",
+    "@scope": 2,
+    "@animation_id": 54,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": 0,
+    "@id": 39,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 6,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Paralisa um alvo",
+    "@name": "Paralisar",
+    "@occasion": 1,
+    "@icon_index": 7,
+    "@message1": " conjurou Paralisar!",
+    "@scope": 1,
+    "@animation_id": 55,
+    "@note": "Range=10",
+    "@mp_cost": 7,
+    "@speed": 0,
+    "@id": 40,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 7,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta ataque de um aliado",
+    "@name": "Aumentar Ataque",
+    "@occasion": 1,
+    "@icon_index": 34,
+    "@message1": " usou Aumentar Ataque!",
+    "@scope": 7,
+    "@animation_id": 43,
+    "@note": "Range=10",
+    "@mp_cost": 9,
+    "@speed": 0,
+    "@id": 41,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 2,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta defesa de um aliado",
+    "@name": "Aumentar Defesa",
+    "@occasion": 1,
+    "@icon_index": 35,
+    "@message1": " usou Aumentar Defesa!",
+    "@scope": 7,
+    "@animation_id": 43,
+    "@note": "Range=10",
+    "@mp_cost": 8,
+    "@speed": 0,
+    "@id": 42,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta defesa mágica de um aliado",
+    "@name": "Aumentar Defesa Mágica",
+    "@occasion": 1,
+    "@icon_index": 37,
+    "@message1": " usou Aumentar Defesa Mágica!",
+    "@scope": 7,
+    "@animation_id": 43,
+    "@note": "Range=10",
+    "@mp_cost": 7,
+    "@speed": 0,
+    "@id": 43,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta agilidade de um aliado",
+    "@name": "Aumentar Agilidade",
+    "@occasion": 1,
+    "@icon_index": 38,
+    "@message1": " usou Aumentar Agilidade!",
+    "@scope": 7,
+    "@animation_id": 43,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": 0,
+    "@id": 44,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 6,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Diminui ataque de todos os inimigos",
+    "@name": "Diminuir Ataque",
+    "@occasion": 1,
+    "@icon_index": 50,
+    "@message1": " usou Diminuir Ataque!",
+    "@scope": 2,
+    "@animation_id": 45,
+    "@note": "Range=10",
+    "@mp_cost": 9,
+    "@speed": 0,
+    "@id": 45,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 2,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Diminui defesa de todos os inimigos",
+    "@name": "Diminuir Defesa",
+    "@occasion": 1,
+    "@icon_index": 51,
+    "@message1": " usou Diminuir Defesa!",
+    "@scope": 2,
+    "@animation_id": 45,
+    "@note": "Range=10",
+    "@mp_cost": 8,
+    "@speed": 0,
+    "@id": 46,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Diminui defesa mágica de todos os inimigos",
+    "@name": "Diminuir Defesa Mágica",
+    "@occasion": 1,
+    "@icon_index": 53,
+    "@message1": " usou Diminuir Defesa Mágica!",
+    "@scope": 2,
+    "@animation_id": 45,
+    "@note": "Range=10",
+    "@mp_cost": 7,
+    "@speed": 0,
+    "@id": 47,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 5,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Diminui Agilidade de todos os inimigos",
+    "@name": "Diminuir Agilidade",
+    "@occasion": 1,
+    "@icon_index": 54,
+    "@message1": " usou Diminuir Agilidade!",
+    "@scope": 2,
+    "@animation_id": 45,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": 0,
+    "@id": 48,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 6,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Drena HP de um alvo, recuperando seu próprio HP",
+    "@name": "Drenar Vida",
+    "@occasion": 1,
+    "@icon_index": 120,
+    "@message1": " drenou vida!",
+    "@scope": 1,
+    "@animation_id": 49,
+    "@note": "Range=10",
+    "@mp_cost": 10,
+    "@speed": 0,
+    "@id": 49,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 5,
+      "@element_id": 2,
+      "@formula": "200 + a.mat * 4 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Drena MP do alvo, recuperando o próprio MP",
+    "@name": "Drenar Mana",
+    "@occasion": 1,
+    "@icon_index": 120,
+    "@message1": " drenou mana!",
+    "@scope": 1,
+    "@animation_id": 49,
+    "@note": "Range=10",
+    "@mp_cost": 10,
+    "@speed": 0,
+    "@id": 50,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 6,
+      "@element_id": 2,
+      "@formula": "20 + a.mat - b.mdf * 0.5",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento fogo",
+    "@name": "Fogo",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " conjurou Fogo!",
+    "@scope": 1,
+    "@animation_id": 57,
+    "@note": "Range=10",
+    "@mp_cost": 4,
+    "@speed": 0,
+    "@id": 51,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 3,
+      "@formula": "50 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento fogo",
+    "@name": "Fogo II",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " conjurou Fogo II!",
+    "@scope": 1,
+    "@animation_id": 58,
+    "@note": "Range=10",
+    "@mp_cost": 12,
+    "@speed": -5,
+    "@id": 52,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 3,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca os inimigos em torno do personagem com elemento fogo",
+    "@name": "Incêndio",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " conjurou Incêndio!",
+    "@scope": 2,
+    "@animation_id": 59,
+    "@note": "AOE=5",
+    "@mp_cost": 8,
+    "@speed": -10,
+    "@id": 53,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 3,
+      "@formula": "150 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento fogo",
+    "@name": "Incêndio II",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " conjurou Incêndio II!",
+    "@scope": 2,
+    "@animation_id": 60,
+    "@note": "Range=10",
+    "@mp_cost": 24,
+    "@speed": -20,
+    "@id": 54,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 3,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento gelo",
+    "@name": "Gelo",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " conjurou Gelo!",
+    "@scope": 1,
+    "@animation_id": 61,
+    "@note": "Range=10\r\nAniIndex=2",
+    "@mp_cost": 4,
+    "@speed": 0,
+    "@id": 55,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 4,
+      "@formula": "100 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento gelo",
+    "@name": "Gelo II",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " conjurou Gelo II!",
+    "@scope": 1,
+    "@animation_id": 62,
+    "@note": "Range=10",
+    "@mp_cost": 12,
+    "@speed": -5,
+    "@id": 56,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 4,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento gelo",
+    "@name": "Nevasca",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " conjurou Nevasca!",
+    "@scope": 2,
+    "@animation_id": 63,
+    "@note": "Range=10",
+    "@mp_cost": 8,
+    "@speed": -10,
+    "@id": 57,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 4,
+      "@formula": "150 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento gelo",
+    "@name": "Nevasca II",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " conjurou Nevasca II!",
+    "@scope": 2,
+    "@animation_id": 64,
+    "@note": "Range=10",
+    "@mp_cost": 24,
+    "@speed": -20,
+    "@id": 58,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 4,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento trovão",
+    "@name": "Trovão",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " conjurou Trovão!",
+    "@scope": 1,
+    "@animation_id": 65,
+    "@note": "Range=10",
+    "@mp_cost": 5,
+    "@speed": 0,
+    "@id": 59,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 5,
+      "@formula": "200 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento trovão",
+    "@name": "Trovão II",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " usou Trovão II!",
+    "@scope": 1,
+    "@animation_id": 66,
+    "@note": "Range=10",
+    "@mp_cost": 15,
+    "@speed": -5,
+    "@id": 60,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 5,
+      "@formula": "500 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento trovão",
+    "@name": "Tempestade",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " conjurou Tempestade!",
+    "@scope": 2,
+    "@animation_id": 67,
+    "@note": "Range=10",
+    "@mp_cost": 10,
+    "@speed": -10,
+    "@id": 61,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 5,
+      "@formula": "200 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento trovão",
+    "@name": "Trovão II",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " conjurou Trovão II!",
+    "@scope": 2,
+    "@animation_id": 68,
+    "@note": "Range=10",
+    "@mp_cost": 30,
+    "@speed": -20,
+    "@id": 62,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 5,
+      "@formula": "500 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento água",
+    "@name": "Água",
+    "@occasion": 1,
+    "@icon_index": 99,
+    "@message1": " conjurou Água!",
+    "@scope": 1,
+    "@animation_id": 69,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": -5,
+    "@id": 63,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 6,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento água",
+    "@name": "Onda",
+    "@occasion": 1,
+    "@icon_index": 99,
+    "@message1": " conjurou Onda!",
+    "@scope": 2,
+    "@animation_id": 70,
+    "@note": "Range=10",
+    "@mp_cost": 18,
+    "@speed": -15,
+    "@id": 64,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 6,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento terra",
+    "@name": "Pedra",
+    "@occasion": 1,
+    "@icon_index": 100,
+    "@message1": " conjurou Pedra!",
+    "@scope": 1,
+    "@animation_id": 71,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": -5,
+    "@id": 65,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 7,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento terra",
+    "@name": "Terremoto",
+    "@occasion": 1,
+    "@icon_index": 100,
+    "@message1": " conjurou Terremoto!",
+    "@scope": 2,
+    "@animation_id": 72,
+    "@note": "Range=10",
+    "@mp_cost": 18,
+    "@speed": -15,
+    "@id": 66,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 7,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com elemento vento",
+    "@name": "Vento",
+    "@occasion": 1,
+    "@icon_index": 101,
+    "@message1": " conjurou Vento!",
+    "@scope": 1,
+    "@animation_id": 73,
+    "@note": "Range=10",
+    "@mp_cost": 6,
+    "@speed": -5,
+    "@id": 67,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 8,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com elemento vento",
+    "@name": "Furacão",
+    "@occasion": 1,
+    "@icon_index": 101,
+    "@message1": " conjurou Furacão!",
+    "@scope": 2,
+    "@animation_id": 74,
+    "@note": "Range=10",
+    "@mp_cost": 18,
+    "@speed": -15,
+    "@id": 68,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 8,
+      "@formula": "300 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca alvo com elemento sagrado",
+    "@name": "Ataque Sagrado",
+    "@occasion": 1,
+    "@icon_index": 102,
+    "@message1": " conjurou Ataque Sagrado!",
+    "@scope": 1,
+    "@animation_id": 75,
+    "@note": "Range=10",
+    "@mp_cost": 10,
+    "@speed": -10,
+    "@id": 69,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 9,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com o elemento sagrado",
+    "@name": "Luz das Estrelas",
+    "@occasion": 1,
+    "@icon_index": 102,
+    "@message1": " conjurou Luz das Estrelas!",
+    "@scope": 1,
+    "@animation_id": 76,
+    "@note": "Range=10",
+    "@mp_cost": 40,
+    "@speed": -30,
+    "@id": 70,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 9,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com o elemento sombrio",
+    "@name": "Trevas",
+    "@occasion": 1,
+    "@icon_index": 103,
+    "@message1": " conjurou Trevas!",
+    "@scope": 1,
+    "@animation_id": 77,
+    "@note": "Range=10",
+    "@mp_cost": 10,
+    "@speed": -10,
+    "@id": 71,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 10,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com o elemento saligno",
+    "@name": "Escuridão",
+    "@occasion": 1,
+    "@icon_index": 103,
+    "@message1": " conjurou Escuridão!",
+    "@scope": 2,
+    "@animation_id": 78,
+    "@note": "Range=10",
+    "@mp_cost": 40,
+    "@speed": -30,
+    "@id": 72,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 10,
+      "@formula": "400 + a.mat * 2 - b.mdf * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com magia neutra",
+    "@name": "Explosão",
+    "@occasion": 1,
+    "@icon_index": 119,
+    "@message1": " conjurou Explosão!",
+    "@scope": 1,
+    "@animation_id": 79,
+    "@note": "Range=10",
+    "@mp_cost": 15,
+    "@speed": -20,
+    "@id": 73,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 0,
+      "@formula": "300 + a.mat * 2",
+      "@variance": 40,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com magia neutra",
+    "@name": "Explosão Nuclear",
+    "@occasion": 1,
+    "@icon_index": 119,
+    "@message1": " conjurou Explosão Nuclear!",
+    "@scope": 2,
+    "@animation_id": 80,
+    "@note": "Range=10",
+    "@mp_cost": 60,
+    "@speed": -40,
+    "@id": 74,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 0,
+      "@formula": "300 + a.mat * 2",
+      "@variance": 40,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 2,
+    "@stype_id": 2,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "",
+    "@name": "--------------------",
+    "@occasion": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@scope": 1,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 75,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta poder do elemento fogo do usuário",
+    "@name": "Arma de Fogo",
+    "@occasion": 1,
+    "@icon_index": 96,
+    "@message1": " conjurou Arma de Fogo!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 25,
+    "@speed": 0,
+    "@id": 76,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 21,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta poder do elemento gelo do usuário",
+    "@name": "Arma de Gelo",
+    "@occasion": 1,
+    "@icon_index": 97,
+    "@message1": " conjurou Arma de Gelo!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 25,
+    "@speed": 0,
+    "@id": 77,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 22,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta poder do elemento trovão do usuário",
+    "@name": "Arma de Trovão",
+    "@occasion": 1,
+    "@icon_index": 98,
+    "@message1": " conjurou Arma de Trovão!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 25,
+    "@speed": 0,
+    "@id": 78,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 23,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "",
+    "@name": "--------------------",
+    "@occasion": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@scope": 1,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 79,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com força",
+    "@name": "Ataque Forte",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " atacou com força!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 80,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 5 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos fortemente",
+    "@name": "Fender",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " fendeu!",
+    "@scope": 2,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 81,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 2 - b.def * 2",
+      "@variance": 25,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta o ataque de todos os aliados",
+    "@name": "Aumentar Ataque",
+    "@occasion": 1,
+    "@icon_index": 34,
+    "@message1": " usou Aumentar Ataque!",
+    "@scope": 8,
+    "@animation_id": 34,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 82,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 2,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca três inimigos aleatórios",
+    "@name": "Dança Frenética",
+    "@occasion": 1,
+    "@icon_index": 128,
+    "@message1": " dançou freneticamente!",
+    "@scope": 5,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 83,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 5 - b.def * 2",
+      "@variance": 30,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 1,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos",
+    "@name": "Lâmina Giratória",
+    "@occasion": 1,
+    "@icon_index": 128,
+    "@message1": " usou Mega Alvoroço!",
+    "@scope": 2,
+    "@animation_id": 12,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 84,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 12 - b.def * 6",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 1,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo com força, podendo atordoa-lo",
+    "@name": "Invesitda",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Invesitda!",
+    "@scope": 1,
+    "@animation_id": 36,
+    "@note": "Range=10",
+    "@mp_cost": 3,
+    "@speed": 0,
+    "@id": 85,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 8,
+        "@value1": 0.3,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 1,
+      "@formula": "a.atk * 4 + a.def * 2 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Remove todos os status negativos do usuário",
+    "@name": "Chakra",
+    "@occasion": 1,
+    "@icon_index": 112,
+    "@message1": " liberou Chakra!",
+    "@scope": 11,
+    "@animation_id": 38,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 86,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 3,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 4,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 5,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 6,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Põe o usuário em posição de contra-ataque",
+    "@name": "Postura do Tigre",
+    "@occasion": 1,
+    "@icon_index": 11,
+    "@message1": " liberou Postura do Tigre!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 87,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 18,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos, ignorando defesa.\r\nPode atacar mais rapidamente que o normal",
+    "@name": "Ataque das Sombra",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Ataque das Sombra!",
+    "@scope": 2,
+    "@animation_id": 5,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 100,
+    "@id": 88,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 0,
+      "@formula": "a.atk * 5",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo duas vezes, ignorando a defesa",
+    "@name": "Dança do Dragão",
+    "@occasion": 1,
+    "@icon_index": 129,
+    "@message1": " liberou Dança do Dragão!",
+    "@scope": 1,
+    "@animation_id": 86,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 89,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 12",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 2,
+    "@required_wtype_id2": 0,
+    "@repeats": 2,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Automaticamente defende o aliado com menor\r\nHP durante um turno",
+    "@name": "Proteção",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Proteção!",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 2000,
+    "@id": 90,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 11,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Provoca os inimigos a atacarem o usuário\r\nao invés dos aliados",
+    "@name": "Provocar",
+    "@occasion": 1,
+    "@icon_index": 9,
+    "@message1": " usou Provocar!",
+    "@scope": 11,
+    "@animation_id": 34,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 91,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 12,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Durante três turnos, quase nenhum dano será \r\ncausado ao usuário",
+    "@name": "Defesa Inexpugnável",
+    "@occasion": 1,
+    "@icon_index": 113,
+    "@message1": " usou Defesa Inexpugnável!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 92,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 17,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta a defesa de todos os aliados \r\nsignificativamente durante cinco turnos ",
+    "@name": "Defesa Inefável",
+    "@occasion": 1,
+    "@icon_index": 43,
+    "@message1": " conjurou Defesa Inefável!",
+    "@scope": 8,
+    "@animation_id": 33,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 93,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Golpe de lança. Ataca três inimigos rapidamente \r\nduas vezes",
+    "@name": "Ataque Frenético",
+    "@occasion": 1,
+    "@icon_index": 130,
+    "@message1": " usou Ataque Frenético!",
+    "@scope": 5,
+    "@animation_id": 90,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 1000,
+    "@id": 94,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 5 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 3,
+    "@required_wtype_id2": 0,
+    "@repeats": 2,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca um alvo, podendo silenciá-lo",
+    "@name": "Aura da Lâmina",
+    "@occasion": 0,
+    "@icon_index": 131,
+    "@message1": " usou Aura da Lâmina!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 95,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 4,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 + a.mat * 3 - b.def - b.mdf",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 4,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Cancela os estados positivos de um alvo",
+    "@name": "Dissipar",
+    "@occasion": 1,
+    "@icon_index": 114,
+    "@message1": " usou Dissipar!",
+    "@scope": 1,
+    "@animation_id": 46,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 96,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 33,
+        "@data_id": 2,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 33,
+        "@data_id": 3,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 33,
+        "@data_id": 4,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 33,
+        "@data_id": 5,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 33,
+        "@data_id": 6,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 33,
+        "@data_id": 7,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta a resistêcia mágica do usuário por três turnos",
+    "@name": "Barreira Mágica",
+    "@occasion": 1,
+    "@icon_index": 45,
+    "@message1": " usou Barreira Mágica!",
+    "@scope": 11,
+    "@animation_id": 44,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 97,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value1": 3.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta o Poder de Fogo, Gelo e Trovão durante cinco turnos",
+    "@name": "Concentração Elemental",
+    "@occasion": 1,
+    "@icon_index": 113,
+    "@message1": " recitou Concentração Elemental!",
+    "@scope": 11,
+    "@animation_id": 44,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 98,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 21,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 21,
+        "@data_id": 22,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 21,
+        "@data_id": 23,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Técnica de espada. Ataca todos os inimigos com o\r\n atributo sagrado. Dano depende do ataque e magia",
+    "@name": "Lâmina Radiante",
+    "@occasion": 1,
+    "@icon_index": 131,
+    "@message1": " usou Lâmina Radiante!",
+    "@scope": 2,
+    "@animation_id": 87,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 1000,
+    "@id": 99,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 9,
+      "@formula": "a.atk * 5 + a.mat * 5 - b.def - b.mdf",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 4,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca o alvo fortemente, ignorando a defesa",
+    "@name": "Ataque de Chi",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Ataque de Shi!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 100,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta o TP do usuário em 30%",
+    "@name": "Limpeza da Mente",
+    "@occasion": 1,
+    "@icon_index": 112,
+    "@message1": " usou Limpeza da Mente!",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 101,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 13,
+        "@data_id": 0,
+        "@value1": 30.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta ataque e defesa do usuário por cinco turnos",
+    "@name": "Resiliência",
+    "@occasion": 1,
+    "@icon_index": 113,
+    "@message1": " usou Resiliência!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 102,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 2,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos duas vezes",
+    "@name": "Retorno das Andorinhas",
+    "@occasion": 1,
+    "@icon_index": 132,
+    "@message1": " usou Retorno das Andorinhas!",
+    "@scope": 2,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 103,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 3 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 5,
+    "@required_wtype_id2": 0,
+    "@repeats": 2,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos quatro vezes",
+    "@name": "Ataque Fantasma",
+    "@occasion": 1,
+    "@icon_index": 132,
+    "@message1": " usou Ataque Fantasma!",
+    "@scope": 2,
+    "@animation_id": 88,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 104,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 5,
+    "@required_wtype_id2": 0,
+    "@repeats": 4,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Causa dano em um alvo e diminui seu ataque",
+    "@name": "Ruptura de Arma",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Ruptura de Arma!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 105,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 2,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Causa dano em um alvo e diminui sua defesa",
+    "@name": "Ruptura de Armadura",
+    "@occasion": 1,
+    "@icon_index": 116,
+    "@message1": " usou Ruptura de Armadura!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 106,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 32,
+        "@data_id": 3,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta a agilidade do usuário drasticamente por cinco turnos",
+    "@name": "Sombra Absoluta",
+    "@occasion": 1,
+    "@icon_index": 46,
+    "@message1": " usou Sombra Absoluta!",
+    "@scope": 11,
+    "@animation_id": 31,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 107,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 6,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 6,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca três inimigos aleatórios",
+    "@name": "Tiro Triplo",
+    "@occasion": 1,
+    "@icon_index": 133,
+    "@message1": " usou Tiro Triplo!",
+    "@scope": 5,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 108,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 4 + a.agi * 2 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 6,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos três vezes ",
+    "@name": "Mil Flechas",
+    "@occasion": 1,
+    "@icon_index": 133,
+    "@message1": " liberou Mil Flechas!",
+    "@scope": 2,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 109,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 3 + a.agi * 2 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 6,
+    "@required_wtype_id2": 0,
+    "@repeats": 3,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Esconde o usuário por cinco turnos",
+    "@name": "Esconder",
+    "@occasion": 1,
+    "@icon_index": 12,
+    "@message1": " usou Esconder!",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 110,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 13,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Cega todos os inimigos",
+    "@name": "Chamejar",
+    "@occasion": 1,
+    "@icon_index": 3,
+    "@message1": " usou Chamejar!",
+    "@scope": 2,
+    "@animation_id": 33,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 111,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 3,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta sorte drasticamente por oito turnos",
+    "@name": "Aumentar Sorte",
+    "@occasion": 1,
+    "@icon_index": 47,
+    "@message1": " usou Aumentar Sorte!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 112,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 7,
+        "@value1": 8.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 7,
+        "@value1": 8.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataque de adaga. Ataca um alvo. Dano depende de sorte e ataque",
+    "@name": "Ataque Sortudo",
+    "@occasion": 1,
+    "@icon_index": 134,
+    "@message1": " usou Ataque Sortudo!",
+    "@scope": 1,
+    "@animation_id": -1,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 113,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 3 + a.luk * 4 - b.def * 2",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 7,
+    "@required_wtype_id2": 0,
+    "@repeats": 2,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca quatro inimigos aleatórios. Depende de sorte e ataque",
+    "@name": "Ataque Aleatório",
+    "@occasion": 1,
+    "@icon_index": 134,
+    "@message1": " usou Ataque Aleatório!",
+    "@scope": 6,
+    "@animation_id": 89,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 114,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": -1,
+      "@formula": "a.atk * 2 + a.luk * 4 - b.def * 2",
+      "@variance": 50,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 1,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 7,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta a defesa por três turnos de todos os aliados",
+    "@name": "Defesa Aumentada",
+    "@occasion": 1,
+    "@icon_index": 35,
+    "@message1": " liberou Defesa Aumentada!",
+    "@scope": 8,
+    "@animation_id": 44,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 115,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta a regeneração de HP de todos os aliados",
+    "@name": "Sopro de Fadas",
+    "@occasion": 1,
+    "@icon_index": 10,
+    "@message1": " usou Sopro de Fadas!",
+    "@scope": 8,
+    "@animation_id": 42,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 116,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 14,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Ataca todos os inimigos com o elemento Sagrado. Dano depende de magia",
+    "@name": "Castigo de Deus",
+    "@occasion": 1,
+    "@icon_index": 102,
+    "@message1": " usou Castigo de Deus!",
+    "@scope": 2,
+    "@animation_id": 76,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 117,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 1,
+      "@element_id": 9,
+      "@formula": "a.mat * 5 - b.mdf",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta Defesa e Resistência por sete turnos de todos os aliados",
+    "@name": "Proteção da Deusa",
+    "@occasion": 1,
+    "@icon_index": 113,
+    "@message1": " usou Proteção da Deusa!",
+    "@scope": 8,
+    "@animation_id": 44,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 118,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 7.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value1": 7.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value1": 7.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value1": 7.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Adiciona status de reflexão mágica ao usuário",
+    "@name": "Reflexão Mágica",
+    "@occasion": 1,
+    "@icon_index": 15,
+    "@message1": " usou Reflexão Mágica!",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 2000,
+    "@id": 119,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 20,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta ataque mágico do usuário por cinco turnos",
+    "@name": "Aumentar Ataque Mágico",
+    "@occasion": 1,
+    "@icon_index": 44,
+    "@message1": " usou Aumentar Ataque Mágico!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 120,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 31,
+        "@data_id": 4,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 4,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Faz com que todos os inimigos durmam e diminui suas resistências por cinco turnos",
+    "@name": "Pesadelo",
+    "@occasion": 1,
+    "@icon_index": 6,
+    "@message1": " recitou Pesadelo!",
+    "@scope": 2,
+    "@animation_id": 56,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 121,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 6,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 32,
+        "@data_id": 5,
+        "@value1": 5.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 32,
+        "@data_id": 5,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Recupera MP do usuário instantaneamente",
+    "@name": "Torrente Mágico",
+    "@occasion": 1,
+    "@icon_index": 14,
+    "@message1": " liberou Torrente Mágico!",
+    "@scope": 11,
+    "@animation_id": 38,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 122,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 4,
+      "@element_id": 0,
+      "@formula": "b.mmp * 0.5",
+      "@variance": 0,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Aumenta regeneração de MP do usuário por quatro turnos",
+    "@name": "Regeneração",
+    "@occasion": 1,
+    "@icon_index": 10,
+    "@message1": " usou Regeneração!",
+    "@scope": 11,
+    "@animation_id": 38,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 123,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 15,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Adiciona Esquiva Mágica por 3 turnos",
+    "@name": "Defesa Mágica Absoluta",
+    "@occasion": 1,
+    "@icon_index": 13,
+    "@message1": " usou Defesa Mágica Absoluta!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 124,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 19,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Evita status negativos de serem causados por cinco turnos",
+    "@name": "Mana Brilhante",
+    "@occasion": 1,
+    "@icon_index": 113,
+    "@message1": "はマナの光輝を使った！",
+    "@scope": 8,
+    "@animation_id": 44,
+    "@note": "Range=10",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 125,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 24,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Reduz significativamente o custo de MP do usuário",
+    "@name": "O Mago Arcano",
+    "@occasion": 1,
+    "@icon_index": 14,
+    "@message1": " liberou O Mago Arcano!",
+    "@scope": 11,
+    "@animation_id": 43,
+    "@note": "",
+    "@mp_cost": 0,
+    "@speed": 0,
+    "@id": 126,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 21,
+        "@data_id": 25,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Muda o outfit por 10 segundos",
+    "@name": "Transformação",
+    "@occasion": 0,
+    "@icon_index": 14,
+    "@message1": "",
+    "@scope": 11,
+    "@animation_id": 39,
+    "@note": "",
+    "@mp_cost": 5,
+    "@speed": 0,
+    "@id": 127,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 6,
+        "@value1": 0.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 31,
+        "@data_id": 2,
+        "@value1": 5.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@message2": "",
+    "@description": "Teletransporta o jogador para a Floresta",
+    "@name": "Teletransporte",
+    "@occasion": 0,
+    "@icon_index": 120,
+    "@message1": "",
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@mp_cost": 20,
+    "@speed": 0,
+    "@id": 128,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 8,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@stype_id": 1,
+    "@tp_cost": 0,
+    "@required_wtype_id1": 0,
+    "@required_wtype_id2": 0,
+    "@repeats": 1,
+    "@tp_gain": 0
+  }
+]

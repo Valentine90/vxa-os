@@ -38,6 +38,12 @@ class Game_Player < Game_Character
     super || collide_with_players?(x, y) && $game_map.pvp
   end
   
+  def in_front?(target)
+    x = $game_map.round_x_with_direction(@x, @direction)
+    y = $game_map.round_y_with_direction(@y, @direction)
+    target.pos?(x, y)
+  end
+  
   def protection_level?(target)
     actor.level < Configs::MIN_LEVEL_PVP || target.actor.level < Configs::MIN_LEVEL_PVP
   end
@@ -47,7 +53,7 @@ class Game_Player < Game_Character
   end
   
   def usable?(item)
-    mp_enough?(item) && sufficient_level?(item) && actor.usable?(item) && (item.for_friend? || valid_target?(item.range, item.aoe))
+    mp_enough?(item) && sufficient_level?(item) && has_item?(item) && actor.usable?(item) && (item.for_friend? || valid_target?(item.range, item.aoe))
   end
   
   def mp_enough?(item)
@@ -59,8 +65,16 @@ class Game_Player < Game_Character
   end
   
   def sufficient_level?(item)
-    if item.is_a?(RPG::Item) && actor.level < item.level
+    if actor.level < item.level
       $error_msg = Vocab::InsufficientLevel
+      return false
+    end
+    return true
+  end
+  
+  def has_item?(item)
+    if item.is_a?(RPG::Item) && !$game_party.has_item?(item)
+      $error_msg = "#{Vocab::NotHave} #{item.name}."
       return false
     end
     return true
@@ -76,7 +90,8 @@ class Game_Player < Game_Character
     x = $game_map.round_x_with_direction(@x, @direction)
     y = $game_map.round_y_with_direction(@y, @direction)
     player = collide_with_players?(x, y)
-    # Se o evento está em frente ou abaixo do jogador ou atrás de um balcão
+    # Se o evento está em frente ou abaixo do jogador
+    #ou atrás de um balcão
     if collide_with_events?(x, y) || event_trigger_here?([0]) || $game_map.counter?(x, y)
       return true
     elsif !actor.movable?
@@ -108,7 +123,7 @@ class Game_Player < Game_Character
     elsif !actor.movable?
       return false
     elsif Configs::RANGE_WEAPONS[actor.weapons[0].id][:item_id] > 0 && !$game_party.has_item?($data_items[Configs::RANGE_WEAPONS[actor.weapons[0].id][:item_id]])
-      $error_msg = Vocab::NotAmmunition
+      $error_msg = Vocab::NotAmmo
       return false
     elsif Configs::RANGE_WEAPONS[actor.weapons[0].id][:mp_cost] && actor.mp < Configs::RANGE_WEAPONS[actor.weapons[0].id][:mp_cost]
       $error_msg = Vocab::InsufficientMP
@@ -128,7 +143,7 @@ class Game_Player < Game_Character
     elsif !in_range?(@target, range)
       $error_msg = Vocab::TargetNotInRange
       return false
-    elsif blocked_passage?
+    elsif blocked_passage?(@target)
       $error_msg = Vocab::NotSeeTarget
       return false
     elsif @target.admin?
@@ -144,19 +159,19 @@ class Game_Player < Game_Character
     return true
   end
   
-  def blocked_passage?
+  def blocked_passage?(target)
     # Retorna falso se o jogador e o alvo estiverem nas
     #mesmas coordenadas x e y, pois, nesta versão do Ruby,
     #o atan2 retorna um erro
-    return false if pos?(@target.x, @target.y)
-    radians = Math.atan2(@target.x - @x, @target.y - @y)
+    return false if pos?(target.x, target.y)
+    radians = Math.atan2(target.x - @x, target.y - @y)
     speed_x = Math.sin(radians)
     speed_y = Math.cos(radians)
-    range_x = (@target.x - @x).abs
-    range_y = (@target.y - @y).abs
+    range_x = (target.x - @x).abs
+    range_y = (target.y - @y).abs
     # Obtém a direção do projétil em vez de usar a do
     #jogador que pode estar de costas para o alvo
-    direction = projectile_direction
+    direction = projectile_direction(target)
     result = false
     x = @x
     y = @y
@@ -201,9 +216,9 @@ class Game_Player < Game_Character
     $windows[:hud].change_opacity
   end
   
-  def projectile_direction
-    sx = distance_x_from(@target.x)
-    sy = distance_y_from(@target.y)
+  def projectile_direction(target)
+    sx = distance_x_from(target.x)
+    sy = distance_y_from(target.y)
     if sx.abs > sy.abs
       direction = sx > 0 ? 4 : 6
     elsif sy != 0
@@ -224,7 +239,7 @@ class Game_Player < Game_Character
   end
   
   def move_by_input
-    return if !movable? || $game_map.interpreter.running?
+    return if !movable? || $game_map.interpreter.running? || $windows[:quest_dialogue].visible
     # Se a conexão ficou lenta e ainda não recebeu do
     #servidor o movimento anterior
     send_movement(Input.dir4) if Input.dir4 > 0 && !$typing && !$wait_player_move
@@ -302,23 +317,35 @@ class Game_Player < Game_Character
   end
   
   def select_nearest_enemy
-    # Se a tecla é uma letra e a caixa de texto estiver ativa
+    # Se a tecla de atalho é uma letra e a caixa de
+    #texto estiver ativa
     return if $typing
-    event_id = 0
-    sx = 10
-    sy = 10
+    event_in_sight_id = 0
+    event_not_in_sight_id = 0
+    in_sight_sx = 10
+    in_sight_sy = 10
+    not_in_sight_sx = 10
+    not_in_sight_sy = 10
     $game_map.events.each_value do |event|
-      # Se é um inimigo que não morreu e está no alcance
+      # Se é um inimigo que morreu ou está fora do alcance
       next unless event.actor? && in_range?(event, 10)
       real_distance_x = distance_x_from(event.x).abs
       real_distance_y = distance_y_from(event.y).abs
-      if real_distance_x + real_distance_y < sx + sy
-        event_id = event.id
-        sx = real_distance_x
-        sy = real_distance_y
+      if !blocked_passage?(event) && real_distance_x + real_distance_y < in_sight_sx + in_sight_sy
+        event_in_sight_id = event.id
+        in_sight_sx = real_distance_x
+        in_sight_sy = real_distance_y
+      elsif real_distance_x + real_distance_y < not_in_sight_sx + not_in_sight_sy
+        event_not_in_sight_id = event.id
+        not_in_sight_sx = real_distance_x
+        not_in_sight_sy = real_distance_y
       end
     end
-    $network.send_target(event_id, Enums::Target::ENEMY) if event_id > 0
+    if event_in_sight_id > 0
+      $network.send_target(event_in_sight_id, Enums::Target::ENEMY)
+    elsif event_not_in_sight_id > 0
+      $network.send_target(event_not_in_sight_id, Enums::Target::ENEMY)
+    end
   end
   
 end

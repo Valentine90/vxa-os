@@ -45,6 +45,7 @@ class Window_Password < Window_Base
     self.title = Vocab::Alert
     @delete_button = Button.new(self, 89, 136, Vocab::Delete) { delete }
     @pass_box = Text_Box.new(self, 47, 110, 140, Configs::MAX_CHARACTERS, true) { enable_delete_button }
+    draw_contents
   end
   
   def adjust_x
@@ -59,8 +60,7 @@ class Window_Password < Window_Base
     @delete_button.enable = false
   end
   
-  def refresh
-    contents.clear
+  def draw_contents
     word_wrap(Vocab::EnterPass).each_with_index do |text, i|
       draw_text(0, line_height * i, contents_width, line_height, text, 1)
     end

@@ -47,7 +47,7 @@ class Sprite_TargetHUD < Sprite2
   def visible=(visible)
     super
     visible_icons = (visible && $game_player.target.is_a?(Game_NetPlayer))
-    @icons.each { |icon| icon.visible = visible_icons}
+    @icons.each { |icon| icon.visible = visible_icons }
   end
   
   def hide
@@ -124,7 +124,7 @@ class Sprite_TargetHUD < Sprite2
     elsif $game_actors[1].friends.size >= Configs::MAX_FRIENDS
       $error_msg = Vocab::FullFriends
     elsif !$game_player.in_range?($game_player.target, 10)
-      $error_msg = Vocab::PlayerNotInRang
+      $error_msg = Vocab::PlayerNotInRange
     else
       $network.send_request(Enums::Request::FRIEND, $game_player.target.id)
     end
@@ -133,7 +133,7 @@ class Sprite_TargetHUD < Sprite2
   def trade_request
     if !$game_player.in_range?($game_player.target, 10)
       $error_msg = Vocab::PlayerNotInRange
-    elsif $windows[:trade].visible
+    elsif $windows[:my_trade].visible
       $error_msg = Vocab::InTrade
     else
       $network.send_request(Enums::Request::TRADE, $game_player.target.id)
@@ -151,10 +151,10 @@ class Sprite_TargetHUD < Sprite2
   end
   
   def guild_request
-    if $game_actors[1].guild.empty?
+    if $game_actors[1].guild_name.empty?
       $error_msg = Vocab::NotGuild
-    elsif !$game_player.target.actor.guild.empty?
-      $error_msg = "#{$game_player.target.actor.name} #{Vocab::PlayerInGuild} #{$game_player.target.actor.guild}."
+    elsif !$game_player.target.actor.guild_name.empty?
+      $error_msg = "#{$game_player.target.actor.name} #{Vocab::PlayerInGuild} #{$game_player.target.actor.guild_name}."
     else
       $network.send_request(Enums::Request::GUILD, $game_player.target.id)
     end

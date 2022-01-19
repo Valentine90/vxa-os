@@ -260,6 +260,7 @@ class Game_Player < Game_Character
   #     normal   : mesa prioridade que ［personagens normais］
   #--------------------------------------------------------------------------
   def start_map_event(x, y, triggers, normal)
+    return if $game_map.interpreter.running?
     $game_map.events_xy(x, y).each do |event|
       if event.trigger_in?(triggers) && event.normal_priority? == normal
         event.start

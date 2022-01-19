@@ -160,13 +160,13 @@ class Game_Event < Game_Character
   def clear_starting_flag
     @starting = false
   end
+=end
   #--------------------------------------------------------------------------
   # * Definição de lista de execução vazia
   #--------------------------------------------------------------------------
   def empty?
     !@list || @list.size <= 1
   end
-=end
   #--------------------------------------------------------------------------
   # * Definição de inclusão de qualquer desencadeador especificado
   #     triggers : desencadeadores
@@ -323,9 +323,9 @@ class Game_Event < Game_Character
   #--------------------------------------------------------------------------
   def update
     super
-    #check_event_trigger_auto
+    check_event_trigger_auto
     return unless @interpreter
-    #@interpreter.setup(@list, @event.id) unless @interpreter.running?
+    @interpreter.setup(@list, @event.id) unless @interpreter.running?
     @interpreter.update
   end
 end

@@ -40,6 +40,7 @@ class Game_Battler < Game_BattlerBase
   attr_accessor :animation_id             # ID da animação
   attr_accessor :animation_mirror         # Flag de inversão de animação
   attr_accessor :sprite_effect_type       # Efeitos de sprite
+  attr_accessor :magic_reflection         # Reflexão de magias
   #--------------------------------------------------------------------------
   # * Inicialização do objeto
   #--------------------------------------------------------------------------
@@ -152,7 +153,7 @@ class Game_Battler < Game_BattlerBase
       #revive if state_id == death_state_id
       erase_state(state_id)
       refresh
-      @result.removed_states.push(state_id).uniq!
+      #@result.removed_states.push(state_id).uniq!
     end
   end
   #--------------------------------------------------------------------------
@@ -827,7 +828,7 @@ class Game_Battler < Game_BattlerBase
   #     battler : lutador
   #--------------------------------------------------------------------------
   def opposite?(battler)
-    actor? != battler.actor?
+    actor? != battler.actor? || battler.magic_reflection
   end
   #--------------------------------------------------------------------------
   # * Efeito do dano no mapa

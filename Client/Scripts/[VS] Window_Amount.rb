@@ -161,7 +161,7 @@ class Window_Amount < Window_Base
   
   def update
     super
-    ok if Input.trigger?(:C)
+    ok if Input.trigger?(:C) && @amount_box.value != 0
   end
   
 end

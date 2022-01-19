@@ -8,8 +8,9 @@
 
 class Window_Guild < Window_Selectable
   
-  MAIN_PAGE   = 0
-  MANAGE_PAGE = 1
+  MAIN_PAGE    = 0
+  MANAGE_PAGE  = 1
+  MEMBERS_PAGE = 2
   
   def initialize
     super(400, 170, 252, 222)
@@ -18,20 +19,23 @@ class Window_Guild < Window_Selectable
     self.title = Vocab::Guild
     @tab_page = Tab_Control.new(self, [Vocab::Main, Vocab::Manage, "#{Vocab::Member}s"], true) { refresh }
     @shutdown_button = Button.new(self, 94, 170, Vocab.shutdown, 65) { $windows[:choice].show(Vocab::Ask, Enums::Choice::LEAVE_GUILD) }
-    @kick_box = Text_Box.new(self, 98, 22, 101, Configs::MAX_CHARACTERS) { enable_kick_button }
-    @leader_box = Text_Box.new(self, 98, 48, 101, Configs::MAX_CHARACTERS) { enable_leader_button }
-    @notice_box = Text_Box.new(self, 98, 74, 101, 64) { enable_notice_button }
-    @kick_button = Button.new(self, 204, 22, Vocab::Ok) { kick_member }
-    @leader_button = Button.new(self, 204, 48, Vocab::Ok) { change_leader }
-    @notice_button = Button.new(self, 204, 74, Vocab::Ok) { change_notice }
-    @colors = Cache.system('GuildColors')
+    @add_box = Text_Box.new(self, 98, 22, 101, Configs::MAX_CHARACTERS) { enable_add_button }
+    @kick_box = Text_Box.new(self, 98, 48, 101, Configs::MAX_CHARACTERS) { enable_kick_button }
+    @leader_box = Text_Box.new(self, 98, 74, 101, Configs::MAX_CHARACTERS) { enable_leader_button }
+    @notice_box = Text_Box.new(self, 98, 100, 101, 64) { enable_notice_button }
+    @add_button = Button.new(self, 204, 22, Vocab::Ok) { add_player }
+    @kick_button = Button.new(self, 204, 48, Vocab::Ok) { kick_member }
+    @leader_button = Button.new(self, 204, 74, Vocab::Ok) { change_leader }
+    @notice_button = Button.new(self, 204, 100, Vocab::Ok) { change_notice }
     disable_buttons
   end
   
   def disable_buttons
+    @add_box.clear
     @kick_box.clear
     @leader_box.clear
     @notice_box.clear
+    @add_button.enable = false
     @kick_button.enable = false
     @leader_button.enable = false
     @notice_button.enable = false
@@ -42,7 +46,7 @@ class Window_Guild < Window_Selectable
   end
   
   def request_guild_data
-    if $game_actors[1].guild.empty?
+    if $game_actors[1].guild_name.empty?
       $error_msg = Vocab::NotGuild
       return
     end
@@ -62,17 +66,20 @@ class Window_Guild < Window_Selectable
   def refresh
     contents.clear
     @shutdown_button.visible = false
+    @add_box.visible = false
     @kick_box.visible = false
     @leader_box.visible = false
     @notice_box.visible = false
+    @add_button.visible = false
     @kick_button.visible = false
     @leader_button.visible = false
     @notice_button.visible = false
-    if @tab_page.index == MAIN_PAGE
+    case @tab_page.index
+    when MAIN_PAGE
       main_page
-    elsif @tab_page.index == MANAGE_PAGE
+    when MANAGE_PAGE
       manage_page
-    else
+    when MEMBERS_PAGE
       super
     end
     @tab_page.draw_border
@@ -81,7 +88,7 @@ class Window_Guild < Window_Selectable
   def main_page
     @data.clear
     $game_guild.flag.each_with_index { |color_id, i| contents.fill_rect(i % 8 * 4 + 10, i / 8 * 4 + 5, 4, 4, color(color_id)) if color_id < 255 }
-    draw_text(55, 7, 105, line_height, $game_actors[1].guild)
+    draw_text(55, 7, 105, line_height, $game_actors[1].guild_name)
     change_color(system_color)
     draw_text(10, 45, 60, line_height, "#{Vocab::Leader}:")
     draw_text(10, 65, 80, line_height, "#{Vocab::Member}s:")
@@ -99,16 +106,20 @@ class Window_Guild < Window_Selectable
   
   def manage_page
     @data.clear
-    draw_text(7, 7, 85, line_height, "#{Vocab::Kick}:")
-    draw_text(7, 33, 100, line_height, Vocab::NewLeader)
-    draw_text(7, 59, 75, line_height, Vocab::Notice)
+    draw_text(7, 7, 85, line_height, Vocab::Add)
+    draw_text(7, 33, 85, line_height, "#{Vocab::Kick}:")
+    draw_text(7, 59, 100, line_height, Vocab::NewLeader)
+    draw_text(7, 85, 75, line_height, Vocab::Notice)
+    @add_box.visible = true
     @kick_box.visible = true
     @leader_box.visible = true
     @notice_box.visible = true
+    @add_button.visible = true
     @kick_button.visible = true
     @leader_button.visible = true
     @notice_button.visible = true
     enable = $game_guild.leader == $game_actors[1].name
+    @add_box.enable = enable
     @kick_box.enable = enable
     @leader_box.enable = enable
     @notice_box.enable = enable
@@ -116,7 +127,7 @@ class Window_Guild < Window_Selectable
   
   def draw_item(index)
     rect = item_rect_for_text(index)
-    icon_index = index >= $game_guild.online_size ? Configs::PLAYER_ON_ICON : Configs::PLAYER_OFF_ICON
+    icon_index = index < $game_guild.online_size ? Configs::PLAYER_ON_ICON : Configs::PLAYER_OFF_ICON
     rect2 = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
     bitmap = Cache.system('Iconset')
     contents.blt(7, rect.y, bitmap, rect2)
@@ -127,25 +138,34 @@ class Window_Guild < Window_Selectable
   end
   
   def color(n)
-    @colors.get_pixel(n % 8 * 8, n / 8 * 8)
+    colors = Cache.system('GuildColors')
+    colors.get_pixel(n % 8 * 8, n / 8 * 8)
+  end
+  
+  def add_player
+    $network.send_guild_request(@add_box.text) unless @add_box.text.casecmp($game_actors[1].name).zero? 
+    @add_box.clear
+    @add_button.enable = false
   end
   
   def kick_member
-    return if @kick_box.text == $game_actors[1].name
-    $network.send_remove_guild_member(@kick_box.text)
+    $network.send_remove_guild_member(@kick_box.text) unless @kick_box.text.casecmp($game_actors[1].name).zero? 
     @kick_box.clear
     @kick_button.enable = false
   end
   
   def change_leader
-    return if @leader_box.text == $game_actors[1].name
-    $network.send_guild_leader(@leader_box.text)
+    $network.send_guild_leader(@leader_box.text) unless @leader_box.text.casecmp($game_actors[1].name).zero? 
     @leader_box.clear
     @leader_button.enable = false
   end
   
   def change_notice
     $network.send_guild_notice(@notice_box.text)
+  end
+  
+  def enable_add_button
+    @add_button.enable = (@add_box.text.strip.size >= Configs::MIN_CHARACTERS)
   end
   
   def enable_kick_button
@@ -188,7 +208,9 @@ class Window_Guild < Window_Selectable
   def ok
     return unless Input.trigger?(:C)
     return unless @tab_page.index == MANAGE_PAGE
-    if @kick_box.active
+    if @add_box.active
+      add_player
+    elsif @kick_box.active
       kick_member
     elsif @leader_box.active
       change_leader

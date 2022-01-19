@@ -6,14 +6,12 @@
 #  Autor: Valentine
 #==============================================================================
 
-class Window_Base < Window
+module W_Base
   
   attr_reader   :controls
   attr_accessor :title_y
   
   def init_features
-    self.back_opacity = 255
-    @title_height = 20
     @title_y = 0
     @dragable = true
     @closable = false
@@ -33,19 +31,18 @@ class Window_Base < Window
   end
   
   def in_border_area?
-    in_area?(0, -@title_y, width - 20, @title_height)
+    in_area?(0, -@title_y, width - 20, Configs::TITLE_BAR_HEIGHT)
   end
   
   def title=(title)
     bitmap = Cache.system('TitleBar')
-    @title_height = bitmap.height
-    @title_y = @title_height - 8
+    @title_y = Configs::TITLE_BAR_HEIGHT - 8
     @title = Sprite.new
     @title.x = x
     @title.y = y - @title_y
     @title.z = z + 1
     @title.visible = visible
-    @title.bitmap = Bitmap.new(width, @title_height)
+    @title.bitmap = Bitmap.new(width, Configs::TITLE_BAR_HEIGHT)
     @title.bitmap.blt(0, 0, bitmap, Rect.new(0, 0, 4, @title.bitmap.height))
     @title.bitmap.stretch_blt(Rect.new(4, 0, @title.bitmap.width - 8, @title.bitmap.height), bitmap, Rect.new(4, 0, 12, @title.bitmap.height))
     @title.bitmap.blt(@title.bitmap.width - 4, 0, bitmap, Rect.new(16, 0, 4, @title.bitmap.height))
@@ -141,6 +138,23 @@ class Window_Base < Window
     contents.blt(x - cw / 2, y - ch, bitmap, src_rect)
   end
   
+  def draw_justified_texts(start_x, y, width, height, texts)
+    lines = word_wrap(texts, width)
+    lines.each.with_index do |text, i|
+      x = start_x
+      if i < lines.size - 1
+        excess = width - contents.text_size(text).width - 40
+        extra_space = excess.to_f / text.split.size
+        text.each_line(' ') do |word|
+          draw_text(x, height * i + y, width, height, word)
+          x += contents.text_size(word).width + extra_space
+        end
+      else
+        draw_text(x, height * i + y, width, height, text)
+      end
+    end
+  end
+  
   def refresh
   end
   
@@ -148,7 +162,7 @@ class Window_Base < Window
     Mouse.x >= self.x + x && Mouse.x <= self.x + x + w && Mouse.y >= self.y + y && Mouse.y <= self.y + y + h
   end
   
-  def convert_gold(value)
+  def format_number(value)
     value.to_s.reverse.scan(/...|..|./).join('.').reverse
   end
   
@@ -156,42 +170,66 @@ class Window_Base < Window
     # Corrige a compressão de texto do RGD
     width -= 20
     bitmap = contents || Bitmap.new(1, 1)
-    return [text] if bitmap.text_size(text).width <= width
+    return [text] if bitmap.text_size(text).width <= width && !text.include?("\n")
     lines = []
     line = ''
-    line_size = 0
+    line_width = 0
     text.each_line(' ') do |word|
-      word_size = bitmap.text_size(word).width
-      if word_size > width
+      word_width = bitmap.text_size(word).width
+      if word.include?("\n")
+        line, lines, line_width = skip_line(word, width, bitmap, line, lines, line_width)
+      elsif word_width > width
         line, lines = character_wrap(word, width, bitmap, line, lines)
-      elsif line_size + word_size <= width
+      elsif line_width + word_width <= width
         line << word
-        line_size += word_size
+        line_width += word_width
       else
         lines << line
         line = word
-        line_size = word_size
+        line_width = word_width
       end
     end
     bitmap.dispose unless contents
     lines << line
   end
   
-  def character_wrap(word, width, bitmap, line, lines)
-    cs = ''
-    cs_size = 0
-    word.each_char do |c|
-      c_size = bitmap.text_size(c).width
-      if cs_size + c_size <= width
-        cs << c
-        cs_size += c_size
-      else
+  def skip_line(words, width, bitmap, line, lines, line_width)
+    words.each_line do |word|
+      # Se a última palavra da matriz não está
+      #acompanhada do comando de quebra de linha
+      unless word.end_with?("\n")
+        line = word
+        line_width = bitmap.text_size(word).width
+        break
+      end
+      word = word.delete("\n")
+      word_width = bitmap.text_size(word).width
+      if line_width + word_width <= width
         # Impede que as linhas sejam alteradas quando a
         #linha atual for apagada
+        lines << line.clone + word
+      else
+        lines << line.clone << word
+      end
+      line.clear
+      line_width = 0
+    end
+    return line, lines, line_width
+  end
+  
+  def character_wrap(word, width, bitmap, line, lines)
+    cs = ''
+    cs_width = 0
+    word.each_char do |c|
+      c_width = bitmap.text_size(c).width
+      if cs_width + c_width <= width
+        cs << c
+        cs_width += c_width
+      else
         lines << line.clone unless line.empty?
         lines << cs
         cs = c
-        cs_size = c_size
+        cs_width = c_width
         line.clear
       end
     end
@@ -200,7 +238,7 @@ class Window_Base < Window
   
   def update_features
     update_dragging
-    hide_window if Mouse.click?(:L) && in_area?(width - 20, -@title_y, 20, @title_height) && @closable
+    hide_window if Mouse.click?(:L) && in_area?(width - 20, -@title_y, 20, Configs::TITLE_BAR_HEIGHT) && @closable
     $dragging_window = Mouse.press?(:L) ? in_border_area? && !$dragging_window && self.opacity > 0 && @dragable ? self : $dragging_window : nil
     update_title
     @controls.each(&:update)
@@ -222,6 +260,106 @@ class Window_Base < Window
       @dif_x = Mouse.x - self.x
       @dif_y = Mouse.y - self.y
     end
+  end
+  
+end
+
+#==============================================================================
+# ** Window_Base2
+#==============================================================================
+class Window_Base2 < Sprite
+  
+  include W_Base
+  
+  attr_accessor :ox, :oy
+  
+  def initialize(x, y, window, height = 0)
+    super()
+    if height > 0
+      width = window
+      self.bitmap = Bitmap.new(width, height)
+    else
+      self.bitmap = Cache.window(window)
+    end
+    self.x = x
+    self.y = y
+    self.z = 100
+    @contents = Sprite.new
+    @contents.x = self.x + contents_x
+    @contents.y = self.y + contents_y
+    @contents.z = self.z
+    create_contents
+    init_features
+    @ox = 0
+    @oy = 0
+  end
+  
+  def contents
+    @contents.bitmap
+  end
+  
+  def contents2
+    @contents2.bitmap
+  end
+  
+  def contents_x
+    standard_padding
+  end
+  
+  def contents_y
+    Configs::TITLE_BAR_HEIGHT + 4
+  end
+  
+  def contents_width
+    width - contents_x - standard_padding
+  end
+  
+  def windowskin
+    Cache.system('Window')
+  end
+  
+  def visible=(visible)
+    super
+    @contents.visible = visible
+    @contents2.visible = visible if @contents2
+  end
+  
+  def create_contents
+    contents.dispose if contents
+    if contents_width > 0 && contents_height > 0
+      @contents.bitmap = Bitmap.new(contents_width, contents_height)
+    else
+      @contents.bitmap = Bitmap.new(1, 1)
+    end
+    # Retorna o bitmap recortado imediatamente quando 
+    #houver atualização da janela, especialmente logo 
+    #após ela ser aberta, nos milésimos de segundo
+    #anteriores ao recorte do update
+    @contents.src_rect.set(self.ox, self.oy, contents_width, self.bitmap.height - Configs::TITLE_BAR_HEIGHT - contents_y) if @contents2
+  end
+  
+  def create_contents2(x, y, width, height)
+    @contents2_x = standard_padding + x
+    @contents2_y = Configs::TITLE_BAR_HEIGHT + y + 4
+    @contents2 = Sprite.new
+    @contents2.bitmap = Bitmap.new(width, height)
+    @contents2.x = self.x + @contents2_x
+    @contents2.y = self.y + @contents2_y
+    @contents2.z = self.z
+  end
+  
+  def update
+    super
+    @contents.src_rect.set(self.ox, self.oy, contents_width, self.bitmap.height - Configs::TITLE_BAR_HEIGHT - contents_y)
+    @contents.x = self.x + contents_x
+    @contents.y = self.y + contents_y
+    if @contents2
+      @contents2.x = self.x + @contents2_x
+      @contents2.y = self.y + @contents2_y
+    end
+  end
+  
+  def update_tone
   end
   
 end

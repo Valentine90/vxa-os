@@ -41,6 +41,7 @@ module Vocab
   Party              = 'Grupo'
   Guild              = 'Guilda'
   Private            = 'Privado'
+  Emojis             = 'Emojis'
   
   # Alerta do menu
   ServerOffline      = 'O servidor está off-line!'
@@ -79,14 +80,16 @@ module Vocab
   InsufficientLevel  = 'Você não tem nível suficiente para usar este item.'
   InsufficientMP     = 'Você não tem MP suficiente.'
   GlobalSpawning     = 'Espere 1 segundo para falar novamente no bate-papo global.'
-  NotAmmunition      = 'Você não tem munição.'
+  NotAmmo            = 'Você não tem munição.'
   NotPickUpDrop      = 'Você ainda não pode pegar esse item.'
+  NotHave            = 'Você não tem'
   RequestDeclined    = 'Sua solicitação foi recusada.'
   FullInventory      = 'Seu inventário está cheio.'
   FullTrade          = 'A troca está cheia.'
   FullBank           = 'O banco está cheio.'
   FullDrops          = 'Você não pode derrubar item no chão agora.'
   ProtectionLevel    = 'Você ou seu alvo não tem nível suficiente para duelar.'
+  WTypeNotEquipped   = 'Você não equipou o tipo de arma exigida para usar essa habilidade.'
   EquipVIP           = 'Só jogadores VIP podem usar este equipamento.'
   DifferentSex       = 'Este protetor não foi feito para o seu sexo.'
   SoulboundItem      = 'Este item está ligado à sua alma e não pode ser negociado, derrubado nem depositado.'
@@ -94,6 +97,7 @@ module Vocab
   Unlocked           = 'foi desbloqueado.'
   Busy               = 'Este jogador está ocupado.'
   Ask                = 'Você tem certeza?'
+  Press              = 'Pressione'
   
   # Habilidades
   Attack             = 'Ataque'
@@ -141,6 +145,7 @@ module Vocab
   NotGuild           = 'Você não está em uma guilda.'
   Leader             = 'Líder'
   Member             = 'Membro'
+  Add                = 'Adicionar:'
   NewLeader          = 'Novo líder:'
   Notice             = 'Aviso:'
   Main               = 'Principal'
@@ -185,6 +190,7 @@ module Vocab
   # Missões
   Quest              = 'Missão'
   Quests             = 'Missões'
+  Dialogue           = 'Diálogo'
   Information        = 'Informações'
   InProgress         = 'Em andamento'
   Completed          = 'Concluídas'

@@ -1010,7 +1010,7 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`id`, `category`, `name`, `description`, `price`, `img`, `amount`, `purchased`, `item_id`) VALUES
-(1, 2, 'Restauração de Atributoss', 'Restauração de Atributoss', '300', '16072174785fcc3146e717b.png', '12', '', ''),
+(1, 2, 'Restauração de Atributos', 'Restauração de Atributos', '300', '16072174785fcc3146e717b.png', '12', '', ''),
 (2, 3, 'Restauração de Atributos', 'Restauração de Atributos', '3000', '16072174785fcc3146e717b.png', '1', '', ''),
 (3, 3, 'Restauração de Atributos', 'Restauração de Atributos', '3000', '16072174785fcc3146e717b.png', '1', '', ''),
 (4, 3, 'Restauração de Atributos', 'Restauração de Atributos', '3000', '16072174785fcc3146e717b.png', '1', '', ''),

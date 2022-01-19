@@ -1,0 +1,924 @@
+[
+  null,
+  {
+    "@description": "Recupera 500 HP de um aliado",
+    "@name": "Poção Pequena",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 192,
+    "@price": 50,
+    "@scope": 7,
+    "@animation_id": 37,
+    "@note": "Range=10\r\nLevel=2",
+    "@speed": 0,
+    "@id": 1,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 11,
+        "@data_id": 0,
+        "@value1": 0.0,
+        "@value2": 500.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera 2500 HP de um aliado",
+    "@name": "Poção Média",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 192,
+    "@price": 150,
+    "@scope": 7,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 2,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 11,
+        "@data_id": 0,
+        "@value1": 0.0,
+        "@value2": 2500.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera 100% do HP de um aliado",
+    "@name": "Poção Grande",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 192,
+    "@price": 450,
+    "@scope": 7,
+    "@animation_id": 37,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 3,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 11,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera 200 MP de um aliado",
+    "@name": "Poção de Mana",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 193,
+    "@price": 300,
+    "@scope": 7,
+    "@animation_id": 38,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 4,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 12,
+        "@data_id": 0,
+        "@value1": 0.0,
+        "@value2": 200.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera um aliado nocauteado",
+    "@name": "Estimulante",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 194,
+    "@price": 250,
+    "@scope": 9,
+    "@animation_id": 42,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 5,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Remove veneno de um aliado",
+    "@name": "Antídoto",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 194,
+    "@price": 30,
+    "@scope": 7,
+    "@animation_id": 40,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 6,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Remove vários estados negativos de um aliado",
+    "@name": "Elixir",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 194,
+    "@price": 90,
+    "@scope": 7,
+    "@animation_id": 41,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 7,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 3,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 4,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 5,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 6,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera todo o HP e MP de um aliado",
+    "@name": "Poção Mágica",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 197,
+    "@price": 1000,
+    "@scope": 7,
+    "@animation_id": 39,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 8,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 11,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      },
+      {
+        "@code": 12,
+        "@data_id": 0,
+        "@value1": 1.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta o HP Máximo de um aliado em 50",
+    "@name": "Aumentar Vida",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 9,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 0,
+        "@value1": 50.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta MP Máximo de um aliado em 10",
+    "@name": "Aumentar Mana",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 10,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 1,
+        "@value1": 10.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Ataque de um aliado em 3 permanentemente",
+    "@name": "Aumentar Ataque",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 11,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 2,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Defesa de um aliado em 3 permanentemente",
+    "@name": "Aumentar Defesa",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 12,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 3,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Ataque Mágico de um aliado em 3 permanentemente",
+    "@name": "Aumentar Ataque Mágico",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 13,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 4,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Defesa Mágica de um aliado em 3 permanentemente",
+    "@name": "Aumentar Defesa Mágica",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 14,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 5,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Agilidade de um aliado em 3 permanentemente",
+    "@name": "Aumentar Agilidade",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 15,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 6,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aumenta Sorte de um aliado em 3 permanentemente",
+    "@name": "Aumentar Sorte",
+    "@consumable": true,
+    "@occasion": 2,
+    "@icon_index": 199,
+    "@price": 200,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "Range=10",
+    "@speed": 0,
+    "@id": 16,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 42,
+        "@data_id": 7,
+        "@value1": 3.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Aprende a habilidade Cura",
+    "@name": "Pergaminho",
+    "@consumable": false,
+    "@occasion": 0,
+    "@icon_index": 238,
+    "@price": 0,
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 17,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 1,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Munição para arcos",
+    "@name": "Flecha",
+    "@consumable": false,
+    "@occasion": 3,
+    "@icon_index": 531,
+    "@price": 2,
+    "@scope": 0,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 18,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Ganha 5 dias VIP",
+    "@name": "Bilhete VIP",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 236,
+    "@price": 5,
+    "@scope": 11,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 19,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 2,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 2,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Reseta todos os parâmetros",
+    "@name": "Poção da Vida",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 215,
+    "@price": 5,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 20,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 3,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 2,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Muda a skin",
+    "@name": "Skin de Elfo",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 259,
+    "@price": 5,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 21,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 4,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 2,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Muda o sexo",
+    "@name": "Fruta da Transformação",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 297,
+    "@price": 5,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 22,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 44,
+        "@data_id": 5,
+        "@value1": 0.0,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 2,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Pedra",
+    "@name": "Pedra",
+    "@consumable": false,
+    "@occasion": 3,
+    "@icon_index": 350,
+    "@price": 0,
+    "@scope": 0,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 23,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Isca para pesca",
+    "@name": "Minhoca",
+    "@consumable": false,
+    "@occasion": 3,
+    "@icon_index": 207,
+    "@price": 0,
+    "@scope": 0,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 24,
+    "@features": [
+
+    ],
+    "@effects": [
+
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  },
+  {
+    "@description": "Recupera 50 HP de um aliado",
+    "@name": "Peixe Cru",
+    "@consumable": true,
+    "@occasion": 0,
+    "@icon_index": 292,
+    "@price": 2,
+    "@scope": 7,
+    "@animation_id": 0,
+    "@note": "",
+    "@speed": 0,
+    "@id": 25,
+    "@features": [
+
+    ],
+    "@effects": [
+      {
+        "@code": 11,
+        "@data_id": 1,
+        "@value1": 0.5,
+        "@value2": 0.0
+      }
+    ],
+    "@damage": {
+      "@type": 0,
+      "@element_id": 0,
+      "@formula": "0",
+      "@variance": 20,
+      "@critical": false
+    },
+    "@success_rate": 100,
+    "@hit_type": 0,
+    "@itype_id": 1,
+    "@repeats": 1,
+    "@tp_gain": 0
+  }
+]

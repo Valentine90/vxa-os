@@ -1,0 +1,1030 @@
+[
+  null,
+  {
+    "@name": "Guerreiro",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 80,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 81,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 82,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 83,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 84,
+        "@note": ""
+      }
+    ],
+    "@id": 1,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 1
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 1,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 4,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 5,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 6,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 6,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 9,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset01/0,Charset01/2\r\nFemaleSprites=Charset01/1\r\nMaleFaces=Charset01/0,Charset01/2\r\nFemaleFaces=Charset01/1",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Monge",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 85,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 86,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 87,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 88,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 89,
+        "@note": ""
+      }
+    ],
+    "@id": 2,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 1
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.06
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset04/0\r\nFemaleSprites=Charset04/4\r\nMaleFaces=Charset04/0\r\nFemaleFaces=Charset04/4",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Cavaleiro",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 90,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 91,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 92,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 93,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 94,
+        "@note": ""
+      },
+      {
+        "@level": 3,
+        "@skill_id": 26,
+        "@note": ""
+      },
+      {
+        "@level": 8,
+        "@skill_id": 69,
+        "@note": ""
+      },
+      {
+        "@level": 12,
+        "@skill_id": 31,
+        "@note": ""
+      },
+      {
+        "@level": 18,
+        "@skill_id": 41,
+        "@note": ""
+      },
+      {
+        "@level": 22,
+        "@skill_id": 27,
+        "@note": ""
+      },
+      {
+        "@level": 28,
+        "@skill_id": 70,
+        "@note": ""
+      }
+    ],
+    "@id": 3,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 1
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 4,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 5,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 6,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset01/3,Charset02/1\r\nFemaleSprites=Charset01/5\r\nMaleFaces=Charset01/3,Charset02/1\r\nFemaleFaces=Charset01/5",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Espadachim",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 95,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 96,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 97,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 98,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 99,
+        "@note": ""
+      },
+      {
+        "@level": 2,
+        "@skill_id": 67,
+        "@note": ""
+      },
+      {
+        "@level": 3,
+        "@skill_id": 76,
+        "@note": ""
+      },
+      {
+        "@level": 6,
+        "@skill_id": 77,
+        "@note": ""
+      },
+      {
+        "@level": 9,
+        "@skill_id": 78,
+        "@note": ""
+      },
+      {
+        "@level": 13,
+        "@skill_id": 49,
+        "@note": ""
+      },
+      {
+        "@level": 18,
+        "@skill_id": 48,
+        "@note": ""
+      },
+      {
+        "@level": 28,
+        "@skill_id": 68,
+        "@note": ""
+      }
+    ],
+    "@id": 4,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 1
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 4,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 4,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 5,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 6,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset02/2\r\nFemaleSprites=Charset02/6\r\nMaleFaces=Charset02/2\r\nFemaleFaces=Charset02/6",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Samurai",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 100,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 102,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 103,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 104,
+        "@note": ""
+      }
+    ],
+    "@id": 5,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 1
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 5,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 23,
+        "@data_id": 5,
+        "@value": 1.5
+      }
+    ],
+    "@note": "MaleSprites=Charset02/5\r\nFemaleSprites=Charset02/3\r\nMaleFaces=Charset02/5\r\nFemaleFaces=Charset02/3",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Arqueiro",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 105,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 106,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 107,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 108,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 109,
+        "@note": ""
+      }
+    ],
+    "@id": 6,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 0.7
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 6,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset03/4,Charset03/3\r\nFemaleSprites=Charset03/5\r\nMaleFaces=Charset03/4,Charset03/3\r\nFemaleFaces=Charset03/5",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Ladino",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 110,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 111,
+        "@note": ""
+      },
+      {
+        "@level": 15,
+        "@skill_id": 112,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 113,
+        "@note": ""
+      },
+      {
+        "@level": 25,
+        "@skill_id": 114,
+        "@note": ""
+      }
+    ],
+    "@id": 7,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 0.75
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 7,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 55,
+        "@data_id": 1,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset03/1\r\nFemaleSprites=Charset03/7\r\nMaleFaces=Charset03/1\r\nFemaleFaces=Charset03/7",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Sacerdote",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 115,
+        "@note": ""
+      },
+      {
+        "@level": 12,
+        "@skill_id": 116,
+        "@note": ""
+      },
+      {
+        "@level": 18,
+        "@skill_id": 117,
+        "@note": ""
+      },
+      {
+        "@level": 24,
+        "@skill_id": 118,
+        "@note": ""
+      },
+      {
+        "@level": 1,
+        "@skill_id": 26,
+        "@note": ""
+      },
+      {
+        "@level": 3,
+        "@skill_id": 31,
+        "@note": ""
+      },
+      {
+        "@level": 7,
+        "@skill_id": 42,
+        "@note": ""
+      },
+      {
+        "@level": 8,
+        "@skill_id": 43,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 27,
+        "@note": ""
+      },
+      {
+        "@level": 14,
+        "@skill_id": 32,
+        "@note": ""
+      },
+      {
+        "@level": 16,
+        "@skill_id": 69,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 33,
+        "@note": ""
+      },
+      {
+        "@level": 22,
+        "@skill_id": 29,
+        "@note": ""
+      },
+      {
+        "@level": 28,
+        "@skill_id": 30,
+        "@note": ""
+      },
+      {
+        "@level": 30,
+        "@skill_id": 34,
+        "@note": ""
+      }
+    ],
+    "@id": 8,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 0.5
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 8,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 5,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset04/1\r\nFemaleSprites=Charset05/0\r\nMaleFaces=Charset04/1\r\nFemaleFaces=Charset05/0",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  },
+  {
+    "@name": "Mago",
+    "@learnings": [
+      {
+        "@level": 1,
+        "@skill_id": 119,
+        "@note": ""
+      },
+      {
+        "@level": 12,
+        "@skill_id": 120,
+        "@note": ""
+      },
+      {
+        "@level": 18,
+        "@skill_id": 121,
+        "@note": ""
+      },
+      {
+        "@level": 24,
+        "@skill_id": 122,
+        "@note": ""
+      },
+      {
+        "@level": 1,
+        "@skill_id": 51,
+        "@note": ""
+      },
+      {
+        "@level": 2,
+        "@skill_id": 39,
+        "@note": ""
+      },
+      {
+        "@level": 3,
+        "@skill_id": 55,
+        "@note": ""
+      },
+      {
+        "@level": 7,
+        "@skill_id": 48,
+        "@note": ""
+      },
+      {
+        "@level": 10,
+        "@skill_id": 53,
+        "@note": ""
+      },
+      {
+        "@level": 14,
+        "@skill_id": 57,
+        "@note": ""
+      },
+      {
+        "@level": 16,
+        "@skill_id": 46,
+        "@note": ""
+      },
+      {
+        "@level": 20,
+        "@skill_id": 52,
+        "@note": ""
+      },
+      {
+        "@level": 22,
+        "@skill_id": 56,
+        "@note": ""
+      },
+      {
+        "@level": 26,
+        "@skill_id": 73,
+        "@note": ""
+      },
+      {
+        "@level": 28,
+        "@skill_id": 54,
+        "@note": ""
+      },
+      {
+        "@level": 30,
+        "@skill_id": 58,
+        "@note": ""
+      }
+    ],
+    "@id": 9,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 0.5
+      },
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": 0.95
+      },
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": 0.05
+      },
+      {
+        "@code": 22,
+        "@data_id": 2,
+        "@value": 0.04
+      },
+      {
+        "@code": 41,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 41,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 51,
+        "@data_id": 9,
+        "@value": 0.0
+      },
+      {
+        "@code": 52,
+        "@data_id": 1,
+        "@value": 0
+      },
+      {
+        "@code": 52,
+        "@data_id": 2,
+        "@value": 0.0
+      }
+    ],
+    "@note": "MaleSprites=Charset05/2,Charset05/3,Charset05/4\r\nFemaleSprites=Charset05/5\r\nMaleFaces=Charset05/2,Charset05/3,Charset05/4\r\nFemaleFaces=Charset05/5",
+    "@params": null,
+    "@exp_params": [
+      30,
+      20,
+      30,
+      30
+    ],
+    "@icon_index": 0,
+    "@description": ""
+  }
+]

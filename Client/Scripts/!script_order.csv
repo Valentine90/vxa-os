@@ -42,7 +42,7 @@
 [RM] Spriteset_Weather
 [RM] Spriteset_Map °
 [RM] Window_Base °
-[RM] Window_Selectable
+[RM] Window_Selectable °
 [RM] Window_Command °
 [RM] Window_Gold
 [RM] Window_ItemList
@@ -59,6 +59,7 @@
 [VS] Enums
 [VS] Structs
 [VS] DataManager
+[VS] Settings_File
 [VS] VXAOS_Base
 [VS] VXAOS
 [VS] Audio

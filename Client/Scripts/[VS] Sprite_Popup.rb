@@ -19,7 +19,7 @@ class Sprite_Popup < Sprite2
   def show(name, icon_index, amount, key = false)
     self.y = $game_actors[1].party_members.empty? ? 120 : $game_actors[1].party_members.size * 35 + 163
     self.y += 42 if $windows[:states].visible
-    @text = amount > 1 ? "#{name} x#{convert_gold(amount)}" : name
+    @text = amount > 1 ? "#{name} x#{format_number(amount)}" : name
     @width = text_width(@text) + 40
     @icon_index = icon_index
     @key = key

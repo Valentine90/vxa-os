@@ -8,7 +8,7 @@
 
 class Combo_Box < Control
   
-  attr_reader   :index
+  attr_reader   :index, :enable
   
   def initialize(win, x, y, width, list, list_dir = :list_down, &block)
     @bitmap = Cache.system('ComboBox')

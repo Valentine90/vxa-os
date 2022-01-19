@@ -1,4 +1,4 @@
 @echo off
 Title Editor de contas
-ruby editor.rb
+ruby Scripts/editor.rb
 @echo on

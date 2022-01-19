@@ -1,0 +1,780 @@
+[
+  null,
+  {
+    "@message2": " morreu!",
+    "@name": "Nocauteado",
+    "@priority": 100,
+    "@icon_index": 17,
+    "@message1": " caiu!",
+    "@message4": " levantou-se!",
+    "@restriction": 4,
+    "@release_by_damage": false,
+    "@message3": "",
+    "@note": "O Estado Nº 1 será adicionada automaticamente quando HP atingir 0.",
+    "@id": 1,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 9,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 0,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": false,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " foi envenenado!",
+    "@name": "Envenenado",
+    "@priority": 65,
+    "@icon_index": 18,
+    "@message1": " foi envenenado!",
+    "@message4": " sente-se melhor!",
+    "@restriction": 0,
+    "@release_by_damage": false,
+    "@message3": "",
+    "@note": "",
+    "@id": 2,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value": -0.1
+      }
+    ],
+    "@auto_removal_timing": 0,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": false,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " está cego!",
+    "@name": "Cego",
+    "@priority": 70,
+    "@icon_index": 19,
+    "@message1": " está cego!",
+    "@message4": " pode ver novamente!",
+    "@restriction": 0,
+    "@release_by_damage": false,
+    "@message3": "",
+    "@note": "",
+    "@id": 3,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 0,
+        "@value": -0.6
+      }
+    ],
+    "@auto_removal_timing": 1,
+    "@min_turns": 3,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " está mudo!",
+    "@name": "Mudo",
+    "@priority": 75,
+    "@icon_index": 20,
+    "@message1": " está mudo!",
+    "@message4": " pode falar novamente!",
+    "@restriction": 0,
+    "@release_by_damage": false,
+    "@message3": "",
+    "@note": "",
+    "@id": 4,
+    "@features": [
+      {
+        "@code": 42,
+        "@data_id": 2,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 1,
+    "@min_turns": 3,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " está confuso!",
+    "@name": "Confuso",
+    "@priority": 80,
+    "@icon_index": 21,
+    "@message1": " está confuso!",
+    "@message4": " voltou ao normal!",
+    "@restriction": 2,
+    "@release_by_damage": false,
+    "@message3": "",
+    "@note": "",
+    "@id": 5,
+    "@features": [
+
+    ],
+    "@auto_removal_timing": 1,
+    "@min_turns": 2,
+    "@max_turns": 4,
+    "@chance_by_damage": 50,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": true,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " caiu no sono!",
+    "@name": "Dormindo",
+    "@priority": 85,
+    "@icon_index": 22,
+    "@message1": " caiu no sono!",
+    "@message4": "は目を覚ました！",
+    "@restriction": 4,
+    "@release_by_damage": true,
+    "@message3": " continua dormindo…",
+    "@note": "",
+    "@id": 6,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": -1.0
+      }
+    ],
+    "@auto_removal_timing": 1,
+    "@min_turns": 3,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": true,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " entrou em paralisia!",
+    "@name": "Paralisado",
+    "@priority": 90,
+    "@icon_index": 23,
+    "@message1": " entrou em paralisia!",
+    "@message4": " pode mover-se novamente!",
+    "@restriction": 4,
+    "@release_by_damage": false,
+    "@message3": " continua em paralisia…",
+    "@note": "",
+    "@id": 7,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 1,
+        "@value": -1.0
+      }
+    ],
+    "@auto_removal_timing": 1,
+    "@min_turns": 4,
+    "@max_turns": 6,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": " está aturdido!",
+    "@name": "Atordoado",
+    "@priority": 60,
+    "@icon_index": 24,
+    "@message1": " está aturdido!",
+    "@message4": " recuperou-se!",
+    "@restriction": 4,
+    "@release_by_damage": false,
+    "@message3": " continua aturdido…",
+    "@note": "",
+    "@id": 8,
+    "@features": [
+
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 1,
+    "@max_turns": 2,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false
+  },
+  {
+    "@message2": "",
+    "@name": "Defendendo",
+    "@priority": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 9,
+    "@features": [
+      {
+        "@code": 62,
+        "@data_id": 1,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": true,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Invulnerável",
+    "@priority": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 10,
+    "@features": [
+      {
+        "@code": 14,
+        "@data_id": 1,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 0,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Cobrindo",
+    "@priority": 0,
+    "@icon_index": 0,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 11,
+    "@features": [
+      {
+        "@code": 62,
+        "@data_id": 2,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": true,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Provocando",
+    "@priority": 50,
+    "@icon_index": 25,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 12,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 10.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Escondido",
+    "@priority": 50,
+    "@icon_index": 28,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 13,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 0,
+        "@value": 0.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": true,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Regeneração de HP",
+    "@priority": 50,
+    "@icon_index": 26,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 14,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 7,
+        "@value": 0.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 4,
+    "@max_turns": 4,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Regeneração de MP",
+    "@priority": 50,
+    "@icon_index": 26,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 15,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 8,
+        "@value": 0.05
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 4,
+    "@max_turns": 4,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Regeneração de TP",
+    "@priority": 50,
+    "@icon_index": 26,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 16,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 9,
+        "@value": 0.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 4,
+    "@max_turns": 4,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Rígido",
+    "@priority": 50,
+    "@icon_index": 29,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 17,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 6,
+        "@value": 0.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 3,
+    "@max_turns": 3,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": true,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Contra-Atacando",
+    "@priority": 50,
+    "@icon_index": 27,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 18,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 6,
+        "@value": 1.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 3,
+    "@max_turns": 3,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": true,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Esquiva Mágica",
+    "@priority": 50,
+    "@icon_index": 29,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 19,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 4,
+        "@value": 1.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 3,
+    "@max_turns": 3,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Reflexão Mágica",
+    "@priority": 50,
+    "@icon_index": 31,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 20,
+    "@features": [
+      {
+        "@code": 22,
+        "@data_id": 5,
+        "@value": 1.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 1,
+    "@max_turns": 1,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": " empunha o poder do fogo!",
+    "@name": "Poder de Fogo",
+    "@priority": 50,
+    "@icon_index": 104,
+    "@message1": " empunha o poder do fogo!",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 21,
+    "@features": [
+      {
+        "@code": 31,
+        "@data_id": 3,
+        "@value": 1.0
+      },
+      {
+        "@code": 11,
+        "@data_id": 3,
+        "@value": 0.5
+      },
+      {
+        "@code": 21,
+        "@data_id": 2,
+        "@value": 1.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": " empunha o poder do gelo!",
+    "@name": "Poder de Gelo",
+    "@priority": 50,
+    "@icon_index": 105,
+    "@message1": " empunha o poder do gelo!",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 22,
+    "@features": [
+      {
+        "@code": 31,
+        "@data_id": 4,
+        "@value": 1.0
+      },
+      {
+        "@code": 11,
+        "@data_id": 4,
+        "@value": 0.5
+      },
+      {
+        "@code": 21,
+        "@data_id": 2,
+        "@value": 1.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": " empunha o poder do trovão!",
+    "@name": "Poder de Trovão",
+    "@priority": 50,
+    "@icon_index": 106,
+    "@message1": " empunha o poder do trovão!",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 23,
+    "@features": [
+      {
+        "@code": 31,
+        "@data_id": 5,
+        "@value": 1.0
+      },
+      {
+        "@code": 11,
+        "@data_id": 5,
+        "@value": 0.5
+      },
+      {
+        "@code": 21,
+        "@data_id": 2,
+        "@value": 1.1
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Prevenção",
+    "@priority": 50,
+    "@icon_index": 29,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 24,
+    "@features": [
+      {
+        "@code": 13,
+        "@data_id": 2,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 3,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 4,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 5,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 6,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 7,
+        "@value": 0.0
+      },
+      {
+        "@code": 13,
+        "@data_id": 8,
+        "@value": 0.0
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  },
+  {
+    "@message2": "",
+    "@name": "Redução de Custo MP",
+    "@priority": 50,
+    "@icon_index": 30,
+    "@message1": "",
+    "@message4": "",
+    "@restriction": 0,
+    "@message3": "",
+    "@note": "",
+    "@id": 25,
+    "@features": [
+      {
+        "@code": 23,
+        "@data_id": 4,
+        "@value": 0.25
+      }
+    ],
+    "@auto_removal_timing": 2,
+    "@min_turns": 5,
+    "@max_turns": 5,
+    "@chance_by_damage": 100,
+    "@steps_to_remove": 100,
+    "@remove_by_walking": false,
+    "@remove_at_battle_end": true,
+    "@remove_by_damage": false,
+    "@remove_by_restriction": false,
+    "@description": ""
+  }
+]

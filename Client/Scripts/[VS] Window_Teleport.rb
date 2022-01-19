@@ -97,7 +97,7 @@ class Window_TeleportInfo < Window_Base
     bitmap = Cache.system('Iconset')
     contents.blt(0, 137, bitmap, rect)
     change_color(normal_color)
-    draw_text(30, 141, contents_width, line_height, convert_gold(@gold))
+    draw_text(30, 141, contents_width, line_height, format_number(@gold))
   end
   
   def go

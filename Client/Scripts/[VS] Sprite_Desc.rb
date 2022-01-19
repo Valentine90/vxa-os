@@ -59,7 +59,7 @@ class Sprite_Desc < Sprite2
     self.bitmap.draw_text(145, 106, 35, line_height, "#{@item.success_rate}%", 2)
     if base_damage > 0
       self.bitmap.draw_text(30, 70, 105, line_height, Vocab::BaseDamage)
-      self.bitmap.draw_text(130, 70, 50, line_height, convert_gold(base_damage), 2)
+      self.bitmap.draw_text(130, 70, 50, line_height, format_number(base_damage), 2)
     end
   end
   
@@ -187,9 +187,9 @@ class Sprite_Desc < Sprite2
   def draw_price
     return unless $windows[:shop].visible
     if $windows[:shop].in_area?
-      self.bitmap.draw_text(0, 206, self.bitmap.width, line_height, "$ #{convert_gold(@item.price)}", 1)
+      self.bitmap.draw_text(0, 206, self.bitmap.width, line_height, "$ #{format_number($windows[:shop].price[@item])}", 1)
     elsif $windows[:item].in_area? || $windows[:equip].in_area?
-      self.bitmap.draw_text(0, 206, self.bitmap.width, line_height, "$ #{convert_gold(@item.price / 2)}", 1)
+      self.bitmap.draw_text(0, 206, self.bitmap.width, line_height, "$ #{format_number(@item.price / 2)}", 1)
     end
   end
   

@@ -1,0 +1,220 @@
+[
+  null,
+  {
+    "@name": "Guerreiro",
+    "@face_index": 0,
+    "@character_index": 0,
+    "@initial_level": 1,
+    "@face_name": "Charset01",
+    "@class_id": 1,
+    "@character_name": "Charset01",
+    "@id": 1,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      1,
+      46,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Temido nos campos de batalha, é mestre em combate\r\ncorpo a corpo",
+    "@max_level": 99
+  },
+  {
+    "@name": "Monge",
+    "@face_index": 7,
+    "@character_index": 7,
+    "@initial_level": 1,
+    "@face_name": "Charset05",
+    "@class_id": 2,
+    "@character_name": "Charset05",
+    "@id": 2,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      7,
+      0,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Utiliza da força sagrada para derrotar o mal. \r\nÉ especialista em magias de suporte",
+    "@max_level": 99
+  },
+  {
+    "@name": "Cavaleiro",
+    "@face_index": 2,
+    "@character_index": 2,
+    "@initial_level": 1,
+    "@face_name": "Charset01",
+    "@class_id": 3,
+    "@character_name": "Charset01",
+    "@id": 3,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      13,
+      46,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Mestre em combate corpo a corpo com lança. É capaz\r\nde meter medo em qualquer adversário",
+    "@max_level": 99
+  },
+  {
+    "@name": "Espadachim",
+    "@face_index": 3,
+    "@character_index": 3,
+    "@initial_level": 1,
+    "@face_name": "Charset01",
+    "@class_id": 4,
+    "@character_name": "Charset01",
+    "@id": 4,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      19,
+      46,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Sua especialidade em combate corpo a corpo o torna a\r\nfrente de ataque em qualquer combate",
+    "@max_level": 99
+  },
+  {
+    "@name": "Samurai",
+    "@face_index": 1,
+    "@character_index": 1,
+    "@initial_level": 1,
+    "@face_name": "Charset02",
+    "@class_id": 5,
+    "@character_name": "Charset02",
+    "@id": 5,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      25,
+      0,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "É capaz de usar uma grande variedade de\r\nkatanas",
+    "@max_level": 99
+  },
+  {
+    "@name": "Arqueiro",
+    "@face_index": 7,
+    "@character_index": 7,
+    "@initial_level": 1,
+    "@face_name": "Charset03",
+    "@class_id": 6,
+    "@character_name": "Charset03",
+    "@id": 6,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      31,
+      0,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Com seu excepcional ataque de longa distância,\r\nnão deixa nenhum adversário escapar vivo",
+    "@max_level": 99
+  },
+  {
+    "@name": "Ladino",
+    "@face_index": 7,
+    "@character_index": 7,
+    "@initial_level": 1,
+    "@face_name": "Charset02",
+    "@class_id": 7,
+    "@character_name": "Charset02",
+    "@id": 7,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      37,
+      37,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Especialista em combate corpo a corpo com adaga.\r\nPode usar as melhores armaduras",
+    "@max_level": 99
+  },
+  {
+    "@name": "Sacerdote",
+    "@face_index": 7,
+    "@character_index": 7,
+    "@initial_level": 1,
+    "@face_name": "Charset01",
+    "@class_id": 8,
+    "@character_name": "Charset01",
+    "@id": 8,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      43,
+      0,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Utiliza da força sagrada para curar os aliados. É\r\nessencial em qualquer grupo",
+    "@max_level": 99
+  },
+  {
+    "@name": "Mago",
+    "@face_index": 3,
+    "@character_index": 3,
+    "@initial_level": 1,
+    "@face_name": "Charset05",
+    "@class_id": 9,
+    "@character_name": "Charset05",
+    "@id": 9,
+    "@features": [
+
+    ],
+    "@note": "",
+    "@equips": [
+      49,
+      0,
+      0,
+      1,
+      0
+    ],
+    "@nickname": "",
+    "@description": "Tem habilidades de ataque excepcionais de curta e\r\nlonga distância",
+    "@max_level": 99,
+    "@icon_index": 0
+  }
+]

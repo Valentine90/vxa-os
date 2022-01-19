@@ -73,6 +73,7 @@ module Enums
     GUILD_LEADER
     GUILD_NOTICE
     REMOVE_GUILD_MEMBER
+    GUILD_REQUEST
     LEAVE_GUILD
     JOIN_PARTY
     LEAVE_PARTY
@@ -113,16 +114,16 @@ module Enums
   )
   
   # Direções
-  module Dir
-    DOWN_LEFT  = 1
-    DOWN       = 2
-    DOWN_RIGHT = 3
-    LEFT       = 4
-    RIGHT      = 6
-    UP_LEFT    = 7
-    UP         = 8
-    UP_RIGHT   = 9
-  end
+  Dir = enum %w(
+    DOWN_LEFT   1
+    DOWN        2
+    DOWN_RIGHT  3
+    LEFT        4
+    RIGHT       6
+    UP_LEFT     7
+    UP          8
+    UP_RIGHT    9
+  )
   
   # Bate-papo
   Chat = enum %w(

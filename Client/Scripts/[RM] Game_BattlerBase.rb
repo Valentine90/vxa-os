@@ -662,7 +662,7 @@ class Game_BattlerBase
     return ""
   end
   #--------------------------------------------------------------------------
-  # * Definição de necessidade de ara para habilidade
+  # * Definição de necessidade de arma para habilidade
   #     skill : habilidade
   #--------------------------------------------------------------------------
   def skill_wtype_ok?(skill)

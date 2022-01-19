@@ -8,11 +8,15 @@
 
 class Scroll_Bar < Control
   
-  def initialize(win, max_lines, spacing)
-    super(win, win.width - 16, 2, 14, win.height - 4)
+  def initialize(win, max_lines, spacing, arrows = true)
+    title_bar_height = win.is_a?(Window_Base2) ? win.contents_y - 4 : 0
+    super(win, win.contents_x + win.contents_width - 4, title_bar_height + 2, 14, win.height - title_bar_height - 4)
     @min_bar_height = (@win.height - 32) / spacing + max_lines
+    @min_bar_y = arrows ? 18 : 0
     @bitmap = Cache.system('ScrollBar')
     @spacing = spacing
+    @title_bar_height = title_bar_height
+    @arrows = arrows
     @dragging = false
     @up_area = false
     @down_area = false
@@ -25,7 +29,7 @@ class Scroll_Bar < Control
   
   def create_bar
     @bar = Sprite.new
-    @bar.bitmap = Bitmap.new(@back.bitmap.width, @win.height - 36)
+    @bar.bitmap = Bitmap.new(@back.bitmap.width, @win.height - @title_bar_height - @min_bar_y * 2)
     @bar.x = @back.x
     @bar.z = @back.z
   end
@@ -54,7 +58,7 @@ class Scroll_Bar < Control
   end
   
   def bar_y
-    @win.oy * (@bar.bitmap.height - @bar_height) / (@win.contents.height - @bar.bitmap.height) + 18
+    @win.oy * (@bar.bitmap.height - @bar_height) / (@win.contents.height - @bar.bitmap.height) + @min_bar_y
   end
   
   def refresh
@@ -69,11 +73,13 @@ class Scroll_Bar < Control
   
   def refresh_back
     @back.bitmap.clear
-    @up_area = in_up_area?
-    @down_area = in_down_area?
     @back.bitmap.stretch_blt(@back.bitmap.rect, @bitmap, Rect.new(28, 0, width, @bitmap.height))
-    @back.bitmap.blt(0, 0, @bitmap, Rect.new(@up_area ? 70 : 56, 0, width, @bitmap.height))
-    @back.bitmap.blt(0, @back.height - 18, @bitmap, Rect.new(@down_area ? 98 : 84, 0, width, @bitmap.height))
+    if @arrows
+      @up_area = in_up_area?
+      @down_area = in_down_area?
+      @back.bitmap.blt(0, 0, @bitmap, Rect.new(@up_area ? 70 : 56, 0, width, @bitmap.height))
+      @back.bitmap.blt(0, @back.height - 18, @bitmap, Rect.new(@down_area ? 98 : 84, 0, width, @bitmap.height))
+    end
   end
   
   def refresh_bar
@@ -91,35 +97,48 @@ class Scroll_Bar < Control
     super
     @bar.x = @back.x
     @bar.y = @back.y + @bar_y
-    refresh_up_down
-    update_dragging
-    @dragging = Mouse.press?(:L) && in_bar_area? && !dragging
+    if visible
+      refresh_up_down
+      update_dragging
+      mouse_scroll
+      @dragging = Mouse.press?(:L) && in_bar_area? && !dragging
+    end
   end
   
   def refresh_up_down
-    return unless @back.visible
-    refresh_back if (in_up_area? != @up_area || in_down_area? != @down_area) && !dragging
+    refresh_back if @arrows && !dragging && (in_up_area? != @up_area || in_down_area? != @down_area)
     refresh_bar if in_bar_area? != @bar_area && !dragging
   end
   
   def update_trigger
-    return if !Mouse.repeat?(:L) || dragging
-    if in_up_area?
-      @win.oy = [@win.oy - @spacing, 0].max if @win.oy > 0
-      @bar_y = bar_y
-    elsif in_down_area?
-      # Calcula o que está dentro de parênteses primeiro
-      #para evitar um resultado diferente
-      @win.oy = [@win.oy + @spacing, @win.contents.height - (@win.height - 32)].min
-      @bar_y = bar_y
-    end
+    return if !Mouse.repeat?(:L) || dragging || !@arrows
+    click_up if in_up_area?
+    click_down if in_down_area?
+  end
+  
+  def mouse_scroll
+    return unless @win.in_area?
+    click_up(Mouse.scroll / 120) if Mouse.scroll > 0
+    click_down(Mouse.scroll.abs / 120) if Mouse.scroll < 0
+  end
+  
+  def click_up(scroll = 1)
+    @win.oy = [@win.oy - @spacing * scroll, 0].max if @win.oy > 0
+    @bar_y = bar_y
+  end
+  
+  def click_down(scroll = 1)
+    # Calcula o que está dentro de parênteses primeiro
+    #para evitar um resultado diferente
+    @win.oy = [@win.oy + @spacing * scroll, @win.contents.height - (@win.height - 32)].min
+    @bar_y = bar_y
   end
   
   def update_dragging
     return if dragging
     if @dragging
-      @bar_y = [[Mouse.y - @dif_y - @back.y, 18].max, 16 + @bar.bitmap.height - @bar_height].min
-      @win.oy = (@bar_y - 18) * (@win.contents.height - @bar.bitmap.height) / (@bar.bitmap.height - @bar_height)
+      @bar_y = [[Mouse.y - @dif_y - @back.y, @min_bar_y].max, @min_bar_y - 2 + @bar.bitmap.height - @bar_height].min
+      @win.oy = (@bar_y - @min_bar_y) * (@win.contents.height - @bar.bitmap.height) / (@bar.bitmap.height - @bar_height)
       @bar.y = @back.y + @bar_y
     else
       @dif_y = Mouse.y - @bar.y

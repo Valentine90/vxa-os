@@ -1,0 +1,13 @@
+[PORTUGUÊS]
+Copie a pasta htdocs e cole em C:\xampp
+
+Para atualizar o Wikipedia do site, use o conversor da pasta 'Converter rvdata2 to json', depois copie os arquivos
+gerados em json e cole na pasta C:\xampp\htdocs\wiki\json
+
+
+
+[ENGLISH]
+Copy the htdocs folder and paste into C:\xampp
+
+To update the site's Wikipedia, use the converter from the 'Converter rvdata2 to json' folder, then copy the files
+generated in json and paste in the folder C:\xampp\htdocs\wiki\json

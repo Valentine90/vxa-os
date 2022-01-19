@@ -18,8 +18,8 @@ class Game_Projectile
     @x = start_x
     @y = start_y
     @angle = to_angle(start_x, start_y, target_x, target_y)
-    @speed_x = Math.sin(@radians)
-    @speed_y = Math.cos(@radians)
+    @speed_x = Math.sin(@radians) / 1.5
+    @speed_y = Math.cos(@radians) / 1.5
   end
   
   def to_angle(start_x, start_y, target_x, target_y)

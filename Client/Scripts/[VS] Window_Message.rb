@@ -23,11 +23,15 @@ class Window_Message < Window_Base
   end
   
   def adjust_x
-    Graphics.width / 2 - 320
+    window_width / 2 - 320
   end
   
   def window_height
     120
+  end
+  
+  def quest_dialogue?
+    !$game_message.texts.empty? && $game_message.texts.first.start_with?('QT')
   end
   
   def create_back_sprite
@@ -43,8 +47,10 @@ class Window_Message < Window_Base
     update_background
     update_placement
     loop do
-      process_all_text if $game_message.has_text?
-      @ok_button.visible = (!$game_message.choice? && !$game_message.item_choice?)
+      unless quest_dialogue?
+        process_all_text if $game_message.has_text?
+        @ok_button.visible = (!$game_message.choice? && !$game_message.num_input? && !$game_message.item_choice?)
+      end
       process_input
       # Se clicou em Ok ou pressinou Esc
       unless $game_message.choice? || $game_message.item_choice?
@@ -68,12 +74,26 @@ class Window_Message < Window_Base
   def reset_font_settings
     change_color(normal_color)
     contents.font.size = 17
-    contents.font.bold = false
-    contents.font.italic = false
+    contents.font.bold = Font.default_bold
+    contents.font.italic = Font.default_italic
   end
   
   def update_show_fast
     @show_fast = true if Input.trigger?(Configs::ATTACK_KEY)
+  end
+  
+  def process_input
+    if quest_dialogue?
+      input_quest
+    elsif $game_message.choice?
+      input_choice
+    elsif $game_message.num_input?
+      input_number
+    elsif $game_message.item_choice?
+      input_item
+    else
+      input_pause unless @pause_skip
+    end
   end
   
   def input_pause
@@ -92,6 +112,12 @@ class Window_Message < Window_Base
   def input_item
     @item_window.start
     Fiber.yield while @item_window.active && $game_message.visible
+  end
+  
+  def input_quest
+    $windows[:quest_dialogue].show
+    $game_message.visible = false
+    Fiber.yield until $windows[:quest_dialogue].visible
   end
   
 end

@@ -50,4 +50,11 @@ class Game_Event < Game_Character
     super || collide_with_players?(x, y)
   end
   
+  def update
+    super
+    return unless @interpreter
+    @interpreter.setup(@list, @event.id) if !@interpreter.running? && @event.name == 'notglobal'
+    @interpreter.update
+  end
+  
 end

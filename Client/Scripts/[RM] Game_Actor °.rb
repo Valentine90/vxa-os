@@ -250,11 +250,15 @@ class Game_Actor < Game_Battler
   #     item_gain : Voltar equipamento removido para o grupo
   #--------------------------------------------------------------------------
   def release_unequippable_items(item_gain = true)
-    @equips.each_with_index do |item, i|
-      if !equippable?(item.object) || item.object.etype_id != equip_slots[i]
-        trade_item_with_party(nil, item.object) if item_gain
-        item.object = nil
+    loop do
+      last_equips = equips.dup
+      @equips.each_with_index do |item, i|
+        if !equippable?(item.object) || item.object.etype_id != equip_slots[i]
+          trade_item_with_party(nil, item.object) if item_gain
+          item.object = nil
+        end
       end
+      return if equips == last_equips
     end
   end
   #--------------------------------------------------------------------------
@@ -588,7 +592,7 @@ class Game_Actor < Game_Battler
   #--------------------------------------------------------------------------
   def make_auto_battle_actions
     @actions.size.times do |i|
-      @actions[i] = make_action_list.max {|action| action.value }
+      @actions = make_action_list.max_by {|action| action.value }
     end
   end
   #--------------------------------------------------------------------------

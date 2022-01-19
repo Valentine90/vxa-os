@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?url=$1
+</IfModule>
+
+php_value memory_limit 256M
+
+php_value post_max_size 256M
+
+php_value upload_max_filesize 256M
+
+php_value max_execution_time 360
+
+php_value session.gc_maxlifetime 3600

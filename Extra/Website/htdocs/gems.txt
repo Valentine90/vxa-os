@@ -1,0 +1,26 @@
+$ sudo apt-add-repository ppa:brightbox/ruby-ng
+$ sudo apt-get update
+
+$ sudo apt-get install ruby2.4 ruby2.4-dev
+
+$ ruby2.4 -v
+
+
+gem install mysql2
+gem install eventmachine
+gem install zlib
+gem install sequel
+gem install colorize
+
+gem install jsonable
+
+gem install --platform ruby eventmachine
+gem install --platform ruby mysql2
+
+
+
+
+
+============================
+https://github.com/treeder/jsonable
+https://github.com/DICE2000/rvdata2json

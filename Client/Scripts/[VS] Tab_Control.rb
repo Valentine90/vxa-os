@@ -47,7 +47,7 @@ class Tab_Control < Control
     x = 12
     @list.each_with_index do |text, i|
       page = Sprite2.new
-      width = text_width(text) + 20
+      width = text.is_a?(Integer) ? 44 : text_width(text) + 20
       page.bitmap = Bitmap.new(width, @bitmap.height)
       page.x = @win.x + x
       page.y = @win.y + @y
@@ -89,7 +89,13 @@ class Tab_Control < Control
     @pages[index].bitmap.blt(0, 0, @bitmap, Rect.new(x, 0, 4, @bitmap.height))
     @pages[index].bitmap.stretch_blt(Rect.new(4, 0, @pages[index].bitmap.width - 8, @bitmap.height), @bitmap, Rect.new(x + 4, 0, 10, @bitmap.height))
     @pages[index].bitmap.blt(@pages[index].bitmap.width - 4, 0, @bitmap, Rect.new(x + 14, 0, 4, @bitmap.height))
-    @pages[index].bitmap.draw_text(@pages[index].bitmap.rect, @list[index], 1)
+    if @list[index].is_a?(Integer)
+      bitmap = Cache.system('Iconset')
+      rect = Rect.new(@list[index] % 16 * 24, @list[index] / 16 * 24, 24, 24)
+      @pages[index].bitmap.blt(@pages[index].bitmap.rect.x + 10, @pages[index].bitmap.rect.y, bitmap, rect)
+    else
+      @pages[index].bitmap.draw_text(@pages[index].bitmap.rect, @list[index], 1)
+    end
   end
   
   def draw_border

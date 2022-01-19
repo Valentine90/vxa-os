@@ -80,6 +80,7 @@ class Window_CreateChar < Window_Base
   
   def hide
     super
+    SceneManager.scene.change_background('Title2')
     $windows[:alert].hide
     $windows[:use_char].show
   end

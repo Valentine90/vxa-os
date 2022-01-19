@@ -16,7 +16,7 @@ class Game_Actor < Game_Battler
   attr_accessor :online_friends_size
   attr_accessor :points
   attr_accessor :friends
-  attr_accessor :guild
+  attr_accessor :guild_name
   
   def init_basic
     @sex = Enums::Sex::MALE
@@ -26,7 +26,7 @@ class Game_Actor < Game_Battler
     @quests = {}
     @friends = []
     @hotbar = []
-    @guild = ''
+    @guild_name = ''
   end
   
   def max_level
@@ -48,7 +48,21 @@ class Game_Actor < Game_Battler
       return 0
     end
   end
-  
+=begin
+  def skill_wtype_ok?(skill)
+    wtype_id1 = skill.required_wtype_id1
+    wtype_id2 = skill.required_wtype_id2
+    if wtype_id1 > 0 && !wtype_equipped?(wtype_id1) || wtype_id2 > 0 && !wtype_equipped?(wtype_id2)
+      $error_msg = Vocab::WTypeNotEquipped
+      return false
+    end
+    return true
+    #return true if wtype_id1 == 0 && wtype_id2 == 0
+    #return true if wtype_id1 > 0 && wtype_equipped?(wtype_id1)
+    #return true if wtype_id2 > 0 && wtype_equipped?(wtype_id2)
+    #return false
+  end
+=end
   def change_exp(exp, show)
     @exp[@class_id] = [[exp, exp_for_level(Configs::MAX_LEVEL)].min, 0].max
     last_level = @level
@@ -76,11 +90,11 @@ class Game_Actor < Game_Battler
   end
   
   def quests_in_progress
-    @quests.select { |quest_id, quest| quest.in_progress? }
+    @quests.values.select(&:in_progress?)
   end
   
   def quests_finished
-    @quests.select { |quest_id, quest| quest.finished? }
+    @quests.values.select(&:finished?)
   end
   
   def change_hotbar(id, type, item_id)

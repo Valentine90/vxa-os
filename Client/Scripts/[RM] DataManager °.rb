@@ -171,7 +171,7 @@ module DataManager
     load_header_without_rescue(index) rescue nil
   end
   #--------------------------------------------------------------------------
-  # * Salvar Jogo (sem excessões)
+  # * Salvar Jogo (sem exceções)
   #     index : índice
   #--------------------------------------------------------------------------
   def self.save_game_without_rescue(index)
@@ -184,7 +184,7 @@ module DataManager
     return true
   end
   #--------------------------------------------------------------------------
-  # * Carregamento do jogo (sem excessões)
+  # * Carregamento do jogo (sem exceções)
   #     index : índice
   #--------------------------------------------------------------------------
   def self.load_game_without_rescue(index)
@@ -197,7 +197,7 @@ module DataManager
     return true
   end
   #--------------------------------------------------------------------------
-  # * Carregamento do cabeçalho (sem excessões)
+  # * Carregamento do cabeçalho (sem exceções)
   #     index : índice
   #--------------------------------------------------------------------------
   def self.load_header_without_rescue(index)

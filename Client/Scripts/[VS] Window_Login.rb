@@ -21,32 +21,33 @@ class Window_Login < Window_Base
     load_user
     @remember = Check_Box.new(self, 19, 110, Vocab::Remember, !@user_box.text.empty?)
     @user_box.active = !@pass_box.active
-    refresh
+    draw_contents
   end
   
   def adjust_x
     Graphics.width / 2 - 105
   end
   
-  def refresh
-    contents.clear
+  def draw_contents
+    # Desenhar o conteúdo da janela uma única vez, e não
+    #toda vez que a janela ficar visível (refresh)
     draw_text(7, 6, 75, line_height, "#{Vocab::Username}:")
     draw_text(7, 52, 75, line_height, "#{Vocab::Password}:")
   end
   
   def load_user
-    return unless FileTest.exist?('System/Account.rvdata2')
-    file = File.open('System/Account.rvdata2', 'rb')
-    @user_box.text = Marshal.load(file)
+    return if $settings_file.user.empty?
+    # Impede que o nome de usuário do arquivo de configurações
+    #seja alterado toda vez que o texto do @user_box mudar,
+    #mesmo que a caixa de verificação não esteja ativada
+    @user_box.text = $settings_file.user.clone
     @pass_box.active = true
-    file.close
   end
   
   def save_user
-    return unless @remember.checked
-    file = File.open('System/Account.rvdata2', 'wb')
-    file.write(Marshal.dump(@user_box.text))
-    file.close
+    return unless @remember.checked && $settings_file.user != @user_box.text
+    $settings_file.user = @user_box.text
+    $settings_file.save
   end
   
   def create_account

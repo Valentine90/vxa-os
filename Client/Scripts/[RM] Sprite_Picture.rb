@@ -38,7 +38,7 @@ class Sprite_Picture < Sprite
   # * Atualização do bitmap de origem
   #--------------------------------------------------------------------------
   def update_bitmap
-    self.bitmap = Cache.picture(@picture.name)
+    self.bitmap = @picture.name.empty? ? nil : Cache.picture(@picture.name)
   end
   #--------------------------------------------------------------------------
   # * Atualização da origem

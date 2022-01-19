@@ -27,6 +27,14 @@ class Buffer_Writer
     write(short, 's')
   end
   
+  def write_float(float)
+    write(float, 'f')
+  end
+  
+  def write_double(double)
+    write(double, 'd')
+  end
+  
   def write_int(int)
     write(int, 'i')
   end
@@ -76,6 +84,14 @@ class Buffer_Reader
   
   def read_short
     read(2, 's')
+  end
+  
+  def read_float
+    read(4, 'f')
+  end
+  
+  def read_double
+    read(8, 'd')
   end
   
   def read_int
