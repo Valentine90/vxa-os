@@ -1,10 +1,10 @@
 [
   null,
   {
-    "@id": 1,
-    "@name": "Mundo",
-    "@mode": 0,
-    "@tileset_names": [
+    "id": 1,
+    "name": "Mundo",
+    "mode": 0,
+    "tileset_names": [
       "World_A1",
       "World_A2",
       "",
@@ -15,14 +15,14 @@
       "",
       ""
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   },
   {
-    "@id": 2,
-    "@name": "Exterior",
-    "@mode": 1,
-    "@tileset_names": [
+    "id": 2,
+    "name": "Exterior",
+    "mode": 1,
+    "tileset_names": [
       "Outside_A1",
       "Outside_A2",
       "Outside_A3",
@@ -33,14 +33,14 @@
       "",
       ""
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   },
   {
-    "@id": 3,
-    "@name": "Interior",
-    "@mode": 1,
-    "@tileset_names": [
+    "id": 3,
+    "name": "Interior",
+    "mode": 1,
+    "tileset_names": [
       "Inside_A1",
       "Inside_A2",
       "",
@@ -51,14 +51,14 @@
       "",
       ""
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   },
   {
-    "@id": 4,
-    "@name": "Masmorra",
-    "@mode": 1,
-    "@tileset_names": [
+    "id": 4,
+    "name": "Masmorra",
+    "mode": 1,
+    "tileset_names": [
       "Dungeon_A1",
       "Dungeon_A2",
       "",
@@ -69,14 +69,14 @@
       "",
       ""
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   },
   {
-    "@id": 5,
-    "@name": "Floresta XP",
-    "@mode": 1,
-    "@tileset_names": [
+    "id": 5,
+    "name": "Floresta XP",
+    "mode": 1,
+    "tileset_names": [
       "A1",
       "xp A2",
       "",
@@ -87,14 +87,14 @@
       "D",
       "E"
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   },
   {
-    "@id": 6,
-    "@name": "Caverna XP",
-    "@mode": 1,
-    "@tileset_names": [
+    "id": 6,
+    "name": "Caverna XP",
+    "mode": 1,
+    "tileset_names": [
       "",
       "Interior A2",
       "",
@@ -105,7 +105,7 @@
       "",
       ""
     ],
-    "@flags": null,
-    "@note": ""
+    "flags": null,
+    "note": ""
   }
 ]

@@ -1,20 +1,20 @@
 [
   null,
   {
-    "@description": "Roupa de tecido altamente respirável",
-    "@name": "Roupas comuns",
-    "@icon_index": 168,
-    "@price": 100,
-    "@note": "Paperdoll=$Armor",
-    "@id": 1,
-    "@features": [
+    "description": "Roupa de tecido altamente respirável",
+    "name": "Roupas comuns",
+    "icon_index": 168,
+    "price": 100,
+    "note": "Paperdoll=$Armor",
+    "id": 1,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -24,24 +24,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 1
+    "etype_id": 3,
+    "atype_id": 1
   },
   {
-    "@description": "A melhor camisa feita de couro",
-    "@name": "Camisa de Couro",
-    "@icon_index": 168,
-    "@price": 300,
-    "@note": "Paperdoll=$Armor",
-    "@id": 2,
-    "@features": [
+    "description": "A melhor camisa feita de couro",
+    "name": "Camisa de Couro",
+    "icon_index": 168,
+    "price": 300,
+    "note": "Paperdoll=$Armor",
+    "id": 2,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -51,24 +51,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 1
+    "etype_id": 3,
+    "atype_id": 1
   },
   {
-    "@description": "Roupas duráveis feitas para suportarem viagens difíceis",
-    "@name": "Roupas do Aventureiro",
-    "@icon_index": 168,
-    "@price": 2000,
-    "@note": "Paperdoll=$Armor",
-    "@id": 3,
-    "@features": [
+    "description": "Roupas duráveis feitas para suportarem viagens difíceis",
+    "name": "Roupas do Aventureiro",
+    "icon_index": 168,
+    "price": 2000,
+    "note": "Paperdoll=$Armor",
+    "id": 3,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -78,24 +78,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 1
+    "etype_id": 3,
+    "atype_id": 1
   },
   {
-    "@description": "Vestes de couro reforçado com cola",
-    "@name": "Couro Reforçado",
-    "@icon_index": 168,
-    "@price": 5000,
-    "@note": "Paperdoll=$Armor",
-    "@id": 4,
-    "@features": [
+    "description": "Vestes de couro reforçado com cola",
+    "name": "Couro Reforçado",
+    "icon_index": 168,
+    "price": 5000,
+    "note": "Paperdoll=$Armor",
+    "id": 4,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -105,24 +105,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 1
+    "etype_id": 3,
+    "atype_id": 1
   },
   {
-    "@description": "Roupas feitas de couro reforçadas com aço",
-    "@name": "Couraça",
-    "@icon_index": 168,
-    "@price": 8000,
-    "@note": "Paperdoll=$Armor",
-    "@id": 5,
-    "@features": [
+    "description": "Roupas feitas de couro reforçadas com aço",
+    "name": "Couraça",
+    "icon_index": 168,
+    "price": 8000,
+    "note": "Paperdoll=$Armor",
+    "id": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -132,24 +132,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 1
+    "etype_id": 3,
+    "atype_id": 1
   },
   {
-    "@description": "Bandana para proteger a testa",
-    "@name": "Bandana",
-    "@icon_index": 162,
-    "@price": 100,
-    "@note": "",
-    "@id": 6,
-    "@features": [
+    "description": "Bandana para proteger a testa",
+    "name": "Bandana",
+    "icon_index": 162,
+    "price": 100,
+    "note": "",
+    "id": 6,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -159,24 +159,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 1
+    "etype_id": 2,
+    "atype_id": 1
   },
   {
-    "@description": "Bandana feita de couro para proteger a cabeça",
-    "@name": "Bandana de Couro",
-    "@icon_index": 162,
-    "@price": 500,
-    "@note": "",
-    "@id": 7,
-    "@features": [
+    "description": "Bandana feita de couro para proteger a cabeça",
+    "name": "Bandana de Couro",
+    "icon_index": 162,
+    "price": 500,
+    "note": "",
+    "id": 7,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -186,24 +186,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 1
+    "etype_id": 2,
+    "atype_id": 1
   },
   {
-    "@description": "Chapéu feito de pele",
-    "@name": "Chapéu de Pele",
-    "@icon_index": 162,
-    "@price": 1500,
-    "@note": "",
-    "@id": 8,
-    "@features": [
+    "description": "Chapéu feito de pele",
+    "name": "Chapéu de Pele",
+    "icon_index": 162,
+    "price": 1500,
+    "note": "",
+    "id": 8,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -213,24 +213,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 1
+    "etype_id": 2,
+    "atype_id": 1
   },
   {
-    "@description": "Tecido grosso que protege a cabeça de danos",
-    "@name": "Turbante",
-    "@icon_index": 162,
-    "@price": 4000,
-    "@note": "",
-    "@id": 9,
-    "@features": [
+    "description": "Tecido grosso que protege a cabeça de danos",
+    "name": "Turbante",
+    "icon_index": 162,
+    "price": 4000,
+    "note": "",
+    "id": 9,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -240,24 +240,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 1
+    "etype_id": 2,
+    "atype_id": 1
   },
   {
-    "@description": "Chapéu estiloso com penas da Ave do Paraíso",
-    "@name": "Chapéu com Penas",
-    "@icon_index": 162,
-    "@price": 6500,
-    "@note": "",
-    "@id": 10,
-    "@features": [
+    "description": "Chapéu estiloso com penas da Ave do Paraíso",
+    "name": "Chapéu com Penas",
+    "icon_index": 162,
+    "price": 6500,
+    "note": "",
+    "id": 10,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -267,24 +267,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 1
+    "etype_id": 2,
+    "atype_id": 1
   },
   {
-    "@description": "Feita de algodão grosso",
-    "@name": "Túnica de Algodão",
-    "@icon_index": 171,
-    "@price": 100,
-    "@note": "Paperdoll=$Robe",
-    "@id": 11,
-    "@features": [
+    "description": "Feita de algodão grosso",
+    "name": "Túnica de Algodão",
+    "icon_index": 171,
+    "price": 100,
+    "note": "Paperdoll=$Robe",
+    "id": 11,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -294,24 +294,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 2
+    "etype_id": 3,
+    "atype_id": 2
   },
   {
-    "@description": "Túnica feita de seda fina",
-    "@name": "Túnica de Seda",
-    "@icon_index": 171,
-    "@price": 500,
-    "@note": "Paperdoll=$Robe",
-    "@id": 12,
-    "@features": [
+    "description": "Túnica feita de seda fina",
+    "name": "Túnica de Seda",
+    "icon_index": 171,
+    "price": 500,
+    "note": "Paperdoll=$Robe",
+    "id": 12,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -321,24 +321,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 2
+    "etype_id": 3,
+    "atype_id": 2
   },
   {
-    "@description": "Túnica forrada gravada com runas",
-    "@name": "Túnica da Arte Mágica",
-    "@icon_index": 171,
-    "@price": 3000,
-    "@note": "Paperdoll=$Robe",
-    "@id": 13,
-    "@features": [
+    "description": "Túnica forrada gravada com runas",
+    "name": "Túnica da Arte Mágica",
+    "icon_index": 171,
+    "price": 3000,
+    "note": "Paperdoll=$Robe",
+    "id": 13,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -348,54 +348,54 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 2
+    "etype_id": 3,
+    "atype_id": 2
   },
   {
-    "@description": "Túnica trajada pelos sábios de outrora",
-    "@name": "Túnica do Hermitão",
-    "@icon_index": 171,
-    "@price": 8000,
-    "@note": "Paperdoll=$Robe",
-    "@id": 14,
-    "@features": [
+    "description": "Túnica trajada pelos sábios de outrora",
+    "name": "Túnica do Hermitão",
+    "icon_index": 171,
+    "price": 8000,
+    "note": "Paperdoll=$Robe",
+    "id": 14,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 4,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 5,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 6,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 7,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 8,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -405,54 +405,54 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 2
+    "etype_id": 3,
+    "atype_id": 2
   },
   {
-    "@description": "Nesta capa residem os poderes definitivos do Rei",
-    "@name": "Túnica Elemental",
-    "@icon_index": 171,
-    "@price": 13000,
-    "@note": "Paperdoll=$Robe",
-    "@id": 15,
-    "@features": [
+    "description": "Nesta capa residem os poderes definitivos do Rei",
+    "name": "Túnica Elemental",
+    "icon_index": 171,
+    "price": 13000,
+    "note": "Paperdoll=$Robe",
+    "id": 15,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 3,
+        "value": 0.6
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 4,
+        "value": 0.6
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 5,
+        "value": 0.6
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 6,
+        "value": 0.6
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 7,
+        "value": 0.6
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 0.6
+        "code": 11,
+        "data_id": 8,
+        "value": 0.6
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -462,24 +462,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 2
+    "etype_id": 3,
+    "atype_id": 2
   },
   {
-    "@description": "Tiara feito de cobre",
-    "@name": "Tiara de Cobre",
-    "@icon_index": 166,
-    "@price": 100,
-    "@note": "",
-    "@id": 16,
-    "@features": [
+    "description": "Tiara feito de cobre",
+    "name": "Tiara de Cobre",
+    "icon_index": 166,
+    "price": 100,
+    "note": "",
+    "id": 16,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -489,24 +489,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 2
+    "etype_id": 2,
+    "atype_id": 2
   },
   {
-    "@description": "Um ornamento em formato de anel feito do ferro",
-    "@name": "Tiara de Ferro",
-    "@icon_index": 166,
-    "@price": 400,
-    "@note": "",
-    "@id": 17,
-    "@features": [
+    "description": "Um ornamento em formato de anel feito do ferro",
+    "name": "Tiara de Ferro",
+    "icon_index": 166,
+    "price": 400,
+    "note": "",
+    "id": 17,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -516,24 +516,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 2
+    "etype_id": 2,
+    "atype_id": 2
   },
   {
-    "@description": "Tiara que aumenta o poder mágico do usuário",
-    "@name": "Tiara de Prata",
-    "@icon_index": 166,
-    "@price": 2500,
-    "@note": "",
-    "@id": 18,
-    "@features": [
+    "description": "Tiara que aumenta o poder mágico do usuário",
+    "name": "Tiara de Prata",
+    "icon_index": 166,
+    "price": 2500,
+    "note": "",
+    "id": 18,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -543,24 +543,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 2
+    "etype_id": 2,
+    "atype_id": 2
   },
   {
-    "@description": "Tiara em formato de anel feito de Mithril",
-    "@name": "Tiara de Mithril",
-    "@icon_index": 166,
-    "@price": 6000,
-    "@note": "",
-    "@id": 19,
-    "@features": [
+    "description": "Tiara em formato de anel feito de Mithril",
+    "name": "Tiara de Mithril",
+    "icon_index": 166,
+    "price": 6000,
+    "note": "",
+    "id": 19,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -570,24 +570,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 2
+    "etype_id": 2,
+    "atype_id": 2
   },
   {
-    "@description": "Coroa feita nos tempos antigos dos Magos, com tecnologia\r\njá esquecida",
-    "@name": "Coroa dos Magos",
-    "@icon_index": 166,
-    "@price": 10000,
-    "@note": "",
-    "@id": 20,
-    "@features": [
+    "description": "Coroa feita nos tempos antigos dos Magos, com tecnologia\r\njá esquecida",
+    "name": "Coroa dos Magos",
+    "icon_index": 166,
+    "price": 10000,
+    "note": "",
+    "id": 20,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -597,24 +597,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 2
+    "etype_id": 2,
+    "atype_id": 2
   },
   {
-    "@description": "Armadura de tiras de couro cruzadas",
-    "@name": "Armadura de Couro",
-    "@icon_index": 169,
-    "@price": 100,
-    "@note": "Paperdoll=$Armor",
-    "@id": 21,
-    "@features": [
+    "description": "Armadura de tiras de couro cruzadas",
+    "name": "Armadura de Couro",
+    "icon_index": 169,
+    "price": 100,
+    "note": "Paperdoll=$Armor",
+    "id": 21,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -624,24 +624,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 3
+    "etype_id": 3,
+    "atype_id": 3
   },
   {
-    "@description": "Peitoral mal-feito de bronze",
-    "@name": "Peitoral de Bronze",
-    "@icon_index": 169,
-    "@price": 400,
-    "@note": "Paperdoll=$Armor",
-    "@id": 22,
-    "@features": [
+    "description": "Peitoral mal-feito de bronze",
+    "name": "Peitoral de Bronze",
+    "icon_index": 169,
+    "price": 400,
+    "note": "Paperdoll=$Armor",
+    "id": 22,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -651,24 +651,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 3
+    "etype_id": 3,
+    "atype_id": 3
   },
   {
-    "@description": "Feito com placas de aço e ferro",
-    "@name": "Peitoral de Ferro",
-    "@icon_index": 169,
-    "@price": 2700,
-    "@note": "Paperdoll=$Armor",
-    "@id": 23,
-    "@features": [
+    "description": "Feito com placas de aço e ferro",
+    "name": "Peitoral de Ferro",
+    "icon_index": 169,
+    "price": 2700,
+    "note": "Paperdoll=$Armor",
+    "id": 23,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -678,24 +678,24 @@
       -2,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 3
+    "etype_id": 3,
+    "atype_id": 3
   },
   {
-    "@description": "Peitoral feito de metal mágico Mithril",
-    "@name": "Peitoral de Mithril",
-    "@icon_index": 169,
-    "@price": 7000,
-    "@note": "Paperdoll=$Armor",
-    "@id": 24,
-    "@features": [
+    "description": "Peitoral feito de metal mágico Mithril",
+    "name": "Peitoral de Mithril",
+    "icon_index": 169,
+    "price": 7000,
+    "note": "Paperdoll=$Armor",
+    "id": 24,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -705,29 +705,29 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 3
+    "etype_id": 3,
+    "atype_id": 3
   },
   {
-    "@description": "Peitoral feito de escamas de dragão",
-    "@name": "Escama de Dragão",
-    "@icon_index": 169,
-    "@price": 12000,
-    "@note": "Paperdoll=$Armor",
-    "@id": 25,
-    "@features": [
+    "description": "Peitoral feito de escamas de dragão",
+    "name": "Escama de Dragão",
+    "icon_index": 169,
+    "price": 12000,
+    "note": "Paperdoll=$Armor",
+    "id": 25,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -737,24 +737,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 3
+    "etype_id": 3,
+    "atype_id": 3
   },
   {
-    "@description": "Capacete feito de couro",
-    "@name": "Capacete de Couro",
-    "@icon_index": 163,
-    "@price": 100,
-    "@note": "Paperdoll=$Helmet1",
-    "@id": 26,
-    "@features": [
+    "description": "Capacete feito de couro",
+    "name": "Capacete de Couro",
+    "icon_index": 163,
+    "price": 100,
+    "note": "Paperdoll=$Helmet1",
+    "id": 26,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -764,24 +764,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 3
+    "etype_id": 2,
+    "atype_id": 3
   },
   {
-    "@description": "Capacete reforçado com bronze",
-    "@name": "Capacete de Bronze",
-    "@icon_index": 163,
-    "@price": 350,
-    "@note": "Paperdoll=$Helmet1",
-    "@id": 27,
-    "@features": [
+    "description": "Capacete reforçado com bronze",
+    "name": "Capacete de Bronze",
+    "icon_index": 163,
+    "price": 350,
+    "note": "Paperdoll=$Helmet1",
+    "id": 27,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -791,24 +791,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 3
+    "etype_id": 2,
+    "atype_id": 3
   },
   {
-    "@description": "Capacete feito com aço processado",
-    "@name": "Capacete de Aço",
-    "@icon_index": 163,
-    "@price": 2400,
-    "@note": "Paperdoll=$Helmet1",
-    "@id": 28,
-    "@features": [
+    "description": "Capacete feito com aço processado",
+    "name": "Capacete de Aço",
+    "icon_index": 163,
+    "price": 2400,
+    "note": "Paperdoll=$Helmet1",
+    "id": 28,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -818,24 +818,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 3
+    "etype_id": 2,
+    "atype_id": 3
   },
   {
-    "@description": "Capacete feito do metal mágico Mithril",
-    "@name": "Capacete de Mithril",
-    "@icon_index": 163,
-    "@price": 5500,
-    "@note": "Paperdoll=$Helmet1",
-    "@id": 29,
-    "@features": [
+    "description": "Capacete feito do metal mágico Mithril",
+    "name": "Capacete de Mithril",
+    "icon_index": 163,
+    "price": 5500,
+    "note": "Paperdoll=$Helmet1",
+    "id": 29,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -845,29 +845,29 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 3
+    "etype_id": 2,
+    "atype_id": 3
   },
   {
-    "@description": "Elmo feito com a pele de um dragão",
-    "@name": "Pele de Dragão",
-    "@icon_index": 163,
-    "@price": 9500,
-    "@note": "Paperdoll=$Helmet1",
-    "@id": 30,
-    "@features": [
+    "description": "Elmo feito com a pele de um dragão",
+    "name": "Pele de Dragão",
+    "icon_index": 163,
+    "price": 9500,
+    "note": "Paperdoll=$Helmet1",
+    "id": 30,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -877,29 +877,29 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 3
+    "etype_id": 2,
+    "atype_id": 3
   },
   {
-    "@description": "Uma armadura feita de elos de ferro",
-    "@name": "Cota de Malha",
-    "@icon_index": 170,
-    "@price": 100,
-    "@note": "",
-    "@id": 31,
-    "@features": [
+    "description": "Uma armadura feita de elos de ferro",
+    "name": "Cota de Malha",
+    "icon_index": 170,
+    "price": 100,
+    "note": "",
+    "id": 31,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -1.0
+        "code": 33,
+        "data_id": 0,
+        "value": -1.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -909,29 +909,29 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 4
+    "etype_id": 3,
+    "atype_id": 4
   },
   {
-    "@description": "Armadura feita de ferro",
-    "@name": "Armadura de Ferro",
-    "@icon_index": 170,
-    "@price": 800,
-    "@note": "",
-    "@id": 32,
-    "@features": [
+    "description": "Armadura feita de ferro",
+    "name": "Armadura de Ferro",
+    "icon_index": 170,
+    "price": 800,
+    "note": "",
+    "id": 32,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.01
+        "code": 22,
+        "data_id": 1,
+        "value": -0.01
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -941,29 +941,29 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 4
+    "etype_id": 3,
+    "atype_id": 4
   },
   {
-    "@description": "Armadura de cavaleiro feita de placas",
-    "@name": "Armadura de Cavaleiro",
-    "@icon_index": 170,
-    "@price": 3600,
-    "@note": "",
-    "@id": 33,
-    "@features": [
+    "description": "Armadura de cavaleiro feita de placas",
+    "name": "Armadura de Cavaleiro",
+    "icon_index": 170,
+    "price": 3600,
+    "note": "",
+    "id": 33,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.02
+        "code": 22,
+        "data_id": 1,
+        "value": -0.02
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -3.0
+        "code": 33,
+        "data_id": 0,
+        "value": -3.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -973,24 +973,24 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 4
+    "etype_id": 3,
+    "atype_id": 4
   },
   {
-    "@description": "Armadura feita do metal mágico Mithril",
-    "@name": "Armadura Mithril",
-    "@icon_index": 170,
-    "@price": 8000,
-    "@note": "",
-    "@id": 34,
-    "@features": [
+    "description": "Armadura feita do metal mágico Mithril",
+    "name": "Armadura Mithril",
+    "icon_index": 170,
+    "price": 8000,
+    "note": "",
+    "id": 34,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1000,34 +1000,34 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 4
+    "etype_id": 3,
+    "atype_id": 4
   },
   {
-    "@description": "Armadura feita com escamas de dragão",
-    "@name": "Armadura de Escamas de Dragão",
-    "@icon_index": 170,
-    "@price": 15000,
-    "@note": "",
-    "@id": 35,
-    "@features": [
+    "description": "Armadura feita com escamas de dragão",
+    "name": "Armadura de Escamas de Dragão",
+    "icon_index": 170,
+    "price": 15000,
+    "note": "",
+    "id": 35,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.01
+        "code": 22,
+        "data_id": 1,
+        "value": -0.01
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1037,29 +1037,29 @@
       0,
       0
     ],
-    "@etype_id": 3,
-    "@atype_id": 4
+    "etype_id": 3,
+    "atype_id": 4
   },
   {
-    "@description": "Elmo pesado feito de malha de aço",
-    "@name": "Elmo de Malha",
-    "@icon_index": 164,
-    "@price": 100,
-    "@note": "",
-    "@id": 36,
-    "@features": [
+    "description": "Elmo pesado feito de malha de aço",
+    "name": "Elmo de Malha",
+    "icon_index": 164,
+    "price": 100,
+    "note": "",
+    "id": 36,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -1.0
+        "code": 33,
+        "data_id": 0,
+        "value": -1.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1069,29 +1069,29 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 4
+    "etype_id": 2,
+    "atype_id": 4
   },
   {
-    "@description": "Elmo feito de ferro",
-    "@name": "Elmo de Ferro",
-    "@icon_index": 164,
-    "@price": 600,
-    "@note": "",
-    "@id": 37,
-    "@features": [
+    "description": "Elmo feito de ferro",
+    "name": "Elmo de Ferro",
+    "icon_index": 164,
+    "price": 600,
+    "note": "",
+    "id": 37,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.005
+        "code": 22,
+        "data_id": 1,
+        "value": -0.005
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1101,29 +1101,29 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 4
+    "etype_id": 2,
+    "atype_id": 4
   },
   {
-    "@description": "Elmo de um Cavaleiro condecorado",
-    "@name": "Elmo do Cavaleiro",
-    "@icon_index": 164,
-    "@price": 3000,
-    "@note": "",
-    "@id": 38,
-    "@features": [
+    "description": "Elmo de um Cavaleiro condecorado",
+    "name": "Elmo do Cavaleiro",
+    "icon_index": 164,
+    "price": 3000,
+    "note": "",
+    "id": 38,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.01
+        "code": 22,
+        "data_id": 1,
+        "value": -0.01
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -3.0
+        "code": 33,
+        "data_id": 0,
+        "value": -3.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1133,24 +1133,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 4
+    "etype_id": 2,
+    "atype_id": 4
   },
   {
-    "@description": "Elmo feito do metal mágico Mithril",
-    "@name": "Elmo de Mithril",
-    "@icon_index": 164,
-    "@price": 7000,
-    "@note": "",
-    "@id": 39,
-    "@features": [
+    "description": "Elmo feito do metal mágico Mithril",
+    "name": "Elmo de Mithril",
+    "icon_index": 164,
+    "price": 7000,
+    "note": "",
+    "id": 39,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1160,34 +1160,34 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 4
+    "etype_id": 2,
+    "atype_id": 4
   },
   {
-    "@description": "Elmo feito com escamas de dragão",
-    "@name": "Elmo de Escamas de Dragão",
-    "@icon_index": 164,
-    "@price": 12000,
-    "@note": "",
-    "@id": 40,
-    "@features": [
+    "description": "Elmo feito com escamas de dragão",
+    "name": "Elmo de Escamas de Dragão",
+    "icon_index": 164,
+    "price": 12000,
+    "note": "",
+    "id": 40,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.005
+        "code": 22,
+        "data_id": 1,
+        "value": -0.005
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1197,24 +1197,24 @@
       0,
       0
     ],
-    "@etype_id": 2,
-    "@atype_id": 4
+    "etype_id": 2,
+    "atype_id": 4
   },
   {
-    "@description": "Um escudo pequeno feito para defender ataques",
-    "@name": "Broquel",
-    "@icon_index": 160,
-    "@price": 100,
-    "@note": "",
-    "@id": 41,
-    "@features": [
+    "description": "Um escudo pequeno feito para defender ataques",
+    "name": "Broquel",
+    "icon_index": 160,
+    "price": 100,
+    "note": "",
+    "id": 41,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.02
+        "code": 22,
+        "data_id": 1,
+        "value": 0.02
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1224,24 +1224,24 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 5
+    "etype_id": 1,
+    "atype_id": 5
   },
   {
-    "@description": "Escudo circular de madeira reforçado com aço",
-    "@name": "Escudo Redondo",
-    "@icon_index": 160,
-    "@price": 300,
-    "@note": "",
-    "@id": 42,
-    "@features": [
+    "description": "Escudo circular de madeira reforçado com aço",
+    "name": "Escudo Redondo",
+    "icon_index": 160,
+    "price": 300,
+    "note": "",
+    "id": 42,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.04
+        "code": 22,
+        "data_id": 1,
+        "value": 0.04
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1251,24 +1251,24 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 5
+    "etype_id": 1,
+    "atype_id": 5
   },
   {
-    "@description": "Escudo com espinhos para atacar",
-    "@name": "Escudo Espinhoso",
-    "@icon_index": 160,
-    "@price": 1800,
-    "@note": "",
-    "@id": 43,
-    "@features": [
+    "description": "Escudo com espinhos para atacar",
+    "name": "Escudo Espinhoso",
+    "icon_index": 160,
+    "price": 1800,
+    "note": "",
+    "id": 43,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.06
+        "code": 22,
+        "data_id": 1,
+        "value": 0.06
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       3,
@@ -1278,24 +1278,24 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 5
+    "etype_id": 1,
+    "atype_id": 5
   },
   {
-    "@description": "Escudo pequeno feito de metal mágico Mithril",
-    "@name": "Broquel de Mithril",
-    "@icon_index": 160,
-    "@price": 4500,
-    "@note": "",
-    "@id": 44,
-    "@features": [
+    "description": "Escudo pequeno feito de metal mágico Mithril",
+    "name": "Broquel de Mithril",
+    "icon_index": 160,
+    "price": 4500,
+    "note": "",
+    "id": 44,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.08
+        "code": 22,
+        "data_id": 1,
+        "value": 0.08
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1305,29 +1305,29 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 5
+    "etype_id": 1,
+    "atype_id": 5
   },
   {
-    "@description": "Escudo pequeno feito de escamas de dragão",
-    "@name": "Broquel do Dragão",
-    "@icon_index": 160,
-    "@price": 7000,
-    "@note": "",
-    "@id": 45,
-    "@features": [
+    "description": "Escudo pequeno feito de escamas de dragão",
+    "name": "Broquel do Dragão",
+    "icon_index": 160,
+    "price": 7000,
+    "note": "",
+    "id": 45,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.125
+        "code": 22,
+        "data_id": 1,
+        "value": 0.125
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1337,34 +1337,34 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 5
+    "etype_id": 1,
+    "atype_id": 5
   },
   {
-    "@description": "Escudo feito de tiras de madeira dura sobrepostas",
-    "@name": "Escudo de Madeira",
-    "@icon_index": 161,
-    "@price": 100,
-    "@note": "Paperdoll=$Shield",
-    "@id": 46,
-    "@features": [
+    "description": "Escudo feito de tiras de madeira dura sobrepostas",
+    "name": "Escudo de Madeira",
+    "icon_index": 161,
+    "price": 100,
+    "note": "Paperdoll=$Shield",
+    "id": 46,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": -0.2
+        "code": 22,
+        "data_id": 3,
+        "value": -0.2
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -1.0
+        "code": 33,
+        "data_id": 0,
+        "value": -1.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1374,34 +1374,34 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 6
+    "etype_id": 1,
+    "atype_id": 6
   },
   {
-    "@description": "Escudo feito de aço maciço",
-    "@name": "Escudo de Aço",
-    "@icon_index": 161,
-    "@price": 700,
-    "@note": "",
-    "@id": 47,
-    "@features": [
+    "description": "Escudo feito de aço maciço",
+    "name": "Escudo de Aço",
+    "icon_index": 161,
+    "price": 700,
+    "note": "",
+    "id": 47,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": -0.2
+        "code": 22,
+        "data_id": 3,
+        "value": -0.2
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1411,34 +1411,34 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 6
+    "etype_id": 1,
+    "atype_id": 6
   },
   {
-    "@description": "Escudo de placas gravado com o símbolo do Grifo",
-    "@name": "Escudo do Cavaleiro",
-    "@icon_index": 161,
-    "@price": 3400,
-    "@note": "",
-    "@id": 48,
-    "@features": [
+    "description": "Escudo de placas gravado com o símbolo do Grifo",
+    "name": "Escudo do Cavaleiro",
+    "icon_index": 161,
+    "price": 3400,
+    "note": "",
+    "id": 48,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": -0.2
+        "code": 22,
+        "data_id": 3,
+        "value": -0.2
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -3.0
+        "code": 33,
+        "data_id": 0,
+        "value": -3.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1448,29 +1448,29 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 6
+    "etype_id": 1,
+    "atype_id": 6
   },
   {
-    "@description": "Escudo feito de metal mágico Mithril",
-    "@name": "Escudo de Mithril",
-    "@icon_index": 161,
-    "@price": 7500,
-    "@note": "",
-    "@id": 49,
-    "@features": [
+    "description": "Escudo feito de metal mágico Mithril",
+    "name": "Escudo de Mithril",
+    "icon_index": 161,
+    "price": 7500,
+    "note": "",
+    "id": 49,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": -0.2
+        "code": 22,
+        "data_id": 3,
+        "value": -0.2
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1480,39 +1480,39 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 6
+    "etype_id": 1,
+    "atype_id": 6
   },
   {
-    "@description": "Escudo feito com uma combinação de escamas de dragões",
-    "@name": "Escudo de Escamas de Dragão",
-    "@icon_index": 161,
-    "@price": 13500,
-    "@note": "",
-    "@id": 50,
-    "@features": [
+    "description": "Escudo feito com uma combinação de escamas de dragões",
+    "name": "Escudo de Escamas de Dragão",
+    "icon_index": 161,
+    "price": 13500,
+    "note": "",
+    "id": 50,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": -0.2
+        "code": 22,
+        "data_id": 3,
+        "value": -0.2
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 33,
-        "@data_id": 0,
-        "@value": -2.0
+        "code": 33,
+        "data_id": 0,
+        "value": -2.0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1522,24 +1522,24 @@
       0,
       0
     ],
-    "@etype_id": 1,
-    "@atype_id": 6
+    "etype_id": 1,
+    "atype_id": 6
   },
   {
-    "@description": "Cinto de metal gravado com o nome do Deus Lutador",
-    "@name": "Cinto do Deus Lutador",
-    "@icon_index": 179,
-    "@price": 3000,
-    "@note": "",
-    "@id": 51,
-    "@features": [
+    "description": "Cinto de metal gravado com o nome do Deus Lutador",
+    "name": "Cinto do Deus Lutador",
+    "icon_index": 179,
+    "price": 3000,
+    "note": "",
+    "id": 51,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       10,
@@ -1549,24 +1549,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Brincos feitos com a magia das florestas",
-    "@name": "Brincos de Defesa",
-    "@icon_index": 179,
-    "@price": 3000,
-    "@note": "",
-    "@id": 52,
-    "@features": [
+    "description": "Brincos feitos com a magia das florestas",
+    "name": "Brincos de Defesa",
+    "icon_index": 179,
+    "price": 3000,
+    "note": "",
+    "id": 52,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1576,24 +1576,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Botas do vento, que carregam dentro de si o espírito\r\nsagrado",
-    "@name": "Botas Aladas",
-    "@icon_index": 179,
-    "@price": 3000,
-    "@note": "",
-    "@id": 53,
-    "@features": [
+    "description": "Botas do vento, que carregam dentro de si o espírito\r\nsagrado",
+    "name": "Botas Aladas",
+    "icon_index": 179,
+    "price": 3000,
+    "note": "",
+    "id": 53,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 1,
+        "value": 0.1
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1603,54 +1603,54 @@
       10,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Com este amuleto, é possível observar os poderes\r\nda Natureza",
-    "@name": "Amuleto da Natureza",
-    "@icon_index": 180,
-    "@price": 3000,
-    "@note": "Type=5",
-    "@id": 54,
-    "@features": [
+    "description": "Com este amuleto, é possível observar os poderes\r\nda Natureza",
+    "name": "Amuleto da Natureza",
+    "icon_index": 180,
+    "price": 3000,
+    "note": "Type=5",
+    "id": 54,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 13,
-        "@data_id": 2,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 2,
+        "value": 0.8
       },
       {
-        "@code": 13,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 13,
-        "@data_id": 4,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 4,
+        "value": 0.8
       },
       {
-        "@code": 13,
-        "@data_id": 5,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 5,
+        "value": 0.8
       },
       {
-        "@code": 13,
-        "@data_id": 6,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 6,
+        "value": 0.8
       },
       {
-        "@code": 13,
-        "@data_id": 7,
-        "@value": 0.8
+        "code": 13,
+        "data_id": 7,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1660,24 +1660,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Amuleto gravado com o nome de da Deusa da Fortuna",
-    "@name": "Amuleto da Sorte",
-    "@icon_index": 180,
-    "@price": 5000,
-    "@note": "Type=5",
-    "@id": 55,
-    "@features": [
+    "description": "Amuleto gravado com o nome de da Deusa da Fortuna",
+    "name": "Amuleto da Sorte",
+    "icon_index": 180,
+    "price": 5000,
+    "note": "Type=5",
+    "id": 55,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1687,54 +1687,54 @@
       0,
       30
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Símbolo sagrado de Deus, que protege aqueles que\r\no servem",
-    "@name": "Símbolo Sagrado",
-    "@icon_index": 179,
-    "@price": 5000,
-    "@note": "",
-    "@id": 56,
-    "@features": [
+    "description": "Símbolo sagrado de Deus, que protege aqueles que\r\no servem",
+    "name": "Símbolo Sagrado",
+    "icon_index": 179,
+    "price": 5000,
+    "note": "",
+    "id": 56,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 3,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 4,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 5,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 6,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 7,
+        "value": 0.8
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 0.8
+        "code": 11,
+        "data_id": 8,
+        "value": 0.8
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1744,29 +1744,29 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Anel imbuido com o poder oculto do Diabo",
-    "@name": "Anel de Salomão",
-    "@icon_index": 176,
-    "@price": 5000,
-    "@note": "",
-    "@id": 57,
-    "@features": [
+    "description": "Anel imbuido com o poder oculto do Diabo",
+    "name": "Anel de Salomão",
+    "icon_index": 176,
+    "price": 5000,
+    "note": "",
+    "id": 57,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       },
       {
-        "@code": 23,
-        "@data_id": 4,
-        "@value": 0.5
+        "code": 23,
+        "data_id": 4,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1776,34 +1776,34 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Colar mágico que dá poder àqueles que têm o desejo de\r\nlutar",
-    "@name": "Colar das Valquírias",
-    "@icon_index": 180,
-    "@price": 5000,
-    "@note": "Type=5",
-    "@id": 58,
-    "@features": [
+    "description": "Colar mágico que dá poder àqueles que têm o desejo de\r\nlutar",
+    "name": "Colar das Valquírias",
+    "icon_index": 180,
+    "price": 5000,
+    "note": "Type=5",
+    "id": 58,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 0,
+        "value": 0.1
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 1,
+        "value": 0.1
       },
       {
-        "@code": 22,
-        "@data_id": 9,
-        "@value": 0.04
+        "code": 22,
+        "data_id": 9,
+        "value": 0.04
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1813,24 +1813,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Tapa-olho utilizado por Amoques para concentrar sua fúria",
-    "@name": "Tapa-olho Amoque",
-    "@icon_index": 179,
-    "@price": 5000,
-    "@note": "",
-    "@id": 59,
-    "@features": [
+    "description": "Tapa-olho utilizado por Amoques para concentrar sua fúria",
+    "name": "Tapa-olho Amoque",
+    "icon_index": 179,
+    "price": 5000,
+    "note": "",
+    "id": 59,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": -0.05
+        "code": 22,
+        "data_id": 1,
+        "value": -0.05
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       15,
@@ -1840,34 +1840,34 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Dentro deste talismã reside o poder dos deuses benignos",
-    "@name": "Talismã da Luz",
-    "@icon_index": 179,
-    "@price": 5000,
-    "@note": "",
-    "@id": 60,
-    "@features": [
+    "description": "Dentro deste talismã reside o poder dos deuses benignos",
+    "name": "Talismã da Luz",
+    "icon_index": 179,
+    "price": 5000,
+    "note": "",
+    "id": 60,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 0,
+        "value": 0.05
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 22,
-        "@data_id": 7,
-        "@value": 0.04
+        "code": 22,
+        "data_id": 7,
+        "value": 0.04
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       5,
@@ -1877,24 +1877,24 @@
       5,
       5
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Capa feita de seda",
-    "@name": "Capa Comum",
-    "@icon_index": 444,
-    "@price": 100,
-    "@note": "Level=2\r\nType=6\r\nPaperdoll=$Cover",
-    "@id": 61,
-    "@features": [
+    "description": "Capa feita de seda",
+    "name": "Capa Comum",
+    "icon_index": 444,
+    "price": 100,
+    "note": "Level=2\r\nType=6\r\nPaperdoll=$Cover",
+    "id": 61,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1904,24 +1904,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Luva feita de ferro",
-    "@name": "Luva de Ferro",
-    "@icon_index": 175,
-    "@price": 100,
-    "@note": "Level=2\r\nType=7\r\nPaperdoll=$Glove",
-    "@id": 62,
-    "@features": [
+    "description": "Luva feita de ferro",
+    "name": "Luva de Ferro",
+    "icon_index": 175,
+    "price": 100,
+    "note": "Level=2\r\nType=7\r\nPaperdoll=$Glove",
+    "id": 62,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1931,24 +1931,24 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   },
   {
-    "@description": "Bota feita de prata",
-    "@name": "Bota de Prata",
-    "@icon_index": 173,
-    "@price": 100,
-    "@note": "Level=2\r\nType=8\r\nPaperdoll=$Boot",
-    "@id": 63,
-    "@features": [
+    "description": "Bota feita de prata",
+    "name": "Bota de Prata",
+    "icon_index": 173,
+    "price": 100,
+    "note": "Level=2\r\nType=8\r\nPaperdoll=$Boot",
+    "id": 63,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0
+        "code": 22,
+        "data_id": 1,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       0,
       0,
       0,
@@ -1958,7 +1958,7 @@
       0,
       0
     ],
-    "@etype_id": 4,
-    "@atype_id": 1
+    "etype_id": 4,
+    "atype_id": 1
   }
 ]

@@ -1,8 +1,6 @@
 <?php
 
-$rclasses = str_replace('@', '', file_get_contents('wiki/json/Actors.json'));
-
-$classes = json_decode($rclasses);
+$classes = json_decode(file_get_contents('wiki/json/Actors.json'));
 
 ?>
 <div>

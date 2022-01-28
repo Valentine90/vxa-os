@@ -1,47 +1,47 @@
 [
   null,
   {
-    "@name": "Gosma",
-    "@gold": 5,
-    "@battler_hue": 0,
-    "@exp": 3,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Gosma",
+    "gold": 5,
+    "battler_hue": 0,
+    "exp": 3,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 1,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 1,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 4,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       200,
       0,
       12,
@@ -51,76 +51,76 @@
       10,
       10
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 2,
-        "@kind": 1,
-        "@data_id": 1
+        "denominator": 2,
+        "kind": 1,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 7
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 7
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 13
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 13
       }
     ]
   },
   {
-    "@name": "Morcego",
-    "@gold": 15,
-    "@battler_hue": 0,
-    "@exp": 8,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Morcego",
+    "gold": 15,
+    "battler_hue": 0,
+    "exp": 8,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6\r\nReviveTime=10\r\nEscape=true",
-    "@id": 2,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6\r\nReviveTime=10\r\nEscape=true",
+    "id": 2,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 3,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 3,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 8,
+        "value": 2.0
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 7,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       250,
       0,
       16,
@@ -130,83 +130,83 @@
       16,
       16
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Soldada",
-    "@gold": 15,
-    "@battler_hue": 0,
-    "@exp": 8,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Soldada",
+    "gold": 15,
+    "battler_hue": 0,
+    "exp": 8,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 55,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 55,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6\r\nAniIndex=1",
-    "@id": 3,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6\r\nAniIndex=1",
+    "id": 3,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 2,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 2,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 0.1
+        "code": 11,
+        "data_id": 8,
+        "value": 0.1
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 7,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       300,
       100,
       16,
@@ -216,71 +216,71 @@
       16,
       16
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 2,
-        "@kind": 0,
-        "@data_id": 3
+        "denominator": 2,
+        "kind": 0,
+        "data_id": 3
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Aranha",
-    "@gold": 25,
-    "@battler_hue": 0,
-    "@exp": 13,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Aranha",
+    "gold": 25,
+    "battler_hue": 0,
+    "exp": 13,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 4,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 4,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 2,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 2,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 3,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       220,
       0,
       18,
@@ -290,73 +290,73 @@
       18,
       18
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Rato",
-    "@gold": 40,
-    "@battler_hue": 0,
-    "@exp": 19,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Rato",
+    "gold": 40,
+    "battler_hue": 0,
+    "exp": 19,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 21,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 21,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 5,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 5,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       }
     ],
-    "@params": [
+    "params": [
       300,
       0,
       20,
@@ -366,78 +366,78 @@
       22,
       22
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Fogo-Fátuo",
-    "@gold": 50,
-    "@battler_hue": 0,
-    "@exp": 26,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Fogo-Fátuo",
+    "gold": 50,
+    "battler_hue": 0,
+    "exp": 26,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 51,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 51,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 6,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 6,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 7,
-        "@value": 0.15
+        "code": 32,
+        "data_id": 7,
+        "value": 0.15
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 7,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       350,
       60,
       30,
@@ -447,73 +447,73 @@
       24,
       24
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Cobra",
-    "@gold": 70,
-    "@battler_hue": 0,
-    "@exp": 34,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Cobra",
+    "gold": 70,
+    "battler_hue": 0,
+    "exp": 34,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 4,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 4,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 7,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 7,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 4,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       400,
       0,
       28,
@@ -523,71 +523,71 @@
       28,
       28
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Escorpião",
-    "@gold": 90,
-    "@battler_hue": 0,
-    "@exp": 43,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Escorpião",
+    "gold": 90,
+    "battler_hue": 0,
+    "exp": 43,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 8,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 8,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 2,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 2,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 4,
+        "value": 1.5
       }
     ],
-    "@params": [
+    "params": [
       450,
       0,
       36,
@@ -597,71 +597,71 @@
       30,
       30
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Água-Viva",
-    "@gold": 105,
-    "@battler_hue": 0,
-    "@exp": 53,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Água-Viva",
+    "gold": 105,
+    "battler_hue": 0,
+    "exp": 53,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 9,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 9,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 3,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 3,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 5,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       500,
       0,
       32,
@@ -671,78 +671,78 @@
       32,
       32
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Planta Carnívora",
-    "@gold": 130,
-    "@battler_hue": 0,
-    "@exp": 63,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Planta Carnívora",
+    "gold": 130,
+    "battler_hue": 0,
+    "exp": 63,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 17,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 17,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 10,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 10,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 6,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       600,
       0,
       40,
@@ -752,88 +752,88 @@
       36,
       36
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Fantasma",
-    "@gold": 150,
-    "@battler_hue": 0,
-    "@exp": 75,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Fantasma",
+    "gold": 150,
+    "battler_hue": 0,
+    "exp": 75,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 51,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 51,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 11,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 11,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 10,
-        "@value": 100
+        "code": 31,
+        "data_id": 10,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 1,
-        "@value": 0.75
+        "code": 11,
+        "data_id": 1,
+        "value": 0.75
       },
       {
-        "@code": 11,
-        "@data_id": 2,
-        "@value": 0.0
+        "code": 11,
+        "data_id": 2,
+        "value": 0.0
       },
       {
-        "@code": 11,
-        "@data_id": 9,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 9,
+        "value": 2.0
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0
+        "code": 11,
+        "data_id": 10,
+        "value": 0
       }
     ],
-    "@params": [
+    "params": [
       700,
       80,
       48,
@@ -843,81 +843,81 @@
       38,
       38
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Esqueleto",
-    "@gold": 180,
-    "@battler_hue": 0,
-    "@exp": 87,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Esqueleto",
+    "gold": 180,
+    "battler_hue": 0,
+    "exp": 87,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 12,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 12,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 3,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 3,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 2,
-        "@value": 0.0
+        "code": 11,
+        "data_id": 2,
+        "value": 0.0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 9,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 9,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       800,
       0,
       50,
@@ -927,78 +927,78 @@
       40,
       40
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Orc",
-    "@gold": 200,
-    "@battler_hue": 0,
-    "@exp": 99,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Orc",
+    "gold": 200,
+    "battler_hue": 0,
+    "exp": 99,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 20,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 20,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 13,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 13,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 6,
+        "value": 2.0
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 2,
+        "value": 0.1
       }
     ],
-    "@params": [
+    "params": [
       850,
       0,
       55,
@@ -1008,80 +1008,80 @@
       42,
       42
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Diabrete",
-    "@gold": 220,
-    "@battler_hue": 0,
-    "@exp": 110,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Diabrete",
+    "gold": 220,
+    "battler_hue": 0,
+    "exp": 110,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 55,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 55,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 50,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 50,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 14,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 14,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 8,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       900,
       150,
       60,
@@ -1091,78 +1091,78 @@
       45,
       45
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Gayzer",
-    "@gold": 250,
-    "@battler_hue": 0,
-    "@exp": 130,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Gayzer",
+    "gold": 250,
+    "battler_hue": 0,
+    "exp": 130,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 23,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 23,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 15,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 15,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 6,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 6,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 5,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       950,
       0,
       65,
@@ -1172,85 +1172,85 @@
       50,
       50
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Marionete",
-    "@gold": 280,
-    "@battler_hue": 0,
-    "@exp": 160,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Marionete",
+    "gold": 280,
+    "battler_hue": 0,
+    "exp": 160,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 53,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 53,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 65,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 65,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 16,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 16,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100.0
+        "code": 31,
+        "data_id": 1,
+        "value": 100.0
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 6,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 7,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 7,
+        "value": 1.5
       }
     ],
-    "@params": [
+    "params": [
       1000,
       200,
       70,
@@ -1260,83 +1260,83 @@
       55,
       55
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Zumbi",
-    "@gold": 320,
-    "@battler_hue": 0,
-    "@exp": 180,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Zumbi",
+    "gold": 320,
+    "battler_hue": 0,
+    "exp": 180,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 4,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 4,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 17,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 17,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 2,
-        "@value": 0.0
+        "code": 11,
+        "data_id": 2,
+        "value": 0.0
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 9,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 9,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       1050,
       0,
       75,
@@ -1346,80 +1346,80 @@
       50,
       50
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Basilisco",
-    "@gold": 400,
-    "@battler_hue": 0,
-    "@exp": 260,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Basilisco",
+    "gold": 400,
+    "battler_hue": 0,
+    "exp": 260,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 10,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 10,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 19,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 19,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 18,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 18,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 8,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 8,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       1100,
       0,
       80,
@@ -1429,95 +1429,95 @@
       60,
       60
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Quimera",
-    "@gold": 900,
-    "@battler_hue": 0,
-    "@exp": 450,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Quimera",
+    "gold": 900,
+    "battler_hue": 0,
+    "exp": 450,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 4,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 4,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 9,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 9,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 18,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 18,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 19,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 19,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 3,
+        "value": 0.5
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 4,
+        "value": 0.5
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 5,
+        "value": 0.5
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 6,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       1200,
       0,
       85,
@@ -1527,83 +1527,83 @@
       60,
       60
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Mímico",
-    "@gold": 1600,
-    "@battler_hue": 0,
-    "@exp": 700,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Mímico",
+    "gold": 1600,
+    "battler_hue": 0,
+    "exp": 700,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 12,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 12,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 20,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 20,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 1,
+        "value": 0.1
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 5,
-        "@value": 0.2
+        "code": 32,
+        "data_id": 5,
+        "value": 0.2
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.2
+        "code": 22,
+        "data_id": 2,
+        "value": 0.2
       },
       {
-        "@code": 61,
-        "@data_id": 0,
-        "@value": 0.5
+        "code": 61,
+        "data_id": 0,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       2000,
       0,
       100,
@@ -1613,83 +1613,83 @@
       65,
       65
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Lobisomem",
-    "@gold": 1300,
-    "@battler_hue": 0,
-    "@exp": 660,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Lobisomem",
+    "gold": 1300,
+    "battler_hue": 0,
+    "exp": 660,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 22,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 22,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 21,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 21,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 2,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 2,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 2,
+        "value": 0.1
       }
     ],
-    "@params": [
+    "params": [
       1600,
       0,
       90,
@@ -1699,85 +1699,85 @@
       70,
       70
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Sahagin",
-    "@gold": 1800,
-    "@battler_hue": 0,
-    "@exp": 690,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Sahagin",
+    "gold": 1800,
+    "battler_hue": 0,
+    "exp": 690,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 4,
-        "@skill_id": 13,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 4,
+        "skill_id": 13,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 64,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 64,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 22,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 22,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 5,
+        "value": 2.0
       },
       {
-        "@code": 11,
-        "@data_id": 6,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 6,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       1800,
       400,
       110,
@@ -1787,83 +1787,83 @@
       80,
       80
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Ogre",
-    "@gold": 3200,
-    "@battler_hue": 0,
-    "@exp": 1600,
-    "@hit": 80,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Ogre",
+    "gold": 3200,
+    "battler_hue": 0,
+    "exp": 1600,
+    "hit": 80,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 21,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 21,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 23,
-    "@eva": 0,
-    "@features": [
+    "note": "Sight=6",
+    "id": 23,
+    "eva": 0,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.75
+        "code": 22,
+        "data_id": 0,
+        "value": 0.75
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 22,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 3,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 5,
+        "value": 1.5
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.15
+        "code": 22,
+        "data_id": 2,
+        "value": 0.15
       }
     ],
-    "@params": [
+    "params": [
       2600,
       0,
       140,
@@ -1873,92 +1873,92 @@
       70,
       70
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Gárgula",
-    "@gold": 2400,
-    "@battler_hue": 0,
-    "@exp": 1400,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Gárgula",
+    "gold": 2400,
+    "battler_hue": 0,
+    "exp": 1400,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 4,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 4,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 8,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 8,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 19,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 19,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 24,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 24,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 5,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 5,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 10,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       2400,
       0,
       130,
@@ -1968,85 +1968,85 @@
       90,
       90
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Lamia",
-    "@gold": 4400,
-    "@battler_hue": 0,
-    "@exp": 2600,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Lamia",
+    "gold": 4400,
+    "battler_hue": 0,
+    "exp": 2600,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 16,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 16,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 4,
-        "@skill_id": 15,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 4,
+        "skill_id": 15,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 25,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 25,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 3,
-        "@value": 0.25
+        "code": 32,
+        "data_id": 3,
+        "value": 0.25
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 4,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       3200,
       1000,
       120,
@@ -2056,109 +2056,109 @@
       95,
       95
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Vampiro",
-    "@gold": 5600,
-    "@battler_hue": 0,
-    "@exp": 3000,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Vampiro",
+    "gold": 5600,
+    "battler_hue": 0,
+    "exp": 3000,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 3,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 3,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 23,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 23,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 3,
-        "@skill_id": 11,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 3,
+        "skill_id": 11,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 58,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 58,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 26,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 26,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 4,
+        "value": 0.5
       },
       {
-        "@code": 11,
-        "@data_id": 9,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 9,
+        "value": 2.0
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 10,
+        "value": 0.5
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 2,
+        "value": 0.1
       }
     ],
-    "@params": [
+    "params": [
       5200,
       2000,
       135,
@@ -2168,87 +2168,87 @@
       100,
       100
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Súcubo",
-    "@gold": 8000,
-    "@battler_hue": 0,
-    "@exp": 4000,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Súcubo",
+    "gold": 8000,
+    "battler_hue": 0,
+    "exp": 4000,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 2,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 2,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 1,
-        "@rating": 5,
-        "@skill_id": 38,
-        "@condition_param2": 4,
-        "@condition_param1": 0
+        "condition_type": 1,
+        "rating": 5,
+        "skill_id": 38,
+        "condition_param2": 4,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 4,
-        "@skill_id": 39,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 4,
+        "skill_id": 39,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 49,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 49,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 27,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 27,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 32,
-        "@data_id": 5,
-        "@value": 0.2
+        "code": 32,
+        "data_id": 5,
+        "value": 0.2
       }
     ],
-    "@params": [
+    "params": [
       6000,
       3000,
       150,
@@ -2258,104 +2258,104 @@
       110,
       110
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Demônio",
-    "@gold": 12000,
-    "@battler_hue": 0,
-    "@exp": 6500,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Demônio",
+    "gold": 12000,
+    "battler_hue": 0,
+    "exp": 6500,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 4,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 4,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 1,
-        "@rating": 4,
-        "@skill_id": 36,
-        "@condition_param2": 3,
-        "@condition_param1": 1
+        "condition_type": 1,
+        "rating": 4,
+        "skill_id": 36,
+        "condition_param2": 3,
+        "condition_param1": 1
       },
       {
-        "@condition_type": 1,
-        "@rating": 8,
-        "@skill_id": 41,
-        "@condition_param2": 7,
-        "@condition_param1": 2
+        "condition_type": 1,
+        "rating": 8,
+        "skill_id": 41,
+        "condition_param2": 7,
+        "condition_param1": 2
       },
       {
-        "@condition_type": 0,
-        "@rating": 4,
-        "@skill_id": 71,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 4,
+        "skill_id": 71,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 4,
-        "@skill_id": 54,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 4,
+        "skill_id": 54,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 28,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 28,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 3,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 3,
+        "value": 0.5
       },
       {
-        "@code": 11,
-        "@data_id": 9,
-        "@value": 1.5
+        "code": 11,
+        "data_id": 9,
+        "value": 1.5
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0.5
+        "code": 11,
+        "data_id": 10,
+        "value": 0.5
       }
     ],
-    "@params": [
+    "params": [
       8000,
       5000,
       170,
@@ -2365,138 +2365,138 @@
       120,
       120
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Lorde Sombrio",
-    "@gold": 30000,
-    "@battler_hue": 0,
-    "@exp": 15000,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Lorde Sombrio",
+    "gold": 30000,
+    "battler_hue": 0,
+    "exp": 15000,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 6,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 6,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 54,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 54,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 58,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 58,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 62,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 62,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 72,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 72,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 46,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 46,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 2,
-        "@rating": 5,
-        "@skill_id": 24,
-        "@condition_param2": 0.8,
-        "@condition_param1": 0
+        "condition_type": 2,
+        "rating": 5,
+        "skill_id": 24,
+        "condition_param2": 0.8,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 29,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 29,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0
+        "code": 11,
+        "data_id": 10,
+        "value": 0
       },
       {
-        "@code": 13,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 13,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 13,
-        "@data_id": 5,
-        "@value": 0.0
+        "code": 13,
+        "data_id": 5,
+        "value": 0.0
       },
       {
-        "@code": 22,
-        "@data_id": 2,
-        "@value": 0.1
+        "code": 22,
+        "data_id": 2,
+        "value": 0.1
       },
       {
-        "@code": 22,
-        "@data_id": 3,
-        "@value": 0.2
+        "code": 22,
+        "data_id": 3,
+        "value": 0.2
       },
       {
-        "@code": 61,
-        "@data_id": 0,
-        "@value": 1.0
+        "code": 61,
+        "data_id": 0,
+        "value": 1.0
       },
       {
-        "@code": 63,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 63,
+        "data_id": 1,
+        "value": 0.0
       }
     ],
-    "@params": [
+    "params": [
       12000,
       9999,
       200,
@@ -2506,128 +2506,128 @@
       1,
       140
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Deus Maligno",
-    "@gold": 50000,
-    "@battler_hue": 0,
-    "@exp": 25000,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Deus Maligno",
+    "gold": 50000,
+    "battler_hue": 0,
+    "exp": 25000,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 6,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 6,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 74,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 74,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 8,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 8,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 9,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 9,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 15,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 15,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 13,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 13,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 12,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 12,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=6",
-    "@id": 30,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=6",
+    "id": 30,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 10,
-        "@value": 0
+        "code": 11,
+        "data_id": 10,
+        "value": 0
       },
       {
-        "@code": 13,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 13,
+        "data_id": 1,
+        "value": 0.0
       },
       {
-        "@code": 13,
-        "@data_id": 5,
-        "@value": 0.0
+        "code": 13,
+        "data_id": 5,
+        "value": 0.0
       },
       {
-        "@code": 61,
-        "@data_id": 0,
-        "@value": 1.0
+        "code": 61,
+        "data_id": 0,
+        "value": 1.0
       },
       {
-        "@code": 63,
-        "@data_id": 1,
-        "@value": 0.0
+        "code": 63,
+        "data_id": 1,
+        "value": 0.0
       }
     ],
-    "@params": [
+    "params": [
       20000,
       9999,
       240,
@@ -2637,87 +2637,87 @@
       150,
       150
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 1
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 1
       }
     ]
   },
   {
-    "@name": "Boss",
-    "@gold": 300,
-    "@battler_hue": 0,
-    "@exp": 500,
-    "@hit": 95,
-    "@battler_name": "",
-    "@actions": [
+    "name": "Boss",
+    "gold": 300,
+    "battler_hue": 0,
+    "exp": 500,
+    "hit": 95,
+    "battler_name": "",
+    "actions": [
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 1,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 1,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 51,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 51,
+        "condition_param2": 0,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 2,
-        "@rating": 5,
-        "@skill_id": 27,
-        "@condition_param2": 0.7,
-        "@condition_param1": 0
+        "condition_type": 2,
+        "rating": 5,
+        "skill_id": 27,
+        "condition_param2": 0.7,
+        "condition_param1": 0
       },
       {
-        "@condition_type": 0,
-        "@rating": 5,
-        "@skill_id": 53,
-        "@condition_param2": 0,
-        "@condition_param1": 0
+        "condition_type": 0,
+        "rating": 5,
+        "skill_id": 53,
+        "condition_param2": 0,
+        "condition_param1": 0
       }
     ],
-    "@note": "Sight=10\r\nBoss=true\r\nSwitchID=102",
-    "@id": 31,
-    "@eva": 5,
-    "@features": [
+    "note": "Sight=10\r\nBoss=true\r\nSwitchID=102",
+    "id": 31,
+    "eva": 5,
+    "features": [
       {
-        "@code": 22,
-        "@data_id": 0,
-        "@value": 0.95
+        "code": 22,
+        "data_id": 0,
+        "value": 0.95
       },
       {
-        "@code": 22,
-        "@data_id": 1,
-        "@value": 0.05
+        "code": 22,
+        "data_id": 1,
+        "value": 0.05
       },
       {
-        "@code": 31,
-        "@data_id": 1,
-        "@value": 100
+        "code": 31,
+        "data_id": 1,
+        "value": 100
       },
       {
-        "@code": 11,
-        "@data_id": 4,
-        "@value": 2.0
+        "code": 11,
+        "data_id": 4,
+        "value": 2.0
       }
     ],
-    "@params": [
+    "params": [
       1000,
       300,
       25,
@@ -2727,21 +2727,21 @@
       10,
       10
     ],
-    "@drop_items": [
+    "drop_items": [
       {
-        "@denominator": 1,
-        "@kind": 2,
-        "@data_id": 21
+        "denominator": 1,
+        "kind": 2,
+        "data_id": 21
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 7
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 7
       },
       {
-        "@denominator": 1,
-        "@kind": 0,
-        "@data_id": 13
+        "denominator": 1,
+        "kind": 0,
+        "data_id": 13
       }
     ]
   }

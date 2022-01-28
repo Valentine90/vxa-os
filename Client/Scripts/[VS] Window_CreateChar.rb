@@ -106,9 +106,7 @@ class Window_CreateChar < Window_Base
     draw_text(4, 62, 70, line_height, Vocab::Graphic)
     draw_text(119, 137, 25, line_height, @params[0] * 10 + $data_classes[@class_id].params[0, 1], 2)
     draw_text(119, 161, 25, line_height, @params[1] * 10 + $data_classes[@class_id].params[1, 1], 2)
-    word_wrap($data_actors[@class_id].description.delete("\n"), 210).each_with_index do |text, i|
-      draw_text(196, line_height * i + 31, contents_width, line_height, text)
-    end
+    draw_justified_texts(196, 31, 225, line_height, $data_actors[@class_id].description.delete("\n"))
     (2...8).each do |param_id|
       draw_text(param_id / 4 * 189 + 119, param_id % 4 * 24 + 137, 25, line_height, $data_classes[@class_id].params[param_id, 1] + @params[param_id], 2)
     end

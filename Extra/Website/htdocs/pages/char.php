@@ -17,11 +17,8 @@ if (isset($_GET['id'])) {
     } else {
         $status_vip = 0;
     }
-
-    $armors         = str_replace('@', '', file_get_contents('wiki/json/Armors.json'));
-    $weapons        = str_replace('@', '', file_get_contents('wiki/json/Weapons.json'));
-    $rarmors        = json_decode($armors);
-    $rweapons       = json_decode($weapons);
+    $rarmors        = json_decode(file_get_contents('wiki/json/Armors.json'));
+    $rweapons       = json_decode(file_get_contents('wiki/json/Weapons.json'));
 
     $eq             = mysqli_query($con, "SELECT * FROM actor_equips WHERE actor_id = " . $row_p->id . " ORDER BY slot_id");
 }

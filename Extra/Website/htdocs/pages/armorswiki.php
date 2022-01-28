@@ -1,9 +1,6 @@
 <?php
-$arquivo = str_replace('@', '', file_get_contents('wiki/json/Armors.json'));
-$arquivo2 = str_replace('@', '', file_get_contents('wiki/json/Enemies.json'));
-
-$json = json_decode($arquivo);
-$json2 = json_decode($arquivo2);
+$json = json_decode(file_get_contents('wiki/json/Armors.json'));
+$json2 = json_decode(file_get_contents('wiki/json/Enemies.json'));
 
 //echo $registro2->drop_items[0]->kind 
 

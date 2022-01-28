@@ -38,7 +38,13 @@ module Game_Account
 		@vip_time = nil
 		@handshake = false
 		@hand_time = Time.now + AUTHENTICATION_TIME
-		@ip = Socket.unpack_sockaddr_in(get_peername)[1]
+		begin
+			@ip = Socket.unpack_sockaddr_in(get_peername)[1]
+		# Se nenhum peername estiver disponível
+		rescue => e
+			$network.log.add('Error', :red, "Erro: #{e}\n#{e.backtrace.join("\n")}")
+			close_connection
+		end
   end
 
 	def connected?

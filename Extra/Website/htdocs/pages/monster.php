@@ -1,15 +1,10 @@
 <?php
 $id = $_GET['id'];
 
-$arquivo 	= str_replace('@', '', file_get_contents('wiki/json/Enemies.json'));
-$items 		= str_replace('@', '', file_get_contents('wiki/json/Items.json'));
-$weapons 	= str_replace('@', '', file_get_contents('wiki/json/Weapons.json'));
-$armors 	= str_replace('@', '', file_get_contents('wiki/json/Armors.json'));
-
-$json 		= json_decode($arquivo);
-$ritems		= json_decode($items);
-$rweapons	= json_decode($weapons);
-$rarmors	= json_decode($armors);
+$json 		= json_decode(file_get_contents('wiki/json/Enemies.json'));
+$ritems		= json_decode(file_get_contents('wiki/json/Items.json'));
+$rweapons	= json_decode(file_get_contents('wiki/json/Weapons.json'));
+$rarmors	= json_decode(file_get_contents('wiki/json/Armors.json'));
 
 foreach ($json as $registro) :
 

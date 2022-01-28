@@ -1,7 +1,5 @@
 <?php
-$arquivo = str_replace('@', '', file_get_contents('wiki/json/Enemies.json'));
-
-$json = json_decode($arquivo);
+$json = json_decode(file_get_contents('wiki/json/Enemies.json'));
 ?>
 <div>
 	<a href="/wikipedia">

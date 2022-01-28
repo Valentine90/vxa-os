@@ -2,11 +2,8 @@
 
 $class = $_GET['id'];
 
-$rskills = str_replace('@', '', file_get_contents('wiki/json/Skills.json'));
-$rclasses = str_replace('@', '', file_get_contents('wiki/json/Classes.json'));
-
-$skills = json_decode($rskills);
-$classes = json_decode($rclasses);
+$skills = json_decode(file_get_contents('wiki/json/Skills.json'));
+$classes = json_decode(file_get_contents('wiki/json/Classes.json'));
 
 ?>
 <div>

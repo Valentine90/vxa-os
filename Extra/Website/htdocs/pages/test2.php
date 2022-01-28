@@ -1,8 +1,6 @@
 <?php
-$armors 		= str_replace('@', '', file_get_contents('wiki/json/Armors.json'));
-$weapons 		= str_replace('@', '', file_get_contents('wiki/json/Weapons.json'));
-$rarmors		= json_decode($armors);
-$rweapons		= json_decode($weapons);
+$rarmors		= json_decode(file_get_contents('wiki/json/Armors.json'));
+$rweapons		= json_decode(file_get_contents('wiki/json/Weapons.json'));
 
 $eq 			= mysqli_query($con, "SELECT * FROM actor_equips WHERE actor_id = '1' ORDER BY slot_id");
 
